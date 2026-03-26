@@ -1293,7 +1293,7 @@ export default function App() {
                     }}
                     className="btn-primary w-full py-4 flex items-center justify-center gap-3 text-lg"
                   >
-                    <MessageCircle className="w-6 h-6" /> Hubungi via WhatsApp
+                    <MessageCircle className="w-6 h-6" /> Konsultasikan Gratis Sekarang !
                   </button>
                 </div>
               </div>
