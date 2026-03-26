@@ -550,8 +550,11 @@ export default function App() {
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center cursor-pointer">
-            <span className="text-xl font-bold tracking-tight text-primary-dark">tebasrumput.com</span>
+          <div className="flex items-center gap-2 cursor-pointer group">
+            <Leaf className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform shrink-0" />
+            <span className="text-2xl font-black tracking-tighter text-black">
+              tebasrumput.com
+            </span>
           </div>
 
           {/* Desktop Menu */}
@@ -1123,8 +1126,13 @@ export default function App() {
       < footer className="bg-slate-900 text-white pt-20 pb-10 px-6 md:px-12 lg:px-24" >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
-            <div className="flex items-center cursor-pointer">
-              <span className="text-xl font-bold tracking-tight">tebasrumput.com</span>
+            <div className="flex items-center gap-2 cursor-pointer group">
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                <Leaf className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-black tracking-tighter text-white">
+                tebasrumput.com
+              </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Partner terpercaya untuk perawatan halaman dan taman Anda. Kami mengutamakan kualitas dan kepuasan pelanggan.
