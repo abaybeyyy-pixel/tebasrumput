@@ -177,8 +177,8 @@ export default function App() {
               </motion.div>
 
               <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-medium leading-tight text-slate-900 tracking-tight">
-                Jasa <span className="font-bold">Potong Rumput</span> <br />
-                Panggilan <span className="text-primary font-extrabold text-3xl md:text-5xl">Murah & Rapi Palembang</span>
+                <span className="font-bold">Jasa Potong Rumput Panggilan Murah & Rapi</span> <br />
+                <span className="text-primary font-black text-4xl md:text-6xl">Palembang</span>
                 <span className="inline-block ml-4 align-middle opacity-30">
                   <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
                     <path d="M2 28H58" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
