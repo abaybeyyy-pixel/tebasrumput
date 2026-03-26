@@ -620,15 +620,6 @@ export default function App() {
               <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-medium leading-tight text-slate-900 tracking-tight">
                 <span className="font-bold">Jasa Potong Rumput Panggilan Murah & Rapi</span> <br />
                 <span className="text-primary font-black text-4xl md:text-6xl">Palembang</span>
-                <span className="inline-block ml-4 align-middle opacity-30">
-                  <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
-                    <path d="M2 28H58" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M18 28V6M42 28V6" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-                    <path d="M18 10H42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M18 14H42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M18 6L4 20M42 6L56 20" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeDasharray="3 3" />
-                  </svg>
-                </span>
               </motion.h1>
 
               <motion.p variants={fadeIn} className="text-lg text-slate-500 leading-relaxed font-light">
