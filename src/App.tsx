@@ -178,7 +178,7 @@ export default function App() {
 
               <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-medium leading-tight text-slate-900 tracking-tight">
                 Jasa <span className="font-bold">Potong Rumput</span> <br />
-                Panggilan <span className="text-primary font-extrabold">Palembang</span>
+                Panggilan <span className="text-primary font-extrabold text-3xl md:text-5xl">Murah & Rapi Palembang</span>
                 <span className="inline-block ml-4 align-middle opacity-30">
                   <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
                     <path d="M2 28H58" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -299,10 +299,10 @@ export default function App() {
               </form>
             </motion.div>
           </div>
-        </section>
+        </section >
 
         {/* Trust / Social Proof - Marquee */}
-        <section className="bg-soft-gray py-12 overflow-hidden border-y border-slate-100">
+        < section className="bg-soft-gray py-12 overflow-hidden border-y border-slate-100" >
           <div className="flex whitespace-nowrap animate-marquee">
             <div className="flex items-center gap-16 px-8">
               <span className="text-2xl font-black text-primary/20 tracking-tighter">GARDENIA</span>
@@ -323,10 +323,10 @@ export default function App() {
               <span className="text-2xl font-black text-primary/20 tracking-tighter">AMPERA-LAND</span>
             </div>
           </div>
-        </section>
+        </section >
 
         {/* Layanan Kami */}
-        <section id="layanan" className="section-padding max-w-7xl mx-auto">
+        < section id="layanan" className="section-padding max-w-7xl mx-auto" >
           <div className="text-center space-y-3 mb-16">
             <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Layanan Kami</h2>
             <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Solusi Lengkap Untuk Halaman Anda</h3>
@@ -353,10 +353,10 @@ export default function App() {
               </motion.div>
             ))}
           </div>
-        </section>
+        </section >
 
         {/* Keunggulan */}
-        <section id="keunggulan" className="bg-slate-900 text-white section-padding overflow-hidden">
+        < section id="keunggulan" className="bg-slate-900 text-white section-padding overflow-hidden" >
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-3">
@@ -420,10 +420,10 @@ export default function App() {
               <div className="absolute -left-8 bottom-1/4 w-16 h-16 border border-slate-200 rounded-full"></div>
             </motion.div>
           </div>
-        </section>
+        </section >
 
         {/* Stats Section - Solid Version */}
-        <section className="bg-primary py-16 px-6 md:px-12 lg:px-24">
+        < section className="bg-primary py-16 px-6 md:px-12 lg:px-24" >
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
               {[
@@ -439,10 +439,10 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section >
 
         {/* Cara Kerja */}
-        <section className="section-padding max-w-7xl mx-auto">
+        < section className="section-padding max-w-7xl mx-auto" >
           <div className="text-center space-y-3 mb-16">
             <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Cara Kerja</h2>
             <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Proses Mudah & Cepat</h3>
@@ -467,10 +467,10 @@ export default function App() {
               </div>
             ))}
           </div>
-        </section>
+        </section >
 
         {/* Pricing Section */}
-        <section id="pricing" className="bg-soft-gray section-padding">
+        < section id="pricing" className="bg-soft-gray section-padding" >
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-3 mb-16">
               <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Harga Paket</h2>
@@ -539,10 +539,10 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section >
 
         {/* Testimonials Marquee */}
-        <section className="py-24 bg-slate-50 overflow-hidden">
+        < section className="py-24 bg-slate-50 overflow-hidden" >
           <div className="max-w-7xl mx-auto px-6 mb-16 text-center space-y-3">
             <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Testimoni</h2>
             <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Apa Kata Pelanggan Kami</h3>
@@ -585,10 +585,10 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section >
 
         {/* FAQ Section */}
-        <section id="faq" className="section-padding bg-slate-50">
+        < section id="faq" className="section-padding bg-slate-50" >
           <div className="max-w-3xl mx-auto">
             <div className="text-center space-y-3 mb-16">
               <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">FAQ</h2>
@@ -621,10 +621,10 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section >
 
         {/* CTA Banner */}
-        <section className="px-6 md:px-12 lg:px-24 py-12">
+        < section className="px-6 md:px-12 lg:px-24 py-12" >
           <div className="max-w-7xl mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden shadow-xl">
             <div className="relative z-10 space-y-6">
               <h3 className="text-2xl md:text-4xl font-semibold max-w-xl mx-auto leading-tight tracking-tight">Rumput Anda Sudah Terlalu Panjang?</h3>
@@ -634,11 +634,11 @@ export default function App() {
               </button>
             </div>
           </div>
-        </section>
-      </main>
+        </section >
+      </main >
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white pt-20 pb-10 px-6 md:px-12 lg:px-24">
+      < footer className="bg-slate-900 text-white pt-20 pb-10 px-6 md:px-12 lg:px-24" >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
             <div className="flex items-center gap-3 group cursor-pointer">
@@ -697,80 +697,82 @@ export default function App() {
         <div className="max-w-7xl mx-auto pt-10 border-t border-white/5 text-center text-slate-500 text-xs">
           <p>&copy; 2026 tebasrumput.com. Seluruh hak cipta dilindungi undang-undang.</p>
         </div>
-      </footer>
+      </footer >
       {/* Modal Legal */}
-      {activeModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            onClick={() => setActiveModal(null)}
-            className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
-          />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            className="relative bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-3xl p-8 md:p-12 shadow-2xl"
-          >
-            <button
+      {
+        activeModal && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               onClick={() => setActiveModal(null)}
-              className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors"
+              className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              className="relative bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-3xl p-8 md:p-12 shadow-2xl"
             >
-              <X className="w-6 h-6 text-slate-400" />
-            </button>
-
-            {activeModal === "terms" ? (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-slate-900">Terms & Conditions</h2>
-                <div className="space-y-4 text-slate-600 leading-relaxed">
-                  <p className="font-bold text-slate-800">1. Layanan</p>
-                  <p>Tebasrumput.com menyediakan jasa pemotongan rumput, pembersihan lahan, dan perawatan taman untuk area perumahan dan komersial di wilayah Kota Palembang.</p>
-
-                  <p className="font-bold text-slate-800">2. Pemesanan & Penjadwalan</p>
-                  <p>Pemesanan dianggap sah setelah pelanggan mengisi formulir atau menghubungi via WhatsApp dan mendapatkan konfirmasi jadwal dari tim kami.</p>
-
-                  <p className="font-bold text-slate-800">3. Biaya & Pembayaran</p>
-                  <p>Biaya layanan disesuaikan dengan paket yang dipilih atau hasil survey lokasi. Pembayaran dilakukan secara tunai (Cash on Delivery) atau transfer setelah pekerjaan selesai dikerjakan.</p>
-
-                  <p className="font-bold text-slate-800">4. Akses Lokasi</p>
-                  <p>Pelanggan wajib memberikan akses masuk ke area pengerjaan pada waktu yang telah disepakati. Kami tidak bertanggung jawab atas keterlambatan akibat kendala akses lokasi.</p>
-
-                  <p className="font-bold text-slate-800">5. Pembatalan</p>
-                  <p>Pembatalan atau perubahan jadwal harus diinformasikan maksimal 24 jam sebelum waktu pengerjaan yang dijadwalkan.</p>
-                </div>
-              </div>
-            ) : (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-slate-900">Privacy Policy</h2>
-                <div className="space-y-4 text-slate-600 leading-relaxed">
-                  <p>Kebijakan Privasi ini menjelaskan bagaimana Tebasrumput.com mengumpulkan dan menggunakan informasi Anda.</p>
-
-                  <p className="font-bold text-slate-800">1. Informasi yang Kami Kumpulkan</p>
-                  <p>Kami mengumpulkan informasi yang Anda berikan secara sukarela saat melakukan pemesanan, termasuk nama, nomor telepon/WhatsApp, dan alamat atau wilayah lokasi pengerjaan.</p>
-
-                  <p className="font-bold text-slate-800">2. Penggunaan Informasi</p>
-                  <p>Informasi Anda digunakan semata-mata untuk keperluan koordinasi layanan, konfirmasi jadwal, dan pengiriman tim ke lokasi Anda.</p>
-
-                  <p className="font-bold text-slate-800">3. Perlindungan Data</p>
-                  <p>Kami berkomitmen untuk menjaga keamanan data Anda. Kami tidak akan menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pihak ketiga untuk tujuan pemasaran.</p>
-
-                  <p className="font-bold text-slate-800">4. Persetujuan</p>
-                  <p>Dengan menggunakan layanan kami, Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan kebijakan ini.</p>
-                </div>
-              </div>
-            )}
-
-            <div className="mt-12 pt-6 border-t border-slate-100">
               <button
                 onClick={() => setActiveModal(null)}
-                className="btn-primary w-full py-3"
+                className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors"
               >
-                Saya Mengerti
+                <X className="w-6 h-6 text-slate-400" />
               </button>
-            </div>
-          </motion.div>
-        </div>
-      )}
-    </div>
+
+              {activeModal === "terms" ? (
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-bold text-slate-900">Terms & Conditions</h2>
+                  <div className="space-y-4 text-slate-600 leading-relaxed">
+                    <p className="font-bold text-slate-800">1. Layanan</p>
+                    <p>Tebasrumput.com menyediakan jasa pemotongan rumput, pembersihan lahan, dan perawatan taman untuk area perumahan dan komersial di wilayah Kota Palembang.</p>
+
+                    <p className="font-bold text-slate-800">2. Pemesanan & Penjadwalan</p>
+                    <p>Pemesanan dianggap sah setelah pelanggan mengisi formulir atau menghubungi via WhatsApp dan mendapatkan konfirmasi jadwal dari tim kami.</p>
+
+                    <p className="font-bold text-slate-800">3. Biaya & Pembayaran</p>
+                    <p>Biaya layanan disesuaikan dengan paket yang dipilih atau hasil survey lokasi. Pembayaran dilakukan secara tunai (Cash on Delivery) atau transfer setelah pekerjaan selesai dikerjakan.</p>
+
+                    <p className="font-bold text-slate-800">4. Akses Lokasi</p>
+                    <p>Pelanggan wajib memberikan akses masuk ke area pengerjaan pada waktu yang telah disepakati. Kami tidak bertanggung jawab atas keterlambatan akibat kendala akses lokasi.</p>
+
+                    <p className="font-bold text-slate-800">5. Pembatalan</p>
+                    <p>Pembatalan atau perubahan jadwal harus diinformasikan maksimal 24 jam sebelum waktu pengerjaan yang dijadwalkan.</p>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-bold text-slate-900">Privacy Policy</h2>
+                  <div className="space-y-4 text-slate-600 leading-relaxed">
+                    <p>Kebijakan Privasi ini menjelaskan bagaimana Tebasrumput.com mengumpulkan dan menggunakan informasi Anda.</p>
+
+                    <p className="font-bold text-slate-800">1. Informasi yang Kami Kumpulkan</p>
+                    <p>Kami mengumpulkan informasi yang Anda berikan secara sukarela saat melakukan pemesanan, termasuk nama, nomor telepon/WhatsApp, dan alamat atau wilayah lokasi pengerjaan.</p>
+
+                    <p className="font-bold text-slate-800">2. Penggunaan Informasi</p>
+                    <p>Informasi Anda digunakan semata-mata untuk keperluan koordinasi layanan, konfirmasi jadwal, dan pengiriman tim ke lokasi Anda.</p>
+
+                    <p className="font-bold text-slate-800">3. Perlindungan Data</p>
+                    <p>Kami berkomitmen untuk menjaga keamanan data Anda. Kami tidak akan menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pihak ketiga untuk tujuan pemasaran.</p>
+
+                    <p className="font-bold text-slate-800">4. Persetujuan</p>
+                    <p>Dengan menggunakan layanan kami, Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan kebijakan ini.</p>
+                  </div>
+                </div>
+              )}
+
+              <div className="mt-12 pt-6 border-t border-slate-100">
+                <button
+                  onClick={() => setActiveModal(null)}
+                  className="btn-primary w-full py-3"
+                >
+                  Saya Mengerti
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )
+      }
+    </div >
   );
 }
