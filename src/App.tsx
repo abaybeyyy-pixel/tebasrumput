@@ -619,6 +619,103 @@ export default function App() {
           </div>
         </section >
 
+        {/* Blog Section */}
+        <section id="blog" className="py-24 px-6 md:px-12 lg:px-24 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 space-y-4">
+              <h2 className="text-primary font-bold text-sm tracking-widest uppercase">Tips & Blog</h2>
+              <h3 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">Inspirasi & Tips Perawatan Taman</h3>
+              <p className="text-slate-500 max-w-2xl mx-auto font-light text-sm md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Palembang.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "5 Tips Merawat Rumput Gajah Mini di Palembang yang Terik",
+                  desc: "Rumput gajah mini butuh perhatian ekstra saat cuaca Palembang sedang panas-panasnya. Simak cara penyiraman yang benar.",
+                  date: "26 Mar 2026",
+                  tag: "Tips Perawatan"
+                },
+                {
+                  title: "Jadwal Terbaik Memotong Rumput untuk Hunian di Kalidoni",
+                  desc: "Kapan waktu paling pas memanggil tukang rumput? Kami bahas frekuensi ideal pangkas rumput agar tetap rapi.",
+                  date: "25 Mar 2026",
+                  tag: "Jadwal"
+                },
+                {
+                  title: "Jasa Potong Rumput Panggilan Palembang: Mengapa Hemat Waktu?",
+                  desc: "Daripada capek sendiri, menggunakan jasa profesional jauh lebih efisien. Lihat perbandingannya di sini.",
+                  date: "24 Mar 2026",
+                  tag: "Edukasi"
+                },
+                {
+                  title: "Mengatasi Rumput Liar (Gulma) di Area Perkantoran",
+                  desc: "Gulma bisa merusak estetika kantor. Pelajari cara pencegahan agar rumput utama tetap dominan dan hijau.",
+                  date: "23 Mar 2026",
+                  tag: "Bisnis"
+                },
+                {
+                  title: "Rumput Manila vs Rumput Jepang: Mana yang Cocok untuk Palembang?",
+                  desc: "Memilih jenis rumput harus sesuai dengan iklim Sumatera Selatan. Cek kelebihan masing-masing di artikel ini.",
+                  date: "22 Mar 2026",
+                  tag: "Desain"
+                },
+                {
+                  title: "Cara Menghilangkan Genangan Air di Halaman Setelah Hujan",
+                  desc: "Hujan deras sering bikin halaman becek. Tips drainase sederhana agar taman tetap kering dan indah.",
+                  date: "21 Mar 2026",
+                  tag: "Teknis"
+                },
+                {
+                  title: "Manfaat Taman Rapi bagi Kesehatan Mental Penghuni Rumah",
+                  desc: "Melihat rumput yang terpangkas rapi bisa mengurangi stres. Inilah alasan psikologis mengapa rumah butuh taman bersih.",
+                  date: "20 Mar 2026",
+                  tag: "Gaya Hidup"
+                },
+                {
+                  title: "Biaya Rata-rata Potong Rumput di Kota Palembang 2026",
+                  desc: "Mau budget buat taman? Cek kisaran harga terbaru tukang rumput panggilan berdasarkan luas lahan.",
+                  date: "19 Mar 2026",
+                  tag: "Harga"
+                },
+                {
+                  title: "Rahasia Rumput Tetap Hijau Meski Musim Kemarau Panjang",
+                  desc: "Gunakan trik pemupukan alami dan waktu siram yang tepat agar rumput tidak kering saat kemarau melanda.",
+                  date: "18 Mar 2026",
+                  tag: "Musiman"
+                },
+                {
+                  title: "Alat-alat Wajib untuk Membersihkan Kebun Belakang Rumah",
+                  desc: "Mengenal fungsi mesin potong rumput vs gunting manual untuk detail pengerjaan yang maksimal.",
+                  date: "17 Mar 2026",
+                  tag: "Peralatan"
+                }
+              ].map((blog, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500"
+                >
+                  <div className="flex flex-col h-full space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">{blog.tag}</span>
+                      <span className="text-xs text-slate-400 font-medium">{blog.date}</span>
+                    </div>
+                    <h4 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">{blog.title}</h4>
+                    <p className="text-slate-500 text-xs md:text-sm leading-relaxed flex-grow">{blog.desc}</p>
+                    <button onClick={handleBooking} className="flex items-center gap-2 text-primary font-bold text-xs md:text-sm group-hover:gap-4 transition-all pt-4">
+                      Selengkapnya <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Banner */}
         < section className="px-6 md:px-12 lg:px-24 py-12" >
           <div className="max-w-7xl mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden shadow-xl">
