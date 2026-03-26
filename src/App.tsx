@@ -1,13 +1,7 @@
-/**
- * @license 
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { motion } from "motion/react";
 import {
   CheckCircle2,
   Scissors,
-  Calendar,
   ShieldCheck,
   Star,
   ChevronDown,
@@ -24,9 +18,7 @@ import {
   Menu,
   X,
   User,
-  MessageCircle,
-  Clock,
-  Users
+  MessageCircle
 } from "lucide-react";
 import React, { useState } from "react";
 

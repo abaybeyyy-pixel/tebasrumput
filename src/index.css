@@ -72,3 +72,12 @@ body {
 .blog-content blockquote {
   @apply border-l-4 border-primary bg-primary/5 p-6 rounded-r-2xl italic text-slate-700 my-8;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
