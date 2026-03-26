@@ -627,8 +627,8 @@ export default function App() {
               </motion.div>
 
               <motion.h1 variants={fadeIn} className="text-3xl sm:text-4xl md:text-6xl font-medium leading-[1.1] text-slate-900 tracking-tight">
-                <span className="font-bold">Jasa Potong Rumput Panggilan Murah & Rapi</span> <br />
-                <span className="text-primary font-black text-4xl md:text-6xl">Palembang</span>
+                <span className="font-bold text-primary">Jasa Tebas Rumput Panggilan Palembang</span> <br />
+                <span className="text-slate-900 font-black text-4xl md:text-6xl">Murah & Rapi</span>
               </motion.h1>
 
               <motion.p variants={fadeIn} className="text-lg text-slate-500 leading-relaxed font-light">
@@ -1135,8 +1135,49 @@ export default function App() {
         </section >
       </main >
 
-      {/* Footer */}
-      < footer className="bg-slate-900 text-white pt-20 pb-10 px-6 md:px-12 lg:px-24" >
+        {/* SEO Keywords & Service Areas Section */}
+        <section className="py-16 bg-white border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold text-slate-900">Area Layanan & Spesialisasi</h2>
+                <p className="text-slate-600 leading-relaxed">
+                  Kami menyediakan <strong>jasa potong rumput panggilan</strong> untuk seluruh wilayah kota Palembang. Tim kami ahli dalam <strong>jasa tebas rumput panggilan Palembang</strong>, menangani berbagai jenis lahan mulai dari halaman rumah minimalis hingga lahan kosong yang rimbun. Layanan <strong>jasa babat rumput area Palembang</strong> kami menjamin hasil yang rapi dan cepat.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Jasa Babat Rumput Area Palembang",
+                    "Potong Rumput Panggilan",
+                    "Jasa Potong Rumput Wilayah Palembang",
+                    "Tukang Rumput Palembang",
+                    "Pembersihan Lahan Kosong",
+                    "Perawatan Taman Palembang"
+                  ].map(keyword => (
+                    <span key={keyword} className="px-3 py-1 bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-wider rounded-full border border-slate-100">
+                      #{keyword}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                <h3 className="text-lg font-bold text-slate-900 mb-4">Cakupan Wilayah Palembang:</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-4 text-xs text-slate-500">
+                  {PALEMBANG_REGIONS.map(region => (
+                    <span key={region} className="flex items-center gap-1">
+                      <div className="w-1 h-1 bg-primary rounded-full"></div> {region}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-6 text-[10px] text-slate-400 italic">
+                  *Pemesanan <strong>jasa potong rumput panggilan wilayah Palembang</strong> dapat dilakukan setiap hari.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        < footer className="bg-slate-900 text-white pt-20 pb-10 px-6 md:px-12 lg:px-24" >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
             <div className="flex items-center gap-2 cursor-pointer group">
