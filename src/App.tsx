@@ -617,7 +617,7 @@ export default function App() {
                 <span>Wilayah <span className="text-primary font-bold">Palembang</span> & Sekitarnya</span>
               </motion.div>
 
-              <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-medium leading-tight text-slate-900 tracking-tight">
+              <motion.h1 variants={fadeIn} className="text-3xl sm:text-4xl md:text-6xl font-medium leading-[1.1] text-slate-900 tracking-tight">
                 <span className="font-bold">Jasa Potong Rumput Panggilan Murah & Rapi</span> <br />
                 <span className="text-primary font-black text-4xl md:text-6xl">Palembang</span>
               </motion.h1>
@@ -627,14 +627,14 @@ export default function App() {
                 <span className="font-medium text-slate-700">Rapi, Cepat, & Terpercaya</span> — Tim kami datang langsung ke lokasi Anda dengan peralatan modern lengkap.
               </motion.p>
 
-              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-6 items-center">
+              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 items-center">
                 <button
                   onClick={handleBooking}
-                  className="btn-primary text-lg px-12 py-5 flex items-center gap-3 shadow-lg hover:bg-primary-dark"
+                  className="btn-primary w-full sm:w-auto text-base px-10 py-4 flex items-center justify-center gap-3 shadow-lg hover:bg-primary-dark"
                 >
-                  <MessageCircle className="w-6 h-6" /> Booking Sekarang
+                  <MessageCircle className="w-5 h-5" /> Booking Sekarang
                 </button>
-                <a href="#layanan" className="text-slate-600 font-bold hover:text-primary transition-colors flex items-center gap-2">
+                <a href="#layanan" className="text-slate-600 font-bold hover:text-primary transition-colors flex items-center gap-2 text-sm sm:text-base">
                   Lihat Daftar Layanan <ArrowRight className="w-5 h-5" />
                 </a>
               </motion.div>
@@ -662,7 +662,7 @@ export default function App() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="bg-white p-8 rounded-3xl shadow-2xl border border-slate-100 relative"
+              className="bg-white p-6 md:p-8 rounded-3xl shadow-2xl border border-slate-100 relative"
             >
               <div className="absolute -top-4 -right-4 bg-primary text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
                 Respon Cepat!
@@ -1058,10 +1058,10 @@ export default function App() {
         {/* Blog Section */}
         <section id="blog" className="py-24 px-6 md:px-12 lg:px-24 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16 space-y-4">
+            <div className="text-center mb-10 md:mb-16 space-y-4">
               <h2 className="text-primary font-bold text-sm tracking-widest uppercase">Tips & Blog</h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">Inspirasi & Tips Perawatan Taman</h3>
-              <p className="text-slate-500 max-w-2xl mx-auto font-light text-sm md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Palembang.</p>
+              <h3 className="text-2xl md:text-5xl font-bold text-slate-900 tracking-tight">Inspirasi & Tips Perawatan Taman</h3>
+              <p className="text-slate-500 max-w-2xl mx-auto font-light text-xs md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Palembang.</p>
             </div>
 
             <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar -mx-6 px-6">
@@ -1092,12 +1092,12 @@ export default function App() {
         </section>
 
         {/* CTA Banner */}
-        < section className="px-6 md:px-12 lg:px-24 py-12" >
-          <div className="max-w-7xl mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden shadow-xl">
+        < section className="px-5 md:px-12 lg:px-24 py-12" >
+          <div className="max-w-7xl mx-auto bg-primary rounded-3xl p-8 md:p-20 text-center text-white relative overflow-hidden shadow-xl">
             <div className="relative z-10 space-y-6">
               <h3 className="text-2xl md:text-4xl font-semibold max-w-xl mx-auto leading-tight tracking-tight">Rumput Anda Sudah Terlalu Panjang?</h3>
-              <p className="text-white/80 font-medium text-base">Jangan biarkan halaman Anda jadi hutan. Booking sekarang dan dapatkan diskon 10%!</p>
-              <button onClick={handleBooking} className="bg-white text-primary px-8 py-3 rounded-full font-bold text-base shadow-lg hover:bg-slate-50 transition-all active:scale-95 flex items-center gap-2 mx-auto">
+              <p className="text-white/80 font-medium text-sm md:text-base">Jangan biarkan halaman Anda jadi hutan. Booking sekarang dan dapatkan diskon 10%!</p>
+              <button onClick={handleBooking} className="bg-white text-primary px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-lg hover:bg-slate-50 transition-all active:scale-95 flex items-center gap-2 mx-auto">
                 <MessageCircle className="w-5 h-5" /> Booking Sekarang <ArrowRight className="w-4 h-4" />
               </button>
             </div>
