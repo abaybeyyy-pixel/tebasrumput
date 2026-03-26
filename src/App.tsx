@@ -410,7 +410,7 @@ const blogs = [
     tags: ["Layanan", "Keamanan", "Lahan Kosong", "Palembang"],
     date: "10 Mar 2026",
     desc: "Rumput liar setinggi dada bukan cuma merusak pemandangan, tapi ancaman nyata bagi keamanan lingkungan sekitar.",
-    source: "https://www.tebasrumput.com/manfaat-bersih-lahan",
+    source: "https://tebasrumput.com/manfaat-bersih-lahan",
     content: `
       <h2>Hindari Ancaman Hewan Berbahaya di Lahan Kosong</h2>
       <p>Banyak lahan di wilayah baru <strong>Jakabaring</strong> atau <strong>Gandus</strong> yang dibiarkan terbengkalai. Rumput liar yang rimbun dan tidak terawat adalah magnet bagi predator berbahaya.</p>
