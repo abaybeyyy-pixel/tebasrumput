@@ -1,0 +1,6 @@
+# tebasrumput.com - Jasa Potong Rumput Palembang
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tebasrumput.com/sitemap.xml
