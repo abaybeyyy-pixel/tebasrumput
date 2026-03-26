@@ -512,6 +512,15 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState<"terms" | "privacy" | null>(null);
   const [activeBlog, setActiveBlog] = useState<any>(null);
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const scrollTo = direction === 'left' ? scrollLeft - clientWidth / 2 : scrollLeft + clientWidth / 2;
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+    }
+  };
   const [formData, setFormData] = useState({
     name: "",
     region: "",
@@ -1058,13 +1067,34 @@ export default function App() {
         {/* Blog Section */}
         <section id="blog" className="py-24 px-6 md:px-12 lg:px-24 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-10 md:mb-16 space-y-4">
-              <h2 className="text-primary font-bold text-sm tracking-widest uppercase">Tips & Blog</h2>
-              <h3 className="text-2xl md:text-5xl font-bold text-slate-900 tracking-tight">Inspirasi & Tips Perawatan Taman</h3>
-              <p className="text-slate-500 max-w-2xl mx-auto font-light text-xs md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Palembang.</p>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6">
+              <div className="text-left space-y-4">
+                <h2 className="text-primary font-bold text-sm tracking-widest uppercase">Tips & Blog</h2>
+                <h3 className="text-2xl md:text-5xl font-bold text-slate-900 tracking-tight">Inspirasi & Tips Perawatan Taman</h3>
+                <p className="text-slate-500 max-w-2xl font-light text-xs md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Palembang.</p>
+              </div>
+              <div className="hidden md:flex gap-4">
+                <button
+                  onClick={() => scroll('left')}
+                  className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-slate-400 group"
+                  aria-label="Scroll Kiri"
+                >
+                  <ArrowRight className="w-5 h-5 rotate-180 group-active:scale-90 transition-transform" />
+                </button>
+                <button
+                  onClick={() => scroll('right')}
+                  className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-slate-400 group"
+                  aria-label="Scroll Kanan"
+                >
+                  <ArrowRight className="w-5 h-5 group-active:scale-90 transition-transform" />
+                </button>
+              </div>
             </div>
 
-            <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar -mx-6 px-6">
+            <div
+              ref={scrollRef}
+              className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar -mx-6 px-6 scroll-smooth"
+            >
               {blogs.map((blog, idx) => (
                 <motion.div
                   key={idx}
