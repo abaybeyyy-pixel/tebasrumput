@@ -46,6 +46,119 @@ const staggerContainer = {
 
 const WA_LINK = "https://wa.me/6281211156865";
 
+const blogs = [
+  {
+    title: "5 Tips Merawat Rumput Gajah Mini di Palembang yang Terik",
+    tag: "Tips Perawatan",
+    date: "26 Mar 2026",
+    desc: "Rumput gajah mini butuh perhatian ekstra saat cuaca Palembang sedang panas-panasnya. Simak cara penyiraman yang benar.",
+    content: `Kota Palembang dikenal dengan cuacanya yang cukup terik. Bagi Anda pemilik hunian dengan rumput gajah mini, tantangan utamanya adalah menjaga agar rumput tidak kering dan menguning. Pertama, pastikan penyiraman dilakukan secara rutin pada pagi hari sebelum jam 8 atau sore hari setelah jam 4. Hindari menyiram di siang bolong karena air akan menguap terlalu cepat dan bisa membakar daun rumput. Kedua, gunakan pupuk nitrogen secara berkala untuk menjaga warna hijaunya tetap pekat. Ketiga, pastikan sirkulasi udara di area taman tetap terjaga. 
+
+Jika Anda merasa kesulitan atau tidak punya waktu untuk merawatnya sendiri, tim Tebasrumput.com siap membantu menjaga kesuburan taman Anda. 
+
+Segera hubungi kami via WhatsApp di 0812-1115-6865 untuk penawaran jasa perawatan rutin di wilayah Palembang.`
+  },
+  {
+    title: "Jadwal Terbaik Memotong Rumput untuk Hunian di Kalidoni",
+    tag: "Jadwal",
+    date: "25 Mar 2026",
+    desc: "Kapan waktu paling pas memanggil tukang rumput? Kami bahas frekuensi ideal pangkas rumput agar tetap rapi.",
+    content: `Wilayah Kalidoni dan sekitarnya memiliki kelembapan yang cukup tinggi, terutama saat musim hujan, yang membuat rumput tumbuh sangat cepat. Untuk menjaga estetika rumah, jadwal ideal untuk memotong rumput adalah setiap 2 hingga 3 minggu sekali. Jika dibiarkan lebih dari satu bulan, rumput cenderung menjadi liar dan sulit untuk dirapikan kembali ke bentuk asalnya. Memotong rumput secara rutin juga mencegah sarang serangga dan binatang melata di halaman Anda. 
+
+Kami melayani area Kalidoni dengan respon cepat dan hasil pengerjaan yang rapi sesuai standar profesional. 
+
+Butuh jasa potong rumput hari ini? Hubungi WhatsApp 0812-1115-6865 untuk booking jadwal pengerjaan.`
+  },
+  {
+    title: "Jasa Potong Rumput Panggilan Palembang: Mengapa Hemat Waktu?",
+    tag: "Edukasi",
+    date: "24 Mar 2026",
+    desc: "Daripada capek sendiri, menggunakan jasa profesional jauh lebih efisien. Lihat perbandingannya di sini.",
+    content: `Kesibukan warga Kota Palembang seringkali membuat perawatan rumah terabaikan. Memotong rumput sendiri bukan hanya memakan waktu 2-3 jam, tapi juga membutuhkan tenaga dan peralatan yang memadai. Dengan menggunakan jasa potong rumput panggilan dari Tebasrumput.com, Anda bisa menghemat waktu berharga Anda untuk keluarga atau istirahat. Tim kami datang membawa mesin potong modern yang bekerja jauh lebih cepat dan hasilnya jauh lebih rata dibanding gunting manual. 
+
+Dapatkan halaman bersih tanpa harus berkeringat di bawah terik matahari Palembang. 
+
+Pesan layanan kami sekarang juga melalui WA 0812-1115-6865 untuk penawaran harga spesial hari ini!`
+  },
+  {
+    title: "Mengatasi Rumput Liar (Gulma) di Area Perkantoran",
+    tag: "Bisnis",
+    date: "23 Mar 2026",
+    desc: "Gulma bisa merusak estetika kantor. Pelajari cara pencegahan agar rumput utama tetap dominan dan hijau.",
+    content: `Citra profesional sebuah kantor di Palembang juga ditentukan oleh kebersihan halamannya. Masalah utama yang sering muncul adalah tumbuhnya gulma atau rumput liar yang merusak pemandangan rumput utama. Pencegahan paling efektif adalah dengan pemotongan rutin yang tidak terlalu pendek, agar akar rumput utama tetap kuat menutupi tanah sehingga bibit gulma tidak mendapat ruang untuk tumbuh. Selain itu, pembersihan manual pada area sudut juga sangat disarankan. 
+
+Kami menawarkan paket perawatan taman kantor bulanan yang terjangkau agar gedung Anda selalu tampak asri. 
+
+Konsultasikan kebutuhan taman kantor Anda via WhatsApp di 0812-1115-6865.`
+  },
+  {
+    title: "Rumput Manila vs Rumput Jepang: Mana yang Cocok untuk Palembang?",
+    tag: "Desain",
+    date: "22 Mar 2026",
+    desc: "Memilih jenis rumput harus sesuai dengan iklim Sumatera Selatan. Cek kelebihan masing-masing di artikel ini.",
+    content: `Sebelum membuat taman di Palembang, Anda perlu memilih jenis rumput yang tahan panas. Rumput Manila dikenal sangat kuat terhadap injakan dan cuaca panas, namun pertumbuhannya agak lambat. Sementara Rumput Jepang memiliki tekstur yang sangat cantik dan halus, tapi membutuhkan penyiraman yang lebih intensif saat kemarau Palembang melanda. Keduanya sama-sama populer, namun untuk perawatan yang lebih 'low maintenance' di wilayah Sumatera Selatan, Rumput Manila seringkali menjadi pilihan favorit. 
+
+Tim kami ahli dalam memangkas kedua jenis rumput ini agar tetap dalam kondisi terbaik sepanjang musim. 
+
+Info lengkap jasa pangkas rumput profesional hubungi WA 0812-1115-6865.`
+  },
+  {
+    title: "Cara Menghilangkan Genangan Air di Halaman Setelah Hujan",
+    tag: "Teknis",
+    date: "21 Mar 2026",
+    desc: "Hujan deras sering bikin halaman becek. Tips drainase sederhana agar taman tetap kering dan indah.",
+    content: `Hujan deras di Palembang seringkali menyisakan genangan di halaman rumah. Genangan air yang lama bisa merusak akar rumput dan menyebabkan pembusukan. Solusinya, buatlah lubang biopori atau parit kecil di tepi taman sebagai sistem drainase alami. Selain itu, pastikan permukaan tanah taman memiliki kemiringan yang cukup ke arah saluran pembuangan. Jika tanah Anda sudah terlalu padat, lakukan 'aerasi' atau pelubangan kecil pada permukaan tanah agar air lebih cepat terserap ke bawah. 
+
+Kami tidak hanya memotong rumput, tapi juga bisa membantu membersihkan sisa sampah yang menyumbat drainase taman Anda. 
+
+Hubungi kami untuk penawaran jasa kebersihan taman di 0812-1115-6865.`
+  },
+  {
+    title: "Manfaat Taman Rapi bagi Kesehatan Mental Penghuni Rumah",
+    tag: "Gaya Hidup",
+    date: "20 Mar 2026",
+    desc: "Melihat rumput yang terpangkas rapi bisa mengurangi stres. Inilah alasan psikologis mengapa rumah butuh taman bersih.",
+    content: `Lingkungan yang bersih adalah cerminan pikiran yang tenang. Studi menunjukkan bahwa melihat area hijau yang rapi dan terawat dapat menurunkan kadar kortisol (hormon stres). Bagi penghuni rumah di kota sibuk seperti Palembang, memiliki halaman yang rapi memberikan efek relaksasi yang luar biasa saat pulang kerja. Sebaliknya, halaman yang berantakan dengan rumput liar yang tinggi seringkali memberikan beban pikiran tambahan secara tidak sadar. 
+
+Biarkan kami yang mengurus keruwetan di halaman Anda, sementara Anda menikmati hasilnya dengan tenang. 
+
+Booking jadwal pembersihan halaman Anda via WhatsApp di 0812-1115-6865.`
+  },
+  {
+    title: "Biaya Rata-rata Potong Rumput di Kota Palembang 2026",
+    tag: "Harga",
+    date: "19 Mar 2026",
+    desc: "Mau budget buat taman? Cek kisaran harga terbaru tukang rumput panggilan berdasarkan luas lahan.",
+    content: `Berapa biaya jasa potong rumput di Palembang tahun ini? Umumnya, harga ditentukan oleh luas lahan dan tingkat kesulitan (ketinggian rumput). Untuk lahan kavling standar rumah (60-100 m²), biaya rata-rata berkisar antara 300 ribu hingga 500 ribu rupiah. Harga ini biasanya sudah termasuk jasa pembersihan sisa potongan rumput. Memilih jasa yang menawarkan transparansi harga seperti Tebasrumput.com sangat penting agar Anda tidak terkena biaya tambahan yang tidak terduga di lapangan. 
+
+Kami memberikan estimasi harga yang jujur dan bersaing untuk seluruh wilayah Palembang. 
+
+Dapatkan penawaran harga pasti hari ini dengan mengirim foto halaman Anda ke WA 0812-1115-6865.`
+  },
+  {
+    title: "Rahasia Rumput Tetap Hijau Meski Musim Kemarau Panjang",
+    tag: "Musiman",
+    date: "18 Mar 2026",
+    desc: "Gunakan trik pemupukan alami dan waktu siram yang tepat agar rumput tidak kering saat kemarau melanda.",
+    content: `Musim kemarau panjang adalah musuh utama rumput hijau. Rahasia agar rumput tetap segar di Palembang adalah dengan tidak memotongnya terlalu pendek saat kemarau. Rumput yang sedikit lebih panjang akan melindungi tanah di bawahnya dari penguapan berlebihan, sehingga akar tetap lembap. Selain itu, pemberian pupuk kompos sangat membantu tanah menahan cadangan air lebih lama dibandingkan pupuk kimia biasa. Konsistensi dalam menyiram di sore hari juga menjadi kunci sukses. 
+
+Tim kami paham betul cara menangani rumput di berbagai musim yang ada di Sumatera Selatan. 
+
+Percayakan keindahan taman Anda pada ahlinya. WA kami di 0812-1115-6865.`
+  },
+  {
+    title: "Alat-alat Wajib untuk Membersihkan Kebun Belakang Rumah",
+    tag: "Peralatan",
+    date: "17 Mar 2026",
+    desc: "Mengenal fungsi mesin potong rumput vs gunting manual untuk detail pengerjaan yang maksimal.",
+    content: `Untuk hasil pembersihan maksimal, penggunaan alat yang tepat sangat krusial. Mesin potong rumput bermotor sangat efektif untuk area luas agar pengerjaan cepat selesai dan rata. Namun, untuk area pojok atau di bawah tanaman hias, gunting manual atau pemotong senar (string trimmer) tetap dibutuhkan untuk hasil yang presisi. Selain itu, sapu lidi kuat atau penggaruk daun sangat penting untuk mengangkat sisa pangkasan agar tidak menjadi sarang jamur bagi rumput yang masih hidup. 
+
+Tebasrumput.com datang dengan peralatan lengkap dan modern untuk menjamin hasil yang memuaskan. 
+
+Cari jasa potong rumput dengan alat lengkap di Palembang? Hubungi WA 0812-1115-6865 sekarang.`
+  }
+];
+
 const PALEMBANG_REGIONS = [
   "Alang-Alang Lebar",
   "Bukit Kecil",
@@ -70,6 +183,7 @@ const PALEMBANG_REGIONS = [
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState<"terms" | "privacy" | null>(null);
+  const [activeBlog, setActiveBlog] = useState<any>(null);
   const [formData, setFormData] = useState({
     name: "",
     region: "",
@@ -629,68 +743,7 @@ export default function App() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "5 Tips Merawat Rumput Gajah Mini di Palembang yang Terik",
-                  desc: "Rumput gajah mini butuh perhatian ekstra saat cuaca Palembang sedang panas-panasnya. Simak cara penyiraman yang benar.",
-                  date: "26 Mar 2026",
-                  tag: "Tips Perawatan"
-                },
-                {
-                  title: "Jadwal Terbaik Memotong Rumput untuk Hunian di Kalidoni",
-                  desc: "Kapan waktu paling pas memanggil tukang rumput? Kami bahas frekuensi ideal pangkas rumput agar tetap rapi.",
-                  date: "25 Mar 2026",
-                  tag: "Jadwal"
-                },
-                {
-                  title: "Jasa Potong Rumput Panggilan Palembang: Mengapa Hemat Waktu?",
-                  desc: "Daripada capek sendiri, menggunakan jasa profesional jauh lebih efisien. Lihat perbandingannya di sini.",
-                  date: "24 Mar 2026",
-                  tag: "Edukasi"
-                },
-                {
-                  title: "Mengatasi Rumput Liar (Gulma) di Area Perkantoran",
-                  desc: "Gulma bisa merusak estetika kantor. Pelajari cara pencegahan agar rumput utama tetap dominan dan hijau.",
-                  date: "23 Mar 2026",
-                  tag: "Bisnis"
-                },
-                {
-                  title: "Rumput Manila vs Rumput Jepang: Mana yang Cocok untuk Palembang?",
-                  desc: "Memilih jenis rumput harus sesuai dengan iklim Sumatera Selatan. Cek kelebihan masing-masing di artikel ini.",
-                  date: "22 Mar 2026",
-                  tag: "Desain"
-                },
-                {
-                  title: "Cara Menghilangkan Genangan Air di Halaman Setelah Hujan",
-                  desc: "Hujan deras sering bikin halaman becek. Tips drainase sederhana agar taman tetap kering dan indah.",
-                  date: "21 Mar 2026",
-                  tag: "Teknis"
-                },
-                {
-                  title: "Manfaat Taman Rapi bagi Kesehatan Mental Penghuni Rumah",
-                  desc: "Melihat rumput yang terpangkas rapi bisa mengurangi stres. Inilah alasan psikologis mengapa rumah butuh taman bersih.",
-                  date: "20 Mar 2026",
-                  tag: "Gaya Hidup"
-                },
-                {
-                  title: "Biaya Rata-rata Potong Rumput di Kota Palembang 2026",
-                  desc: "Mau budget buat taman? Cek kisaran harga terbaru tukang rumput panggilan berdasarkan luas lahan.",
-                  date: "19 Mar 2026",
-                  tag: "Harga"
-                },
-                {
-                  title: "Rahasia Rumput Tetap Hijau Meski Musim Kemarau Panjang",
-                  desc: "Gunakan trik pemupukan alami dan waktu siram yang tepat agar rumput tidak kering saat kemarau melanda.",
-                  date: "18 Mar 2026",
-                  tag: "Musiman"
-                },
-                {
-                  title: "Alat-alat Wajib untuk Membersihkan Kebun Belakang Rumah",
-                  desc: "Mengenal fungsi mesin potong rumput vs gunting manual untuk detail pengerjaan yang maksimal.",
-                  date: "17 Mar 2026",
-                  tag: "Peralatan"
-                }
-              ].map((blog, idx) => (
+              {blogs.map((blog, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
@@ -706,7 +759,7 @@ export default function App() {
                     </div>
                     <h4 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">{blog.title}</h4>
                     <p className="text-slate-500 text-xs md:text-sm leading-relaxed flex-grow">{blog.desc}</p>
-                    <button onClick={handleBooking} className="flex items-center gap-2 text-primary font-bold text-xs md:text-sm group-hover:gap-4 transition-all pt-4">
+                    <button onClick={() => setActiveBlog(blog)} className="flex items-center gap-2 text-primary font-bold text-xs md:text-sm group-hover:gap-4 transition-all pt-4">
                       Selengkapnya <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -857,6 +910,54 @@ export default function App() {
                 >
                   Saya Mengerti
                 </button>
+              </div>
+            </motion.div>
+          </div>
+        )
+      }
+      {/* Modal Blog */}
+      {
+        activeBlog && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              onClick={() => setActiveBlog(null)}
+              className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              className="relative bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-3xl p-8 md:p-12 shadow-2xl"
+            >
+              <button
+                onClick={() => setActiveBlog(null)}
+                className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors"
+              >
+                <X className="w-6 h-6 text-slate-400" />
+              </button>
+
+              <div className="space-y-6">
+                <div className="flex justify-between items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">{activeBlog.tag}</span>
+                  <span className="text-xs text-slate-400 font-medium">{activeBlog.date}</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">{activeBlog.title}</h2>
+                <div className="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base whitespace-pre-line">
+                  {activeBlog.content}
+                </div>
+
+                <div className="mt-12 pt-6 border-t border-slate-100">
+                  <button
+                    onClick={() => {
+                      setActiveBlog(null);
+                      handleBooking();
+                    }}
+                    className="btn-primary w-full py-4 flex items-center justify-center gap-3 text-lg"
+                  >
+                    <MessageCircle className="w-6 h-6" /> Hubungi via WhatsApp
+                  </button>
+                </div>
               </div>
             </motion.div>
           </div>
