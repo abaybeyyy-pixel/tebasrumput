@@ -1078,15 +1078,15 @@ export default function App() {
               <p className="text-slate-500 max-w-2xl mx-auto font-light text-sm md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Palembang.</p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar -mx-6 px-6">
               {blogs.map((blog, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.05 }}
-                  className="group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500"
+                  className="min-w-[280px] md:min-w-[380px] snap-start group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="flex flex-col h-full space-y-4">
                     <div className="flex justify-between items-center">
@@ -1094,7 +1094,7 @@ export default function App() {
                       <span className="text-xs text-slate-400 font-medium">{blog.date}</span>
                     </div>
                     <h4 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">{blog.title}</h4>
-                    <p className="text-slate-500 text-xs md:text-sm leading-relaxed flex-grow">{blog.desc}</p>
+                    <p className="text-slate-500 text-xs md:text-sm leading-relaxed flex-grow line-clamp-3">{blog.desc}</p>
                     <button onClick={() => setActiveBlog(blog)} className="flex items-center gap-2 text-primary font-bold text-xs md:text-sm group-hover:gap-4 transition-all pt-4">
                       Selengkapnya <ArrowRight className="w-4 h-4" />
                     </button>
