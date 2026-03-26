@@ -48,271 +48,449 @@ const WA_LINK = "https://wa.me/6281211156865";
 
 const blogs = [
   {
-    title: "5 Tips Ampuh Merawat Rumput Gajah Mini di Cuaca Palembang yang Terik",
+    title: "Panduan Lengkap Merawat Rumput Gajah Mini di Cuaca Terik Palembang",
     tags: ["Tips Perawatan", "Palembang", "Rumput Gajah Mini", "Taman"],
     date: "26 Mar 2026",
-    desc: "Rumput gajah mini butuh perhatian ekstra saat cuaca Palembang sedang panas-panasnya. Simak panduan lengkap penyiraman, pemupukan, dan perawatannya.",
+    desc: "Menghadapi cuaca Palembang yang ekstrem? Pelajari teknik penyiraman, pemupukan, dan perlindungan rumput gajah mini agar tetap hijau royo-royo.",
     source: "https://kumparan.com/jasa-taman/cara-merawat-rumput-gajah-mini",
     content: `
-      <h2>Kenapa Rumput Gajah Mini Populer di Palembang?</h2>
-      <p>Rumput gajah mini merupakan pilihan favorit untuk taman minimalis di perumahan Palembang seperti CitraGrand City atau OPI Regency. Suhu di Palembang yang bisa mencapai 34-36°C menjadi tantangan tersendiri.</p>
+      <h2>Tantangan Menanam Gajah Mini di Sumatera Selatan</h2>
+      <p>Kota Palembang dikenal memiliki indeks UV yang cukup tinggi dan suhu rata-rata yang bisa mencapai 35°C di siang hari. Bagi pemilik rumah di area seperti <strong>CitraGrand City</strong> atau <strong>OPI Regency</strong>, rumput gajah mini adalah pilihan estetis, namun rentan menguning jika salah perawatan.</p>
       
-      <h3>1. Waktu Penyiraman yang Strategis</h3>
-      <p>Jangan pernah menyiram rumput di siang hari saat matahari sedang terik. Waktu terbaik adalah Pagi (06:00 - 08:00) dan Sore (16:30 - 18:00).</p>
+      <h3>1. Teknik Penyiraman 'Deep Watering'</h3>
+      <p>Banyak orang melakukan kesalahan dengan menyiram sedikit-sedikit tapi sering. Di Palembang, Anda disarankan menggunakan teknik <em>deep watering</em>.</p>
+      <ul>
+        <li><strong>Waktu Ideal:</strong> Lakukan penyiraman antara jam 6 hingga 7 pagi. Ini memberikan waktu bagi air untuk meresap ke akar sebelum matahari mulai menyegat.</li>
+        <li><strong>Volume Air:</strong> Pastikan air meresap hingga kedalaman 10-15 cm di bawah permukaan tanah.</li>
+        <li><strong>Hindari Penyiraman Malam:</strong> Menyiram saat malam hari di cuaca lembap Palembang dapat memicu pertumbuhan jamur tanah.</li>
+      </ul>
 
-      <h3>2. Pembersihan Gulma Secara Rutin</h3>
-      <p>Rumput liar atau gulma seringkali tumbuh di sela-sela rumput gajah mini. Gunakan alat cukil kecil untuk mencabut gulma beserta akarnya.</p>
+      <h3>2. Nutrisi Tambahan (Pemupukan)</h3>
+      <p>Rumput gajah mini membutuhkan asupan Nitrogen yang konsisten. Gunakan pupuk NPK 16-16-16 setiap 2 bulan sekali. Taburkan secara merata dan segera siram agar butiran pupuk hancur dan tidak membakar daun rumput.</p>
 
-      <h3>3. Pemupukan Organik vs Kimia</h3>
-      <p>Untuk tanah di wilayah Palembang yang cenderung asam, penggunaan pupuk NPK secara berkala sangat disarankan.</p>
+      <h3>3. Penyiangan Gulma (Rumput Teki)</h3>
+      <p>Masalah utama di Palembang adalah pertumbuhan rumput teki yang sangat cepat. Cabutlah gulma hingga ke akarnya menggunakan pencukil kecil minimal satu minggu sekali agar nutrisi tanah tidak direbut.</p>
+
+      <blockquote>
+        <p><strong>Butuh Bantuan?</strong> Jika kesibukan membuat Anda sulit merawat taman secara detail, tim <strong>Tebasrumput.com</strong> siap membantu perawatan rutin dengan tim profesional berpengalaman di seluruh wilayah Palembang.</p>
+      </blockquote>
     `
   },
   {
-    title: "Jadwal Terbaik Memotong Rumput untuk Hunian di Kalidoni & Sako",
+    title: "Kapan Waktu Terbaik Memotong Rumput di Kalidoni dan Sako?",
     tags: ["Jadwal", "Kalidoni", "Sako", "Layanan"],
     date: "25 Mar 2026",
-    desc: "Kapan waktu paling pas memanggil tukang rumput? Kami bahas frekuensi ideal pangkas rumput agar tetap rapi di wilayah Kalidoni.",
+    desc: "Frekuensi pemotongan rumput sangat dipengaruhi oleh lokasi. Simak panduan jadwal pemangkasan untuk wilayah Palembang Timur.",
     source: "https://www.flamboyanasri.com/2021/04/jadwal-memotong-rumput.html",
     content: `
-      <h2>Pentingnya Konsistensi Pemotongan Rumput</h2>
-      <p>Wilayah seperti Kalidoni, Sako, dan Sematang Borang memiliki kelembapan yang cukup tinggi. Hal ini memacu pertumbuhan rumput liar lebih cepat.</p>
+      <h2>Mengapa Wilayah Kalidoni dan Sako Berbeda?</h2>
+      <p>Wilayah Palembang bagian Timur seperti <strong>Kalidoni</strong>, <strong>Sako</strong>, dan <strong>Sematang Borang</strong> cenderung memiliki kontur tanah yang lebih lembap. Hal ini mengakibatkan pertumbuhan rumput liar dan tanaman hias menjadi lebih masif dibandingkan wilayah lainnya.</p>
       
-      <h3>Frekuensi Kerja yang Disarankan</h3>
+      <h3>Strategi Pemotongan Berdasarkan Musim</h3>
+      <p>Menjaga kerapian halaman bukan hanya soal estetika, tapi juga soal mencegah sarang binatang melata seperti ular atau kelabang yang sering muncul di rumput tinggi.</p>
       <ul>
-        <li><strong>Musim Hujan:</strong> Setiap 2 minggu sekali.</li>
-        <li><strong>Musim Kemarau:</strong> Setiap 3-4 minggu sekali.</li>
+        <li><strong>Musim Penghujan (Oktober - April):</strong> Rumput tumbuh 2x lebih cepat. Lakukan pemangkasan setiap <strong>10-14 hari sekali</strong>. Jangan menunggu hingga setinggi lutut karena batang rumput akan mengeras dan sulit dirapikan.</li>
+        <li><strong>Musim Kemarau Berdebu:</strong> Pertumbuhan melambat, namun debu sering menempel. Potonglah setiap <strong>3-4 minggu sekali</strong> dengan ketinggian yang sedikit lebih tinggi (sekitar 5 cm) untuk menjaga kelembapan akar.</li>
       </ul>
 
-      <p>Kami melayani area Kalidoni dengan respon cepat dan hasil pengerjaan yang rapi sesuai standar profesional.</p>
+      <h3>Manfaat Memangkas Secara Konsisten</h3>
+      <p>Memotong rumput secara rutin merangsang pertumbuhan tunas baru yang lebih hijau dan lembut. Selain itu, sinar matahari akan lebih mudah masuk ke sela-sela batang rumput, mencegah pertumbuhan lumut dan jamur yang merusak visual taman Anda.</p>
+
+      <p>Tebasrumput.com menyediakan layanan langganan bulanan khusus untuk area Kalidoni dan sekitarnya. Hubungi kami untuk jadwal survey gratis!</p>
     `
   },
   {
-    title: "Jasa Potong Rumput Panggilan Palembang: Mengapa Lebih Hemat Waktu?",
+    title: "Investasi Waktu: Jasa Potong Rumput Panggilan vs Memotong Sendiri",
     tags: ["Edukasi", "Layanan Panggilan", "Palembang", "Hemat"],
     date: "24 Mar 2026",
-    desc: "Daripada capek sendiri, menggunakan jasa profesional jauh lebih efisien. Lihat perbandingannya di sini.",
+    desc: "Seringkali kita merasa bisa melakukannya sendiri, tapi benarkah itu menguntungkan? Mari hitung biaya dan energinya.",
     source: "https://www.99.co/blog/indonesia/jasa-potong-rumput-panggilan/",
     content: `
-      <h2>Efisiensi vs Lelah: Mana Pilihan Anda?</h2>
-      <p>Kesibukan warga Kota Palembang seringkali membuat perawatan rumah terabaikan. Memotong rumput sendiri memakan waktu dan tenaga besar.</p>
+      <h2>Analisis Biaya dan Tenaga Perawatan Taman</h2>
+      <p>Bagi warga Palembang yang bekerja di sektor perkantoran atau bisnis, waktu luang di akhir pekan sangatlah berharga. Seringkali rencana memotong rumput sendiri berakhir dengan kelelahan atau hasil yang tidak maksimal.</p>
 
-      <h3>Kelebihan Menggunakan Jasa Profesional:</h3>
+      <h3>Perbandingan Realistis:</h3>
+      <p><strong>1. Menggunakan Tenaga Sendiri:</strong></p>
       <ul>
-        <li><strong>Peralatan Modern:</strong> Jauh lebih cepat dari gunting manual.</li>
-        <li><strong>Hasil Presisi:</strong> Ketinggian rumput dipastikan rata.</li>
-        <li><strong>Pembersihan Total:</strong> Sisa potongan langsung kami angkut.</li>
+        <li>Waktu yang dihabiskan: 3-5 jam (termasuk persiapan dan bersih-bersih).</li>
+        <li>Biaya alat: Pembelian mesin potong, bensin, oli, dan perawatan alat.</li>
+        <li>Risiko: Kelelahan fisik, cedera jika tidak terbiasa, dan hasil yang tidak rata.</li>
       </ul>
+
+      <p><strong>2. Menggunakan Jasa Tebasrumput.com:</strong></p>
+      <ul>
+        <li>Waktu: Anda bisa bersantai atau melakukan hobi lain.</li>
+        <li>Biaya: Transparan mulai dari 300rb, sudah termasuk angkut sampah.</li>
+        <li>Hasil: Rapi kualitas mesin profesional, sudut-sudut sulit terjangkau, dan taman langsung bersih seketika.</li>
+      </ul>
+
+      <p>Kesimpulannya, menggunakan jasa profesional bukan sekadar pengeluaran, melainkan investasi untuk kenyamanan dan kesehatan mental Anda. Halaman bersih tanpa keringat!</p>
     `
   },
   {
-    title: "Strategi Efektif Mengatasi Rumput Liar (Gulma) di Area Perkantoran",
+    title: "Mengatasi Gulma dan Rumput Liar di Halaman Kantor Perusahaan",
     tags: ["Bisnis", "Kantor", "Gulma", "Pembersihan Lahan"],
     date: "23 Mar 2026",
-    desc: "Gulma bisa merusak estetika kantor. Pelajari cara pencegahan agar rumput utama tetap dominan dan hijau.",
+    desc: "Citra perusahaan dimulai dari pandangan pertama tamu saat memasuki halaman. Pastikan area bisnis Anda selalu tampak profesional.",
     source: "https://gdm.id/cara-mengatasi-gulma-rumput/",
     content: `
-      <h2>Citra Profesional Mulai dari Halaman Kantor</h2>
-      <p>Gedung perkantoran atau ruko di Palembang seringkali terganggu oleh pertumbuhan gulma di sela paving block. Pencegahan paling efektif adalah pemotongan rutin.</p>
+      <h2>Wajah Bisnis Anda Adalah Taman Depan Kantor</h2>
+      <p>Banyak gedung perkantoran di area <strong>Jl. Sudirman</strong> atau <strong>Basuki Rahmat</strong> yang memiliki area hijau. Masalah utama yang sering timbul adalah tumbuhnya rumput liar di sela-sela <em>paving block</em> atau taman mini yang merusak estetika profesional kantor Anda.</p>
       
-      <p>Kami menawarkan paket perawatan taman kantor bulanan yang terjangkau agar gedung Anda selalu tampak asri.</p>
+      <h3>Dampak Negatif Membiarkan Gulma:</h3>
+      <ol>
+        <li><strong>Kesan Kurang Terawat:</strong> Membuat klien meragukan kedisiplinan perusahaan dalam hal detail.</li>
+        <li><strong>Kerusakan Infrastruktur:</strong> Akar gulma yang kuat bisa mengangkat paving block atau merusak saluran drainase kecil.</li>
+        <li><strong>Sarang Hama:</strong> Menjadi tempat persembunyian nyamuk dan serangga pengganggu kenyamanan kantor.</li>
+      </ol>
+      
+      <h3>Solusi Perawatan Korporat</h3>
+      <p>Kami menawarkan paket <strong>Pembersihan Lahan Komersial</strong>. Tim kami akan melakukan pembersihan total, mulai dari pemangkasan rumput utama hingga pembersihan rumput liar di sela bangunan menggunakan mesin senar khusus agar tidak merusak tembok atau lantai.</p>
+      
+      <p>Segera buat kontrak perawatan rutin agar kantor Anda selalu tampak asri menyegarkan bagi karyawan dan tamu bisnis Anda.</p>
     `
   },
   {
-    title: "Rumput Manila vs Rumput Jepang: Mana yang Cocok untuk Palembang?",
+    title: "Rumput Manila vs Rumput Jepang: Perbandingan untuk Taman Palembang",
     tags: ["Desain", "Edukasi", "Rumput Manila", "Rumput Jepang"],
     date: "22 Mar 2026",
-    desc: "Memilih jenis rumput harus sesuai dengan iklim Sumatera Selatan. Cek kelebihan masing-masing di artikel ini.",
+    desc: "Ingin membangun taman baru tapi bingung pilih jenis rumput? Baca panduan pemilihan untuk wilayah Sumatera Selatan.",
     source: "https://arsitag.com/article/mengenal-jenis-rumput-taman",
     content: `
-      <h2>Karakteristik Rumput untuk Iklim Palembang</h2>
-      <p>Di Sumatera Selatan, tantangan terbesarnya adalah paparan sinar matahari yang intens.</p>
+      <h2>Memilih Karpet Hijau yang Tepat</h2>
+      <p>Tidak semua rumput cocok dengan karakteristik tanah di Sumatera Selatan. Sebelum Anda memesan bibit, pahami perbedaan dua primadona ini.</p>
 
       <h3>1. Rumput Manila (Zoysia Matrella)</h3>
-      <p>Sangat ideal untuk area yang sering diinjak dan sangat tahan panas.</p>
+      <p>Rumput ini sering digunakan untuk lapangan golf karena kekuatannya. Di Palembang, rumput manila sangat disukai karena:</p>
+      <ul>
+        <li><strong>Tahan Injak:</strong> Sangat kuat untuk area bermain anak atau hewan peliharaan.</li>
+        <li><strong>Warna Stabil:</strong> Hijau pekat meski terpapar matahari langsung.</li>
+        <li><strong>Minus:</strong> Pertumbuhannya sangat lambat, butuh kesabaran ekstra saat penanaman awal.</li>
+      </ul>
 
       <h3>2. Rumput Jepang (Zoysia Japonica)</h3>
-      <p>Terlihat premium namun butuh penyiraman ekstrim jika kemarau panjang melanda.</p>
+      <p>Memiliki bentuk daun yang lebih runcing dan tegak. Kelebihannya:</p>
+      <ul>
+        <li><strong>Estetika Tinggi:</strong> Terlihat sangat rapi dan formal, cocok untuk taman depan perumahan elit.</li>
+        <li><strong>Mudah Tumbuh:</strong> Lebih cepat menutup tanah dibandingkan manila.</li>
+        <li><strong>Minus:</strong> Sangat manja. Jika telat siram sedikit saja saat kemarau Palembang, daunnya cepat menguning dan mati.</li>
+      </ul>
+
+      <p>Tim <strong>Tebasrumput.com</strong> memiliki keahlian khusus dalam menangani kedua jenis rumput ini. Kami tahu perbedaan mata pisau mesin yang tepat agar potongan tidak merusak struktur daunnya.</p>
     `
   },
   {
-    title: "Cara Menghilangkan Genangan Air di Halaman Setelah Hujan Deras",
+    title: "Mengatasi Masalah Genangan Air dan Drainase Taman Pasca Hujan",
     tags: ["Teknis", "Drainase", "Tips Rumah", "Palembang"],
     date: "21 Mar 2026",
-    desc: "Hujan deras sering bikin halaman becek. Tips drainase sederhana agar taman tetap kering dan indah.",
+    desc: "Hujan deras di Palembang seringkali menyisakan genangan. Pelajari trik teknis agar taman Anda tidak becek.",
     source: "https://www.rumah123.com/panduan-properti/drainase-taman/",
     content: `
-      <h2>Solusi Halaman Becek di Musim Hujan</h2>
-      <p>Hujan deras di Palembang seringkali menyisakan genangan. Solusinya:</p>
+      <h2>Halaman Bebas Becek di Musim Hujan</h2>
+      <p>Intensitas hujan di wilayah Sumatera Selatan bisa sangat tinggi. Bagi Anda yang memiliki halaman cukup luas, genangan air yang menetap lebih dari 24 jam bisa membunuh akar rumput dan menyebabkan bau tidak sedap.</p>
+
+      <h3>Tindakan Praktis yang Bisa Anda Lakukan:</h3>
       <ul>
-        <li><strong>Lubang Biopori:</strong> Buat resapan di titik terendah.</li>
-        <li><strong>Kemiringan Tanah:</strong> Minimal 2% ke arah got.</li>
+        <li><strong>Pembuatan Biopori:</strong> Buatlah lubang silindris vertikal ke dalam tanah. Isi dengan sampah organik untuk meningkatkan daya serap air tanah secara alami.</li>
+        <li><strong>Koreksi Kemiringan (Slopeing):</strong> Pastikan permukaan tanah taman memiliki kemiringan 1-2 derajat ke arah parit atau saluran pembuangan utama.</li>
+        <li><strong>Aerasi Manual:</strong> Gunakan garpu taman untuk menusuk-nusuk area yang sering tergenang. Ini akan memecah kepadatan tanah dan memberi jalan air masuk ke lapisan bawah.</li>
       </ul>
+
+      <p>Saat tim kami bertugas memotong rumput, kami juga bisa membantu memeriksa saluran drainase taman Anda agar bebas dari tumpukan sampah atau sisa potongan rumput lama yang menyumbat.</p>
     `
   },
   {
-    title: "Manfaat Psikologis Taman yang Rapi bagi Kesehatan Mental",
+    title: "Taman Rapi: Pengaruh Kebersihan Halaman Terhadap Kesehatan Mental",
     tags: ["Gaya Hidup", "Kesehatan", "Psikologi", "Rumah"],
     date: "20 Mar 2026",
-    desc: "Melihat rumput yang terpangkas rapi bisa mengurangi stres. Inilah alasan mengapa rumah butuh taman bersih.",
+    desc: "Kesehatan mental dimulai dari apa yang kita lihat setiap hari. Mengapa taman yang berantakan bikin stres?",
     source: "https://www.liputan6.com/lifestyle/read/manfaat-berkebun-bagi-kesehatan-mental",
     content: `
-      <h2>Taman Rapih, Pikiran Jernih</h2>
-      <p>Studi menunjukkan melihat area hijau yang terawat dapat menurunkan kadar kortisol (hormon stres) hingga 15%.</p>
-      <p>Bagi warga Palembang, memiliki halaman rapi memberikan efek relaksasi instan saat sampai di rumah.</p>
+      <h2>Visual Relaksasi di Depan Mata</h2>
+      <p>Pernahkah Anda merasa lebih tenang saat melihat rumput yang baru saja dipangkas rapi? Ternyata itu bukan sekadar perasaan. Secara psikologis, lingkungan yang teratur membantu otak untuk memproses informasi lebih tenang.</p>
+
+      <h3>Mengapa Halaman Bersih Sangat Penting?</h3>
+      <ul>
+        <li><strong>Lingkungan Bebas Cemas:</strong> Rumput liar yang tinggi secara tidak sadar memicu kecemasan akan keberadaan hewan berbahaya (ular/serangga).</li>
+        <li><strong>Area Terbuka untuk Anak:</strong> Taman yang rapi memberikan ruang aman bagi anak untuk beraktivitas outdoor, menjauhkan mereka sejenak dari layar gadget.</li>
+        <li><strong>Kepuasan Visual:</strong> Melihat warna hijau yang teratur meningkatkan hormon dopamin yang membuat kita merasa bahagia dan bangga akan hunian kita.</li>
+      </ul>
+
+      <p>Biarkan <strong>Tebasrumput.com</strong> mengambil beban pekerjaan berat di halaman Anda. Anda cukup duduk manis di teras, minum kopi, dan menikmati pemandangan taman yang asri setiap sore.</p>
     `
   },
   {
-    title: "Daftar Biaya Jasa Potong Rumput Terbaru di Palembang 2026",
+    title: "Estimasi Biaya dan Harga Jasa Potong Rumput di Palembang 2026",
     tags: ["Harga", "Layanan", "Promo", "Info Palembang"],
     date: "19 Mar 2026",
-    desc: "Mau budget buat taman? Cek kisaran harga terbaru tukang rumput panggilan berdasarkan luas lahan.",
+    desc: "Berapa anggaran yang harus disiapkan untuk memanggil tukang rumput? Cek tabel perkiraan harga kami.",
     source: "https://www.sejutataman.com/harga-jasa-potong-rumput/",
     content: `
-      <h2>Transparansi Harga Jasa Potong Rumput</h2>
-      <p>Di Tebasrumput.com, kami mengedepankan harga jujur. Estimasi 2026:</p>
+      <h2>Transparansi Harga Tanpa Biaya Tersembunyi</h2>
+      <p>Banyak pelanggan khawatir dengan biaya "tembak" di lapangan. Di Tebasrumput.com, kami mengedepankan transparansi agar Anda bisa merencanakan pengeluaran perawatan rumah dengan tepat.</p>
+
+      <h3>Faktor-faktor Penentu Harga:</h3>
+      <ol>
+        <li><strong>Luas Lahan:</strong> Satuan kavling standar biasanya lebih murah dibanding lahan luas borongan.</li>
+        <li><strong>Tinggi Rumput:</strong> Rumput yang sudah setinggi dada manusia membutuhkan tenaga dan bensin mesin yang lebih besar.</li>
+        <li><strong>Tingkat Kesulitan:</strong> Area yang banyak bebatuan atau kemiringan curam membutuhkan kehati-hatian ekstra.</li>
+      </ol>
+
+      <h3>Estimasi Layanan Palembang:</h3>
       <ul>
-        <li><strong>Lahan Kecil (60-80 m²):</strong> Rp 300.000</li>
-        <li><strong>Lahan Sedang:</strong> Rp 450.000 - Rp 550.000</li>
+        <li><strong>Paket 1 (Kavling Kecil):</strong> Rp 300.000 - Rp 350.000 (Cocok untuk rumah tipe 36 atau 45).</li>
+        <li><strong>Paket 2 (Lahan Sedang):</strong> Rp 450.000 - Rp 600.000 (Untuk lahan sisa atau samping rumah).</li>
+        <li><strong>Lahan Borongan:</strong> Nego di tempat setelah survey foto/video via WhatsApp.</li>
       </ul>
+
+      <p>Harga kami sudah termasuk biaya angkut sampah sisa potongan dan pembersihan area jalan setapak di sekitar taman. Sangat ekonomis dan terpercaya!</p>
     `
   },
   {
-    title: "Tips Rumput Tetap Hijau Segar Meski Kemarau Panjang di Sumatera",
+    title: "Rahasia Menjaga Rumput Tetap Hijau Segar di Musim Kemarau Sumatera",
     tags: ["Musiman", "Tips Kebun", "Kemarau", "Palembang"],
     date: "18 Mar 2026",
-    desc: "Gunakan trik pemupukan alami dan waktu siram yang tepat agar rumput tidak kering saat kemarau melanda.",
+    desc: "Kemarau panjang sering melanda Sumatera Selatan. Simak trik agar rumput taman tidak kering dan mati.",
     source: "https://disway.id/read/tips-merawat-rumput-kemarau",
     content: `
-      <h2>Rahasia Taman Hijau di Cuaca Ekstrim</h2>
-      <p>Jangan potong terlalu pendek saat kemarau! Rumput yang sedikit lebih panjang (5-7 cm) melindungi tanah dari penguapan berlebihan.</p>
+      <h2>Bertahan di Bawah Terik Matahari</h2>
+      <p>Musim kemarau di Palembang bisa menyebabkan tanah pecah-pecah jika tidak dikelola dengan benar. Rumput yang kering tidak hanya buruk secara visual, tapi juga sulit dipulihkan.</p>
+
+      <h3>Golden Rules di Musim Kemarau:</h3>
+      <ul>
+        <li><strong>Naikkan Ketinggian Potongan:</strong> Saat musim panas, jangan potong rumput terlalu pendek (minimal sisakan 5-7 cm). Daun yang lebih panjang akan memayungi tanah di bawahnya agar air tidak cepat menguap.</li>
+        <li><strong>Mulching:</strong> Jika memungkinkan, biarkan sisa potongan rumput halus tertinggal di atas lahan. Ini berfungsi sebagai pupuk alami sekaligus mulsa pengunci kelembapan.</li>
+        <li><strong>Waktu Siram:</strong> Fokuskan penyiraman di sore hari agar air memiliki waktu semalaman untuk meresap sebelum matahari muncul kembali.</li>
+      </ul>
+
+      <p>Tim profesional kami selalu menyesuaikan setelan mesin potong rumput berdasarkan cuaca saat itu. Kami menjamin rumput Anda tetap aman meski di cuaca ekstrim sekalipun.</p>
     `
   },
   {
-    title: "Peralatan Profesional: Mesin Potong vs Gunting Manual",
+    title: "Investasi Alat: Mesin Potong Rumput Modern vs Alat Manual",
     tags: ["Peralatan", "Teknis", "Profesional", "Kebun"],
     date: "17 Mar 2026",
-    desc: "Mengenal fungsi mesin potong rumput vs gunting manual untuk detail pengerjaan yang maksimal.",
+    desc: "Mengapa menggunakan mesin bermotor jauh lebih baik bagi kesehatan rumput Anda? Simak ulasan teknisnya.",
     source: "https://www.alatpro.id/perbedaan-mesin-potong-rumput/",
     content: `
-      <h2>Kenapa Kami Menggunakan Alat Modern?</h2>
-      <p>Mesin bermotor memberikan kecepatan, sementara String Trimmer merapikan pinggiran sempit dengan presisi.</p>
+      <h2>Kualitas Hasil Tergantung pada Ketajaman Alat</h2>
+      <p>Banyak warga menggunakan sabit atau gunting manual untuk merapikan taman. Meskipun murah, secara teknis hal ini bisa menghambat pertumbuhan rumput Anda.</p>
+
+      <h3>Kelebihan Mesin Potong Rumput Bermotor:</h3>
+      <ul>
+        <li><strong>Kecepatan Putaran Tinggi:</strong> Menghasilkan potongan yang bersih (<em>clean cut</em>). Sabit manual seringkali membuat batang rumput "sobek", yang bisa memicu penyakit tanaman.</li>
+        <li><strong>Efisiensi Waktu:</strong> Pekerjaan yang dilakukan manual 1 hari bisa selesai dalam 1-2 jam menggunakan mesin profesional.</li>
+        <li><strong>Kerataan Sempurna:</strong> Tidak ada area yang lebih tinggi atau lebih rendah, taman terlihat seperti karpet hotel bintang lima.</li>
+      </ul>
+
+      <p>Tebasrumput.com selalu menggunakan mesin terbaru dengan mata pisau yang selalu diasah setiap hari untuk memastikan hasil potongan yang sehat bagi rumput kesayangan Anda di wilayah Palembang.</p>
     `
   },
   // New 10 Articles
   {
-    title: "Rahasia Pemupukan NPK Mutiara untuk Rumput Gajah Mini",
+    title: "Panduan Aplikasi Pupuk NPK Mutiara untuk Rumput Gajah Mini",
     tags: ["Pupuk", "NPK", "Gajah Mini", "Tips"],
     date: "16 Mar 2026",
     desc: "Pelajari dosis tepat NPK 16-16-16 agar rumput gajah mini Anda tumbuh rimbun dan tidak mudah mati.",
     source: "https://kumparan.com/pupuk-npk-untuk-rumput-gajah-mini",
     content: `
-      <h2>Optimalkan Nutrisi dengan NPK Mutiara</h2>
-      <p>Pupuk NPK (Nitrogen, Phosfat, Kalium) adalah kunci utama. Dosis yang disarankan adalah 20-30 gram per meter persegi setiap 3 bulan sekali.</p>
-      <h3>Cara Aplikasi:</h3>
-      <p>Larutkan dalam air agar lebih cepat diserap akar, atau taburkan saat sore hari menjelang penyiraman.</p>
+      <h2>Nutrisi Seimbang: Kunci Rumput Sehat</h2>
+      <p>Banyak pemilik rumah di Palembang mengeluh rumput mereka tiba-tiba mengerdil atau berwarna kekuningan. Hal ini biasanya terjadi karena tanah sudah kehabisan nutrisi penting seperti Nitrogen (N), Fosfor (P), dan Kalium (K).</p>
+      
+      <h3>Mengapa Pilih NPK Mutiara 16-16-16?</h3>
+      <p>Pupuk NPK Mutiara memiliki komposisi hara yang seimbang. Nitrogen berfungsi untuk kesegaran daun, Fosfor untuk kekuatan akar, dan Kalium untuk daya tahan terhadap penyakit.</p>
+      <ul>
+        <li><strong>Dosis:</strong> Gunakan sekitar 30 gram per meter persegi lahan.</li>
+        <li><strong>Persiapan:</strong> Siram rumput secara merata 1 hari sebelum pemupukan agar tanah dalam kondisi lembap.</li>
+        <li><strong>Waktu Terbaik:</strong> Taburkan saat sore hari setelah matahari tidak menyengat. Segera siram setelah pupuk ditabur agar butirannya mencair dan tidak membuat daun rumput "hangus".</li>
+      </ul>
+
+      <p>Ingat, pemupukan yang berlebihan justru bisa merusak pH tanah. Lakukan pemupukan rutin setiap 2-3 bulan sekali untuk hasil yang optimal.</p>
     `
   },
   {
-    title: "Inspirasi Desain Taman Tropis Minimalis Perumahan Palembang",
+    title: "Inspirasi Taman Tropis Minimalis: Desain Ideal untuk Rumah Palembang",
     tags: ["Desain", "Modern", "Palembang", "Inspirasi"],
     date: "15 Mar 2026",
-    desc: "Ubah halaman sempit Anda menjadi oase tropis yang asri dengan konsep minimalis modern khas Sumatera Selatan.",
+    desc: "Membangun taman di lahan sempit Sumatera Selatan butuh strategi. Simak konsep desain Tropical Zen kami.",
     source: "https://arsitag.com/taman-tropis-minimalis-palembang",
     content: `
-      <h2>Konsep Tropical Zen di Tengah Kota</h2>
-      <p>Gunakan kombinasi rumput manila dengan tanaman Sansevieria untuk kesan modern dan perawatan yang sangat minim.</p>
+      <h2>Cantik Tanpa Repot: Konsep Modern Tropis</h2>
+      <p>Bagi warga Palembang yang memiliki lahan terbatas di perumahan tipe 36 atau 45, konsep minimalis adalah solusi terbaik. Fokus utama desain ini adalah integrasi antara area hijau yang rapi dengan elemen keras seperti batuan alam atau kayu.</p>
+      
+      <h3>Elemen Wajib Taman Minimalis Palembang:</h3>
+      <ol>
+        <li><strong>Rumput sebagai Karpet Alami:</strong> Gunakan rumput manila atau gajah mini yang dipangkas pendek secara rutin.</li>
+        <li><strong>Tanaman Vertikal:</strong> Gunakan dinding samping untuk menaruh tanaman gantung seperti <em>Lee Kwan Yew</em> untuk memberikan kesan air terjun hijau.</li>
+        <li><strong>Bebatuan Koral:</strong> Gunakan batu koral putih atau sikat di pinggiran taman untuk mempertegas batas area dan mempermudah pembersihan.</li>
+      </ol>
+
+      <p>Sebagus apapun desain taman Anda, kuncinya tetap pada pemangkasan rutin. Taman minimalis yang rimbun tanpa kontrol akan terlihat sangat berantakan dan menutupi cahaya masuk ke dalam rumah.</p>
     `
   },
   {
-    title: "10 Tanaman Hias Outdoor yang Tahan Panas Matahari Matahari Langsung",
+    title: "10 Tanaman Hias Outdoor yang Paling Kuat Menghadapi Terik Matahari",
     tags: ["Tanaman", "Outdoor", "Tahan Panas", "Kebun"],
     date: "14 Mar 2026",
-    desc: "Daftar tanaman yang tetap berbunga cantik meski terpapar terik matahari Palembang sepanjang hari.",
+    desc: "Daftar tanaman tangguh yang tetap berbunga cantik meski terpapar panas Palembang sepanjang hari.",
     source: "https://www.rumah123.com/tanaman-hias-tahan-panas/",
     content: `
-      <h2>Tanaman Tangguh untuk Cuaca Terik</h2>
+      <h2>Oase Berwarna di Halaman Depan</h2>
+      <p>Memilih tanaman hias di Palembang tidak bisa sembarangan. Tanaman yang tidak tahan panas (<em>indoor plants</em>) yang dipaksa di halaman terbuka akan cepat layu dan mati terbakar matahari.</p>
+      
+      <h3>Rekomendasi Tanaman Tahan Panas:</h3>
       <ul>
-        <li><strong>Bougainvillea:</strong> Semakin panas semakin berbunga.</li>
-        <li><strong>Portulaca:</strong> Si cantik yang mekar pukul 9 pagi.</li>
-        <li><strong>Lantana:</strong> Tahan kekeringan ekstrim.</li>
+        <li><strong>Bougainvillea (Bunga Kertas):</strong> Sangat tangguh, semakin terpapar panas justru bunganya akan semakin banyak dan berwarna cerah.</li>
+        <li><strong>Kaktus dan Sukulen Besar:</strong> Memiliki kemampuan menyimpan air yang luar biasa, cocok untuk dekorasi taman kering.</li>
+        <li><strong>Euphorbia:</strong> Memiliki bunga kecil yang cantik dan duri pelindung, sangat tahan terhadap kekeringan.</li>
+        <li><strong>Bunga Matahari:</strong> Memberikan keceriaan pada taman Anda dan sangat menyukai sinar matahari penuh.</li>
       </ul>
+
+      <p>Memiliki tanaman ini akan sangat menghemat waktu Anda dalam hal penyiraman, namun tetap pastikan area sekitarnya bersih dari tumpukan daun kering agar taman tetap terlihat estetis.</p>
     `
   },
   {
-    title: "Panduan Lengkap Memasang Paving Block Sendiri di Halaman",
+    title: "Panduan Teknis DIY: Cara Memasang Paving Block yang Rata dan Awet",
     tags: ["Teknis", "DIY", "Halaman", "Paving"],
     date: "13 Mar 2026",
-    desc: "Ingin halaman lebih rapi? Simak langkah teknis memasang paving block agar tidak bergelombang dan awet.",
+    desc: "Ingin mengubah area becek menjadi area parkir atau jalan setapak yang rapi? Simak panduan lengkapnya.",
     source: "https://www.detik.com/properti/tips-pasang-paving-block/",
     content: `
-      <h2>Lantai Halaman yang Stabil</h2>
-      <p>Kunci utama adalah pada pemadatan tanah dasar (sub-grade) dan penggunaan pasir alas yang rata sebelum penyusunan block.</p>
+      <h2>Ciptakan Halaman Lebih Fungsional</h2>
+      <p>Paving block adalah solusi cerdas bagi warga Palembang untuk mengatasi area halaman yang sering becek saat musim hujan. Namun, pemasangan yang asal-asalan akan membuat paving cepat amblas atau bergelombang.</p>
+      
+      <h3>Langkah-langkah Pemasangan Profesional:</h3>
+      <ol>
+        <li><strong>Galian Tanah Dasar:</strong> Gali tanah sedalam 15-20 cm dan pastikan padat menggunakan alat stamper.</li>
+        <li><strong>Gunakan Pasir Urug:</strong> Hampar pasir setebal 5-7 cm sebagai dasar. Ratakan menggunakan papan kayu yang panjang.</li>
+        <li><strong>Penyusunan Paving:</strong> Mulailah dari sudut paling pojok. Pastikan antar block terpatri rapat.</li>
+        <li><strong>Finishing dengan Abu Batu:</strong> Taburkan abu batu di atas permukaan paving yang sudah terpasang, lalu sapu hingga masuk ke sela-sela (nat) untuk mengunci posisi paving agar tidak bergeser.</li>
+      </ol>
+
+      <p>Halaman yang rapi dengan kombinasi paving dan rumput hijau akan meningkatkan nilai properti Anda di mata orang lain!</p>
     `
   },
   {
-    title: "Mengenal Hama Uret dan Cara Membasminya Secara Alami",
+    title: "Membasmi Hama Uret (Larva Kumbang) Pada Rumput Secara Efektif",
     tags: ["Hama", "Organik", "Penyakit", "Tips"],
     date: "12 Mar 2026",
-    desc: "Rumput menguning melingkar? Bisa jadi itu serangan hama uret. Pelajari cara mengatasinya tanpa pestisida kimia.",
+    desc: "Waspadai tanda-tanda kerusakan akar rumput. Jangan biarkan hama uret menghancurkan investasi taman Anda.",
     source: "https://agrokomplekskita.com/membasmi-hama-uret/",
     content: `
-      <h2>Larva Kumbang: Musuh Tersembunyi di Dalam Tanah</h2>
-      <p>Gunakan larutan air sabun atau pestisida alami dari bawang putih untuk mengusir larva uret yang memakan akar rumput.</p>
+      <h2>Musuh Tersembunyi di Bawah Tanah</h2>
+      <p>Pernahkah Anda menemui bercak kuning melingkar pada rumput yang saat dicabut ternyata tidak memiliki akar? Itu adalah tanda serangan hama uret (larva kumbang) yang memakan akar rumput gajah mini kesayangan Anda.</p>
+      
+      <h3>Cara Identifikasi dan Pembasmian:</h3>
+      <ul>
+        <li><strong>Cek Kepadatan Tanah:</strong> Jika tanah terasa gembur atau berongga saat diinjak, kemungkinan besar ada aktivitas uret merusak akar.</li>
+        <li><strong>Solusi Pestisida Organik:</strong> Campurkan air sabun cuci piring dengan air biasa, lalu siramkan ke area yang terinfeksi. Larva uret akan naik ke permukaan dan bisa Anda bersihkan secara manual.</li>
+        <li><strong>Pencegahan dengan Jamur Metarhizium:</strong> Gunakan agen hayati ini yang dicampur pada pupuk dasar untuk membasmi larva secara alami tanpa merusak kesuburan tanah.</li>
+      </ul>
+
+      <p>Jika serangan sudah meluas, segera konsultasikan dengan tim <strong>Tebasrumput.com</strong> untuk penanganan profesional.</p>
     `
   },
   {
-    title: "Pentingnya Aerasi Tanah untuk Kesuburan Rumput Jangka Panjang",
+    title: "Mengenal Teknik Aerasi (Pelubangan Tanah) untuk Kesuburan Akar",
     tags: ["Perawatan", "Tanah", "Aerasi", "Profesional"],
     date: "11 Mar 2026",
-    desc: "Tanah yang padat membuat rumput sulit bernapas. Pelajari teknik aerasi sederhana untuk taman rumah.",
+    desc: "Tanah yang terlalu padat bikin rumput 'sesak napas'. Simak pentingnya teknik aerasi setiap 6 bulan sekali.",
     source: "https://kfclandscape.com/pentingnya-aerasi-rumput/",
     content: `
-      <h2>Beri Ruang Napas untuk Akar</h2>
-      <p>Aerasi adalah proses melubangi tanah agar oksigen dan air bisa mencapai zona akar dengan lebih efektif.</p>
+      <h2>Agar Rumput Bisa Bernapas Kembali</h2>
+      <p>Di wilayah dengan tanah liat seperti sebagian besar area Palembang, tanah cenderung menjadi sangat padat seiring berjalannya waktu. Padatnya tanah menghalangi oksigen, air, dan nutrisi untuk sampai ke akar rumput utama.</p>
+      
+      <h3>Apa Itu Aerasi?</h3>
+      <p>Aerasi adalah proses membuat lubang-lubang kecil sedalam 10 cm pada permukaan tanah secara merata. Ini bisa dilakukan menggunakan mesin aerator atau alat manual berbasis garpu tanah.</p>
+      
+      <h3>Manfaat Luar Biasa Aerasi:</h3>
+      <ul>
+        <li>Memudahkan air hujan meresap, mengurangi risiko genangan.</li>
+        <li>Mengoptimalkan penyerapan pupuk oleh akar.</li>
+        <li>Memperkuat struktur akar agar rumput lebih tahan terhadap cuaca panas.</li>
+      </ul>
+
+      <p>Sebaiknya aerasi dilakukan bersamaan dengan jadwal pemupukan rutin untuk hasil maksimal.</p>
     `
   },
   {
-    title: "Jasa Pembersihan Lahan Kosong: Solusi Menghindari Sarang Ular",
+    title: "Mengapa Lahan Kosong yang Rimbun Harus Segera Dibersihkan?",
     tags: ["Layanan", "Keamanan", "Lahan Kosong", "Palembang"],
     date: "10 Mar 2026",
-    desc: "Lahan kosong di samping rumah yang rimbun bisa menjadi ancaman. Kenapa harus segera dibersihkan?",
+    desc: "Rumput liar setinggi dada bukan cuma merusak pemandangan, tapi ancaman nyata bagi keamanan lingkungan sekitar.",
     source: "https://www.tebasrumput.com/manfaat-bersih-lahan",
     content: `
-      <h2>Keamanan Lingkungan Mulai dari Kebersihan Lahan</h2>
-      <p>Rumput setinggi manusia di lahan kosong adalah tempat favorit bagi reptil berbahaya. Pembersihan berkala mencegah risiko ini.</p>
+      <h2>Hindari Ancaman Hewan Berbahaya di Lahan Kosong</h2>
+      <p>Banyak lahan di wilayah baru <strong>Jakabaring</strong> atau <strong>Gandus</strong> yang dibiarkan terbengkalai. Rumput liar yang rimbun dan tidak terawat adalah magnet bagi predator berbahaya.</p>
+      
+      <h3>Risiko Membiarkan Lahan Rimbun:</h3>
+      <ol>
+        <li><strong>Sarang Ular:</strong> Kobra dan sanca sangat suka bersembunyi di sela-sela rumput tinggi yang lembap.</li>
+        <li><strong>Wabah Nyamuk:</strong> Menjadi tempat berkembang biak nyamuk DBD yang mengancam kesehatan anak-anak di sekitar.</li>
+        <li><strong>Kejahatan:</strong> Lahan rimbun sering digunakan untuk aktivitas negatif karena tidak terpantau dari jalan utama.</li>
+      </ol>
+
+      <p>Tim <strong>Tebasrumput.com</strong> memiliki keahlian khusus untuk pembersihan lahan skala besar menggunakan mesin tebas yang kuat. Kami siap membersihkan semak belukar hingga ke akarnya!</p>
     `
   },
   {
-    title: "Tips Membuat Vertical Garden di Lahan Sempit Kota Palembang",
+    title: "Tips Membangun Vertical Garden di Lahan Terbatas Kota Palembang",
     tags: ["Urban Farming", "Vertical Garden", "DIY", "Palembang"],
     date: "09 Mar 2026",
-    desc: "Halaman sempit bukan halangan untuk memiliki taman. Gunakan sistem dinding hijau yang menyegarkan rumah.",
+    desc: "Solusi cerdas bagi pemilik ruko atau rumah minimalis yang ingin tetap memiliki sudut hijau yang segar.",
     source: "https://palpres.disway.id/tips-vertical-garden-minimalis",
     content: `
-      <h2>Hutan Kecil di Dinding Rumah</h2>
-      <p>Gunakan rak besi atau kantong tanam (planter bag) untuk menyusun tanaman secara vertikal tanpa memakan lahan bawah.</p>
+      <h2>Hutan Vertikal di Dinding Rumah Anda</h2>
+      <p>Konsep <em>Vertical Garden</em> sangat populer di kota besar seperti Palembang karena tidak memakan tempat di lantai. Anda bisa memanfaatkan dinding belakang rumah atau pagar depan untuk area hijau ini.</p>
+      
+      <h3>Cara Membuat Vertical Garden Sederhana:</h3>
+      <ul>
+        <li><strong>Pemilihan Rak:</strong> Gunakan rangka besi atau modular plastik yang bisa ditempel di tembok.</li>
+        <li><strong>Sistem Pengairan:</strong> Karena media tanam sangat sedikit, perhatikan sistem pengairan otomatis atau lakukan penyiraman manual minimal 2x sehari karena penguapan di dinding sangat cepat.</li>
+        <li><strong>Jenis Tanaman:</strong> Gunakan <em>Epipremnum</em> (Sirih Gading) atau <em>Bromelia</em> yang tahan banting di berbagai kondisi cahaya.</li>
+      </ul>
+
+      <p>Penyusunan tanaman yang rapi secara vertikal akan memberikan efek sejuk pada dinding rumah sehingga suhu ruangan di dalamnya bisa turun secara alami.</p>
     `
   },
   {
-    title: "Cara Mengatasi Rumput Menguning Akibat Jamur Tanah",
+    title: "Cara Identifikasi dan Identifikasi Penyakit Jamur Tanah Pada Rumput",
     tags: ["Penyakit", "Fungisida", "Tips", "Kesehatan"],
     date: "08 Mar 2026",
-    desc: "Jamur sering muncul saat transisi musim hujan ke kemarau. Identifikasi dan basmi sebelum seluruh taman mati.",
+    desc: "Musim hujan berkepanjangan sering membawa jamur. Jangan biarkan bercak putih menyebar di taman Anda.",
     source: "https://pertanian.go.id/penyakit-jamur-rumput-taman",
     content: `
-      <h2>Waspadai Bercak Putih atau Cokelat</h2>
-      <p>Penyiraman berlebihan di malam hari adalah pemicu utama jamur. Pastikan drainase lancar dan gunakan fungisida jika perlu.</p>
+      <h2>Waspadai Bercak Putih Kapas di Pagi Hari</h2>
+      <p>Penyakit jamur tanah sering menyerang rumput jepang yang terlalu rapat di kondisi lembap. Cirinya adalah munculnya bercak berwarna cokelat atau putih seperti kapas pada permukaan rumput.</p>
+      
+      <h3>Langkah Penyelamatan:</h3>
+      <ol>
+        <li><strong>Kurangi Penyiraman:</strong> Hentikan penyiraman selama 1-2 hari agar permukaan tanah mengering.</li>
+        <li><strong>Pemangkasan Segera:</strong> Potong bagian yang terinfeksi dan jangan membuang sisa potongannya di area taman lain karena spora jamur bisa menyebar.</li>
+        <li><strong>Gunakan Fungisida:</strong> Semprotkan larutan fungisida sesuai dosis untuk membunuh akar jamur di dalam tanah.</li>
+      </ol>
+
+      <p>Kebersihan alat potong juga sangat berpengaruh. Tim kami selalu mensterilkan mata pisau sebelum mulai mengerjaan lahan pelanggan baru untuk mencegah penularan penyakit tanaman antar rumah.</p>
     `
   },
   {
-    title: "Keunggulan Menggunakan Mesin Potong Rumput Modern",
+    title: "Kenapa Mesin Potong Rumput Bermotor Lebih Aman Bagi Rumput?",
     tags: ["Teknologi", "Layanan", "Mesin", "Efisien"],
     date: "07 Mar 2026",
-    desc: "Kenapa tim Tebasrumput.com selalu menggunakan mesin bermotor? Simak kualitas hasil vs manual.",
+    desc: "Efisiensi tinggi dan kesehatan tanaman adalah alasan utama kami meninggalkan cara pemotongan tradisional.",
     source: "https://www.alatpro.id/kelebihan-mesin-potong-rumput",
     content: `
-      <h2>Cepat, Rapi, dan Bergaransi</h2>
-      <p>Mesin bermotor menghasilkan potongan yang rata sempurna dan jauh lebih aman bagi kesehatan batang rumput utama Anda.</p>
+      <h2>Potongan Rapi, Tumbuhan Happy</h2>
+      <p>Banyak orang menganggap semua teknik pemotongan sama saja selama rumput menjadi pendek. Secara sains, hal itu salah besar. Cara memotong sangat menentukan kecepatan pemulihan rumput Anda.</p>
+      
+      <h3>Keunggulan Mesin Rotari Modern:</h3>
+      <ul>
+        <li><strong>Clean Cut (Potongan Bersih):</strong> Mesin modern memotong helai rumput secepat kilat tanpa merobek pori-pori daun. Rumput yang terpotong bersih akan segera menutup lukanya dan tumbuh kembali lebih hijau.</li>
+        <li><strong>Pemadatan Tanah Minim:</strong> Tekanan mesin yang didorong/gendong lebih merata dibandingkan tekanan kaki manusia saat berjam-jam memotong menggunakan sabit tradisional.</li>
+        <li><strong>Penghancur Sampah:</strong> Beberapa mesin kami memiliki fitur <em>mulching</em> yang bisa menghancurkan sisa potongan menjadi serpihan halus sebagai pupuk langsung.</li>
+      </ul>
+
+      <p>Dapatkan pengalaman jasa potong rumput kelas profesional hanya di <strong>Tebasrumput.com</strong>. Kami datang membawa alat terbaik, Anda tinggal menikmati hasilnya!</p>
     `
   }
 ];
