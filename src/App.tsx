@@ -4,18 +4,18 @@
  */
 
 import { motion } from "motion/react";
-import { 
-  CheckCircle2, 
-  Scissors, 
-  Calendar, 
-  ShieldCheck, 
-  Star, 
-  ChevronDown, 
-  Instagram, 
-  Facebook, 
-  Twitter, 
-  Mail, 
-  Phone, 
+import {
+  CheckCircle2,
+  Scissors,
+  Calendar,
+  ShieldCheck,
+  Star,
+  ChevronDown,
+  Instagram,
+  Facebook,
+  Twitter,
+  Mail,
+  Phone,
   MapPin,
   Leaf,
   Trash2,
@@ -78,12 +78,12 @@ export default function App() {
 
   const handleBooking = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    
+
     let message = "Halo tebasrumput.com, saya ingin memesan jasa potong rumput.";
     if (formData.name || formData.region) {
       message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari wilayah ${formData.region || "Palembang"} ingin memesan layanan ${formData.service}.`;
     }
-    
+
     window.open(`${WA_LINK}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
@@ -127,7 +127,7 @@ export default function App() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-white border-b border-slate-100 px-6 py-8 flex flex-col gap-4"
@@ -146,13 +146,13 @@ export default function App() {
       {/* Hero Section */}
       <section className="pt-40 pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative overflow-hidden">
         {/* Grid Pattern Background */}
-        <div className="absolute inset-0 -z-20 pointer-events-none" 
-             style={{ 
-               backgroundImage: `linear-gradient(to right, rgba(22, 163, 74, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(22, 163, 74, 0.05) 1px, transparent 1px)`,
-               backgroundSize: '40px 40px'
-             }}>
+        <div className="absolute inset-0 -z-20 pointer-events-none"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(22, 163, 74, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(22, 163, 74, 0.05) 1px, transparent 1px)`,
+            backgroundSize: '40px 40px'
+          }}>
         </div>
-        
+
         {/* Balanced Songket-inspired Line Pattern */}
         <div className="absolute top-0 left-0 w-full flex flex-col items-center opacity-10">
           <div className="w-full h-[1px] bg-primary"></div>
@@ -164,7 +164,7 @@ export default function App() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
-          <motion.div 
+          <motion.div
             initial="initial"
             animate="animate"
             variants={staggerContainer}
@@ -174,29 +174,29 @@ export default function App() {
               <MapPin className="w-3 h-3" />
               <span>Wilayah Palembang & Sekitarnya</span>
             </motion.div>
-            
+
             <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-medium leading-tight text-slate-900 tracking-tight">
               Jasa <span className="font-bold">Potong Rumput</span> <br />
               Panggilan <span className="text-primary font-extrabold">Palembang</span>
               <span className="inline-block ml-4 align-middle opacity-30">
                 <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
-                  <path d="M2 28H58" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M18 28V6M42 28V6" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
-                  <path d="M18 10H42" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M18 14H42" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M18 6L4 20M42 6L56 20" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeDasharray="3 3"/>
+                  <path d="M2 28H58" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M18 28V6M42 28V6" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+                  <path d="M18 10H42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M18 14H42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M18 6L4 20M42 6L56 20" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeDasharray="3 3" />
                 </svg>
               </span>
             </motion.h1>
-            
+
             <motion.p variants={fadeIn} className="text-lg text-slate-500 leading-relaxed font-light">
               Solusi praktis untuk halaman rumah, kantor, dan lahan kosong. <br className="hidden md:block" />
               <span className="font-medium text-slate-700">Rapi, Cepat, & Terpercaya</span> — Tim kami datang langsung ke lokasi Anda dengan peralatan modern lengkap.
             </motion.p>
-            
+
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-6 items-center">
-              <button 
-                onClick={handleBooking} 
+              <button
+                onClick={handleBooking}
                 className="btn-primary text-lg px-12 py-5 flex items-center gap-3 shadow-lg hover:bg-primary-dark"
               >
                 <MessageCircle className="w-6 h-6" /> Booking Sekarang
@@ -208,7 +208,7 @@ export default function App() {
 
             <motion.div variants={fadeIn} className="flex flex-col items-start gap-4 pt-8">
               <div className="flex -space-x-3">
-                {[1,2,3,4,5].map(i => (
+                {[1, 2, 3, 4, 5].map(i => (
                   <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-slate-100 flex items-center justify-center text-slate-400 shadow-sm">
                     <User className="w-6 h-6" />
                   </div>
@@ -216,7 +216,7 @@ export default function App() {
               </div>
               <div className="space-y-1">
                 <div className="flex items-center text-amber-500 gap-1">
-                  {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}
                   <span className="ml-2 font-black text-slate-900 text-lg">4.9/5</span>
                 </div>
                 <p className="text-slate-500 font-medium italic">"Taman saya jadi rapi banget, timnya profesional!" — 1,000+ Pelanggan Puas</p>
@@ -234,19 +234,19 @@ export default function App() {
             <div className="absolute -top-4 -right-4 bg-primary text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
               Respon Cepat!
             </div>
-            
+
             <h3 className="text-2xl font-bold text-slate-900 mb-2">Pesan Sekarang</h3>
             <p className="text-slate-500 text-sm mb-8">Isi form di bawah untuk booking via WhatsApp.</p>
-            
+
             <form onSubmit={handleBooking} className="space-y-5">
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Nama Lengkap</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   placeholder="Contoh: Budi Santoso"
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
                 />
               </div>
@@ -254,10 +254,10 @@ export default function App() {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Wilayah Palembang</label>
                 <div className="relative">
-                  <select 
+                  <select
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white"
                     value={formData.region}
-                    onChange={(e) => setFormData({...formData, region: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, region: e.target.value })}
                     required
                   >
                     <option value="" disabled>Pilih Kecamatan</option>
@@ -272,10 +272,10 @@ export default function App() {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Pilih Paket Layanan</label>
                 <div className="relative">
-                  <select 
+                  <select
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white font-medium text-slate-700"
                     value={formData.service}
-                    onChange={(e) => setFormData({...formData, service: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   >
                     <option value="Paket 1 (300rb - Kavling Kecil)">Paket 1: 300rb (60-80 m²)</option>
                     <option value="Paket 2 (500rb - Kavling Sedang)">Paket 2: 500rb (80-120 m²)</option>
@@ -285,13 +285,13 @@ export default function App() {
                 </div>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-dark hover:shadow-primary/40 transition-all active:scale-[0.98] flex items-center justify-center gap-3 mt-4"
               >
                 <MessageCircle className="w-6 h-6" /> Kirim Ke WhatsApp
               </button>
-              
+
               <p className="text-center text-slate-400 text-[10px] uppercase tracking-widest pt-2">
                 Aman • Cepat • Tanpa Biaya Admin
               </p>
@@ -339,7 +339,7 @@ export default function App() {
             { icon: <Trash2 />, title: "Pembersihan Halaman", desc: "Pembersihan sisa rumput, daun kering, dan sampah organik lainnya." },
             { icon: <Trees />, title: "Pangkas Tanaman", desc: "Merapikan tanaman hias dan pohon kecil agar tumbuh teratur." }
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               whileHover={{ y: -5 }}
               className="card group"
@@ -362,7 +362,7 @@ export default function App() {
               <h2 className="text-xs font-bold text-primary-light tracking-[0.2em] uppercase">Mengapa Kami?</h2>
               <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">Kualitas Terbaik Untuk Kepuasan Anda</h3>
             </div>
-            
+
             <div className="space-y-6">
               {[
                 { title: "Tenaga Profesional", desc: "Tim ahli yang sudah berpengalaman bertahun-tahun di bidangnya." },
@@ -383,21 +383,21 @@ export default function App() {
             </div>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative group"
           >
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 aspect-[4/5] lg:aspect-square">
-              <img 
-                src="https://potongrumputbatam.com/wp-content/uploads/2022/08/grass-trim-services.jpeg" 
-                alt="Professional Lawn Care" 
+              <img
+                src="https://potongrumputbatam.com/wp-content/uploads/2022/08/grass-trim-services.jpeg"
+                alt="Professional Lawn Care"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-              
+
               <div className="absolute bottom-8 left-8 right-8 p-6 bg-white rounded-2xl border border-slate-100 shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
@@ -410,11 +410,11 @@ export default function App() {
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative Elements */}
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full -z-10"></div>
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/5 rounded-full -z-10"></div>
-            
+
             <div className="absolute -right-4 top-1/4 w-24 h-24 border-2 border-primary/20 rounded-full"></div>
             <div className="absolute -left-8 bottom-1/4 w-16 h-16 border border-slate-200 rounded-full"></div>
           </motion.div>
@@ -450,7 +450,7 @@ export default function App() {
         <div className="grid md:grid-cols-4 gap-8 relative">
           {/* Connector Line (Desktop) */}
           <div className="hidden md:block absolute top-1/4 left-0 right-0 h-0.5 bg-slate-100 -z-10"></div>
-          
+
           {[
             { step: "01", title: "Booking", desc: "Hubungi kami via WA atau website untuk reservasi." },
             { step: "02", title: "Survey", desc: "Kami lakukan konfirmasi atau survey lokasi jika diperlukan." },
@@ -478,9 +478,9 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
-              { 
-                name: "Paket 1", 
-                price: "300rb", 
+              {
+                name: "Paket 1",
+                price: "300rb",
                 desc: "Luas 1 kavling kecil (60–80 m²)",
                 features: [
                   "Pemotongan rumput standar",
@@ -491,9 +491,9 @@ export default function App() {
                 ],
                 recommended: false
               },
-              { 
-                name: "Paket 2", 
-                price: "500rb", 
+              {
+                name: "Paket 2",
+                price: "500rb",
                 desc: "Luas 1 kavling sedang (80–120 m²)",
                 features: [
                   "Pemotongan rumput rapi & merata",
@@ -507,8 +507,8 @@ export default function App() {
                 recommended: true
               }
             ].map((plan, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className={`p-8 rounded-3xl border transition-all ${plan.recommended ? 'bg-white border-primary shadow-xl scale-105 z-10' : 'bg-white/50 border-slate-200'}`}
               >
                 {plan.recommended && (
@@ -528,8 +528,8 @@ export default function App() {
                     </li>
                   ))}
                 </ul>
-                <button 
-                  onClick={() => selectPackage(plan.name === "Paket 1" ? "Paket 1 (300rb - Kavling Kecil)" : "Paket 2 (500rb - Kavling Sedang)")} 
+                <button
+                  onClick={() => selectPackage(plan.name === "Paket 1" ? "Paket 1 (300rb - Kavling Kecil)" : "Paket 2 (500rb - Kavling Sedang)")}
                   className={`w-full py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 ${plan.recommended ? 'bg-primary text-white hover:bg-primary-dark' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}
                 >
                   <MessageCircle className="w-4 h-4" /> Pilih Paket
@@ -561,12 +561,12 @@ export default function App() {
                   { name: "Fajar Ramadhan", role: "Pemilik Kafe", text: "Area outdoor kafe saya jadi terlihat jauh lebih profesional setelah rumputnya dipotong rapi. Hasilnya benar-benar beda dari jasa lain." },
                   { name: "Maya Sari", role: "Ibu Rumah Tangga", text: "Halaman belakang yang tadinya seperti hutan sekarang sudah bersih total. Hasil potongannya halus dan tidak ada yang terlewat." }
                 ].map((testi, idx) => (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className="w-[350px] bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 whitespace-normal inline-block transition-all hover:border-primary/20"
                   >
                     <div className="flex items-center text-amber-400">
-                      {[1,2,3,4,5].map(star => <Star key={star} className="w-3.5 h-3.5 fill-current" />)}
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-3.5 h-3.5 fill-current" />)}
                     </div>
                     <p className="text-slate-600 text-sm leading-relaxed">"{testi.text}"</p>
                     <div className="flex items-center gap-4">
@@ -593,7 +593,7 @@ export default function App() {
             <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">FAQ</h2>
             <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Pertanyaan Umum</h3>
           </div>
-  
+
           <div className="space-y-4">
             {[
               { q: "Apakah bisa panggilan mendadak?", a: "Tentu! Kami menyediakan slot untuk pengerjaan di hari yang sama jika jadwal masih tersedia. Sebaiknya hubungi kami di pagi hari." },
@@ -678,15 +678,15 @@ export default function App() {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Jl. Hijau Asri No. 123, Palembang, Sumatera Selatan</span>
+                <span>Jl. Prajurit Nazaruddin Lorong Al-Hidayah, Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan 30119</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+62 812 3456 7890</span>
+                <span>0812 1115 6865</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>halo@tebasrumput.com</span>
+                <span>rdwansaputra@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -699,18 +699,18 @@ export default function App() {
       {/* Modal Legal */}
       {activeModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             onClick={() => setActiveModal(null)}
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
           />
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             className="relative bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-3xl p-8 md:p-12 shadow-2xl"
           >
-            <button 
+            <button
               onClick={() => setActiveModal(null)}
               className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors"
             >
@@ -723,16 +723,16 @@ export default function App() {
                 <div className="space-y-4 text-slate-600 leading-relaxed">
                   <p className="font-bold text-slate-800">1. Layanan</p>
                   <p>Tebasrumput.com menyediakan jasa pemotongan rumput, pembersihan lahan, dan perawatan taman untuk area perumahan dan komersial di wilayah Kota Palembang.</p>
-                  
+
                   <p className="font-bold text-slate-800">2. Pemesanan & Penjadwalan</p>
                   <p>Pemesanan dianggap sah setelah pelanggan mengisi formulir atau menghubungi via WhatsApp dan mendapatkan konfirmasi jadwal dari tim kami.</p>
-                  
+
                   <p className="font-bold text-slate-800">3. Biaya & Pembayaran</p>
                   <p>Biaya layanan disesuaikan dengan paket yang dipilih atau hasil survey lokasi. Pembayaran dilakukan secara tunai (Cash on Delivery) atau transfer setelah pekerjaan selesai dikerjakan.</p>
-                  
+
                   <p className="font-bold text-slate-800">4. Akses Lokasi</p>
                   <p>Pelanggan wajib memberikan akses masuk ke area pengerjaan pada waktu yang telah disepakati. Kami tidak bertanggung jawab atas keterlambatan akibat kendala akses lokasi.</p>
-                  
+
                   <p className="font-bold text-slate-800">5. Pembatalan</p>
                   <p>Pembatalan atau perubahan jadwal harus diinformasikan maksimal 24 jam sebelum waktu pengerjaan yang dijadwalkan.</p>
                 </div>
@@ -742,24 +742,24 @@ export default function App() {
                 <h2 className="text-2xl font-bold text-slate-900">Privacy Policy</h2>
                 <div className="space-y-4 text-slate-600 leading-relaxed">
                   <p>Kebijakan Privasi ini menjelaskan bagaimana Tebasrumput.com mengumpulkan dan menggunakan informasi Anda.</p>
-                  
+
                   <p className="font-bold text-slate-800">1. Informasi yang Kami Kumpulkan</p>
                   <p>Kami mengumpulkan informasi yang Anda berikan secara sukarela saat melakukan pemesanan, termasuk nama, nomor telepon/WhatsApp, dan alamat atau wilayah lokasi pengerjaan.</p>
-                  
+
                   <p className="font-bold text-slate-800">2. Penggunaan Informasi</p>
                   <p>Informasi Anda digunakan semata-mata untuk keperluan koordinasi layanan, konfirmasi jadwal, dan pengiriman tim ke lokasi Anda.</p>
-                  
+
                   <p className="font-bold text-slate-800">3. Perlindungan Data</p>
                   <p>Kami berkomitmen untuk menjaga keamanan data Anda. Kami tidak akan menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pihak ketiga untuk tujuan pemasaran.</p>
-                  
+
                   <p className="font-bold text-slate-800">4. Persetujuan</p>
                   <p>Dengan menggunakan layanan kami, Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan kebijakan ini.</p>
                 </div>
               </div>
             )}
-            
+
             <div className="mt-12 pt-6 border-t border-slate-100">
-              <button 
+              <button
                 onClick={() => setActiveModal(null)}
                 className="btn-primary w-full py-3"
               >
