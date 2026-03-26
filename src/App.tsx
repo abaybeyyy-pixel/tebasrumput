@@ -173,7 +173,7 @@ export default function App() {
             >
               <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase">
                 <MapPin className="w-3 h-3" />
-                <span>Wilayah Palembang & Sekitarnya</span>
+                <span>Wilayah <span className="text-primary font-bold">Palembang</span> & Sekitarnya</span>
               </motion.div>
 
               <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-medium leading-tight text-slate-900 tracking-tight">
