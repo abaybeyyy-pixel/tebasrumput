@@ -100,11 +100,7 @@ export default function App() {
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-primary to-primary-dark rounded-xl shadow-lg shadow-primary/20 overflow-hidden">
-              <Scissors className="text-white w-5 h-5 absolute -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-              <Scissors className="text-white w-5 h-5 absolute rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-            </div>
+          <div className="flex items-center cursor-pointer">
             <span className="text-xl font-bold tracking-tight text-primary-dark">tebasrumput.com</span>
           </div>
 
@@ -641,11 +637,7 @@ export default function App() {
       < footer className="bg-slate-900 text-white pt-20 pb-10 px-6 md:px-12 lg:px-24" >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
-            <div className="flex items-center gap-3 group cursor-pointer">
-              <div className="relative w-10 h-10 flex items-center justify-center bg-primary rounded-xl shadow-lg overflow-hidden">
-                <Scissors className="text-white w-5 h-5 absolute -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-                <Scissors className="text-white w-5 h-5 absolute rotate-45 group-hover:rotate-0 transition-transform duration-500" />
-              </div>
+            <div className="flex items-center cursor-pointer">
               <span className="text-xl font-bold tracking-tight">tebasrumput.com</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
