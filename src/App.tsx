@@ -50,6 +50,8 @@ const WA_LINK = "https://wa.me/6281211156865";
 
 const INITIAL_BLOGS = [
   {
+    id: "1",
+    slug: "panduan-merawat-rumput-gajah-mini-palembang",
     title: "Panduan Lengkap Merawat Rumput Gajah Mini di Cuaca Terik Palembang",
     tags: ["Tips Perawatan", "Palembang", "Rumput Gajah Mini", "Taman"],
     date: "26 Mar 2026",
@@ -79,6 +81,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "2",
+    slug: "waktu-terbaik-memotong-rumput-palembang",
     title: "Kapan Waktu Terbaik Memotong Rumput di Kalidoni dan Sako?",
     tags: ["Jadwal", "Kalidoni", "Sako", "Layanan"],
     date: "25 Mar 2026",
@@ -102,6 +106,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "3",
+    slug: "jasa-potong-rumput-vs-potong-sendiri",
     title: "Investasi Waktu: Jasa Potong Rumput Panggilan vs Memotong Sendiri",
     tags: ["Edukasi", "Layanan Panggilan", "Palembang", "Hemat"],
     date: "24 Mar 2026",
@@ -130,6 +136,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "4",
+    slug: "mengatasi-gulma-halaman-kantor",
     title: "Mengatasi Gulma dan Rumput Liar di Halaman Kantor Perusahaan",
     tags: ["Bisnis", "Kantor", "Gulma", "Pembersihan Lahan"],
     date: "23 Mar 2026",
@@ -153,6 +161,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "5",
+    slug: "rumput-manila-vs-rumput-jepang",
     title: "Rumput Manila vs Rumput Jepang: Perbandingan untuk Taman Palembang",
     tags: ["Desain", "Edukasi", "Rumput Manila", "Rumput Jepang"],
     date: "22 Mar 2026",
@@ -182,6 +192,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "6",
+    slug: "mengatasi-genangan-air-taman",
     title: "Mengatasi Masalah Genangan Air dan Drainase Taman Pasca Hujan",
     tags: ["Teknis", "Drainase", "Tips Rumah", "Palembang"],
     date: "21 Mar 2026",
@@ -202,6 +214,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "7",
+    slug: "kebersihan-halaman-kesehatan-mental",
     title: "Taman Rapi: Pengaruh Kebersihan Halaman Terhadap Kesehatan Mental",
     tags: ["Gaya Hidup", "Kesehatan", "Psikologi", "Rumah"],
     date: "20 Mar 2026",
@@ -222,6 +236,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "8",
+    slug: "estimasi-harga-potong-rumput-palembang-2026",
     title: "Estimasi Biaya dan Harga Jasa Potong Rumput di Palembang 2026",
     tags: ["Harga", "Layanan", "Promo", "Info Palembang"],
     date: "19 Mar 2026",
@@ -249,6 +265,8 @@ const INITIAL_BLOGS = [
     `
   },
   {
+    id: "9",
+    slug: "menjaga-rumput-hijau-musim-kemarau",
     title: "Rahasia Menjaga Rumput Tetap Hijau Segar di Musim Kemarau Sumatera",
     tags: ["Musiman", "Tips Kebun", "Kemarau", "Palembang"],
     date: "18 Mar 2026",
