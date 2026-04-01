@@ -18,9 +18,19 @@ import {
   Menu,
   X,
   User,
-  MessageCircle
+  MessageCircle,
+  LayoutDashboard
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Routes, Route, Link, Navigate, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
+// Admin Page Imports
+import LoginPage from "./pages/LoginPage";
+import DashboardPage from "./pages/DashboardPage";
+import ArticleEditorPage from "./pages/ArticleEditorPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
+import AdminLayout from "./components/AdminLayout";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -38,7 +48,7 @@ const staggerContainer = {
 
 const WA_LINK = "https://wa.me/6281211156865";
 
-const blogs = [
+const INITIAL_BLOGS = [
   {
     title: "Panduan Lengkap Merawat Rumput Gajah Mini di Cuaca Terik Palembang",
     tags: ["Tips Perawatan", "Palembang", "Rumput Gajah Mini", "Taman"],
@@ -253,12 +263,12 @@ const blogs = [
         <li><strong>Naikkan Ketinggian Potongan:</strong> Saat musim panas, jangan potong rumput terlalu pendek (minimal sisakan 5-7 cm). Daun yang lebih panjang akan memayungi tanah di bawahnya agar air tidak cepat menguap.</li>
         <li><strong>Mulching:</strong> Jika memungkinkan, biarkan sisa potongan rumput halus tertinggal di atas lahan. Ini berfungsi sebagai pupuk alami sekaligus mulsa pengunci kelembapan.</li>
         <li><strong>Waktu Siram:</strong> Fokuskan penyiraman di sore hari agar air memiliki waktu semalaman untuk meresap sebelum matahari muncul kembali.</li>
-      </ul>
-
       <p>Tim profesional kami selalu menyesuaikan setelan mesin potong rumput berdasarkan cuaca saat itu. Kami menjamin rumput Anda tetap aman meski di cuaca ekstrim sekalipun.</p>
     `
   },
   {
+    id: "10",
+    slug: "mesin-potong-rumput-modern-vs-manual",
     title: "Investasi Alat: Mesin Potong Rumput Modern vs Alat Manual",
     tags: ["Peralatan", "Teknis", "Profesional", "Kebun"],
     date: "17 Mar 2026",
@@ -508,7 +518,98 @@ const PALEMBANG_REGIONS = [
   "Sukarami"
 ];
 
+// Protected Route Component
+const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+  const isAdmin = localStorage.getItem("isAdmin") === "true";
+  if (!isAdmin) return <Navigate to="/admin" replace />;
+  return <>{children}</>;
+};
+
 export default function App() {
+  const [blogs, setBlogs] = useState<any[]>([]);
+  const location = useLocation();
+
+  // Load blogs from localStorage on mount
+  useEffect(() => {
+    const savedBlogs = localStorage.getItem("tebasrumput_blogs");
+    if (savedBlogs) {
+      setBlogs(JSON.parse(savedBlogs));
+    } else {
+      setBlogs(INITIAL_BLOGS);
+    }
+  }, []);
+
+  // Save blogs to localStorage when updated
+  useEffect(() => {
+     if (blogs.length > 0) {
+        localStorage.setItem("tebasrumput_blogs", JSON.stringify(blogs));
+     }
+  }, [blogs]);
+
+  const handleSaveBlog = (blog: any) => {
+    setBlogs(prev => {
+      const index = prev.findIndex(b => b.id === blog.id);
+      if (index !== -1) {
+        const newBlogs = [...prev];
+        newBlogs[index] = blog;
+        return newBlogs;
+      }
+      return [blog, ...prev];
+    });
+  };
+
+  const handleDeleteBlog = (id: string) => {
+    setBlogs(prev => prev.filter(b => b.id !== id));
+  };
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage blogs={blogs} />} />
+      <Route path="/blog/:slug" element={<BlogDetailPage blogs={blogs} />} />
+      
+      {/* Admin Routes */}
+      <Route path="/admin" element={<LoginPage />} />
+      <Route 
+        path="/admin/dashboard" 
+        element={
+          <ProtectedRoute>
+            <AdminLayout>
+              <DashboardPage blogs={blogs} onDeleteBlog={handleDeleteBlog} />
+            </AdminLayout>
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/admin/dashboard/new" 
+        element={
+          <ProtectedRoute>
+            <AdminLayout>
+              <ArticleEditorPage blogs={blogs} onSaveBlog={handleSaveBlog} />
+            </AdminLayout>
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/admin/dashboard/edit/:id" 
+        element={
+          <ProtectedRoute>
+            <AdminLayout>
+              <ArticleEditorPage blogs={blogs} onSaveBlog={handleSaveBlog} />
+            </AdminLayout>
+          </ProtectedRoute>
+        } 
+      />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+}
+
+function LandingPage({ blogs }: { blogs: any[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState<"terms" | "privacy" | null>(null);
   const [activeBlog, setActiveBlog] = useState<any>(null);
@@ -1111,9 +1212,9 @@ export default function App() {
                     </div>
                     <h4 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">{blog.title}</h4>
                     <p className="text-slate-500 text-xs md:text-sm leading-relaxed flex-grow line-clamp-3">{blog.desc}</p>
-                    <button onClick={() => setActiveBlog(blog)} className="flex items-center gap-2 text-primary font-bold text-xs md:text-sm group-hover:gap-4 transition-all pt-4">
+                    <Link to={`/blog/${blog.slug}`} className="flex items-center gap-2 text-primary font-bold text-xs md:text-sm group-hover:gap-4 transition-all pt-4">
                       Selengkapnya <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </Link>
                   </div>
                 </motion.div>
               ))}
