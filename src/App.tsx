@@ -563,6 +563,7 @@ export default function App() {
             <a href="#layanan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Layanan</a>
             <a href="#keunggulan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Keunggulan</a>
             <a href="#pricing" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Harga</a>
+            <a href="#lokasi" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Lokasi</a>
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">FAQ</a>
             <button onClick={handleBooking} className="btn-primary text-sm py-2 px-6 flex items-center gap-2">
               <MessageCircle className="w-4 h-4" /> Booking Sekarang
@@ -585,6 +586,7 @@ export default function App() {
             <a href="#layanan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Layanan</a>
             <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Keunggulan</a>
             <a href="#pricing" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Harga</a>
+            <a href="#lokasi" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Lokasi</a>
             <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">FAQ</a>
             <button onClick={handleBooking} className="btn-primary w-full mt-4 flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" /> Booking Sekarang
@@ -1130,6 +1132,89 @@ export default function App() {
               <button onClick={handleBooking} className="bg-white text-primary px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-lg hover:bg-slate-50 transition-all active:scale-95 flex items-center gap-2 mx-auto">
                 <MessageCircle className="w-5 h-5" /> Booking Sekarang <ArrowRight className="w-4 h-4" />
               </button>
+            </div>
+          </div>
+        </section >
+
+        {/* Google Bisnisku & Lokasi Kami */}
+        <section id="lokasi" className="py-24 px-6 md:px-12 lg:px-24 bg-slate-50 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="space-y-4">
+                  <h2 className="text-primary font-bold text-sm tracking-widest uppercase">Lokasi Kami</h2>
+                  <h3 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">Temukan Lokasi kami di <span className="text-primary">Google Map</span></h3>
+                  <p className="text-slate-500 leading-relaxed font-light">
+                    Kami berbasis di Kalidoni, Palembang, namun layanan kami mencakup seluruh wilayah kota. Lihat lokasi kami di Google Map untuk ulasan pelanggan dan informasi terbaru.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl space-y-6 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                      <Star className="w-6 h-6 fill-current" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900">Jasa Potong Rumput Palembang</h4>
+                      <div className="flex items-center text-amber-500 gap-1">
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <span className="ml-2 font-bold text-slate-900">4.9 / 5.0</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 pt-4 border-t border-slate-50">
+                    <div className="flex gap-4">
+                      <MapPin className="text-primary w-5 h-5 shrink-0" />
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        Jl. Prajurit Nazaruddin Lorong Al-Hidayah, Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan 30119
+                      </p>
+                    </div>
+                    <div className="flex gap-4">
+                      <Phone className="text-primary w-5 h-5 shrink-0" />
+                      <p className="text-sm text-slate-600">0812 1115 6865</p>
+                    </div>
+                  </div>
+
+                  <a 
+                    href="https://www.google.com/maps?cid=6300102712432011708&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAEYASAB&hl=id&gl=ID&source=embed" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-primary w-full py-4 flex items-center justify-center gap-3 text-sm"
+                  >
+                    Buka di Google Maps <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.444908985172!2d104.79602187588049!3d-2.951100039702202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b77bf922eb48d%3A0x576e76099efc29bc!2sJasa%20potong%20rumput%20panggilan%20Palembang%20by%20Tebasrumput.com!5e0!3m2!1sid!2sid!4v1711964251234!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Maps Tebasrumput.com"
+                ></iframe>
+              </motion.div>
             </div>
           </div>
         </section >
