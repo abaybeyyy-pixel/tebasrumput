@@ -526,24 +526,15 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default function App() {
-  const [blogs, setBlogs] = useState<any[]>([]);
-  const location = useLocation();
-
-  // Load blogs from localStorage on mount
-  useEffect(() => {
+  const [blogs, setBlogs] = useState<any[]>(() => {
     const savedBlogs = localStorage.getItem("tebasrumput_blogs");
-    if (savedBlogs) {
-      setBlogs(JSON.parse(savedBlogs));
-    } else {
-      setBlogs(INITIAL_BLOGS);
-    }
-  }, []);
+    return savedBlogs ? JSON.parse(savedBlogs) : INITIAL_BLOGS;
+  });
+  const location = useLocation();
 
   // Save blogs to localStorage when updated
   useEffect(() => {
-     if (blogs.length > 0) {
-        localStorage.setItem("tebasrumput_blogs", JSON.stringify(blogs));
-     }
+    localStorage.setItem("tebasrumput_blogs", JSON.stringify(blogs));
   }, [blogs]);
 
   const handleSaveBlog = (blog: any) => {
