@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import {
   CheckCircle2,
   Scissors,
@@ -18,9 +18,12 @@ import {
   Menu,
   X,
   User,
-  MessageCircle
+  MessageCircle,
+  AlertTriangle,
+  Copy,
+  Check
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -512,7 +515,30 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState<"terms" | "privacy" | null>(null);
   const [activeBlog, setActiveBlog] = useState<any>(null);
+  const [showPaymentNotice, setShowPaymentNotice] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const hasSeenNotice = sessionStorage.getItem("hasSeenPaymentNotice");
+    if (!hasSeenNotice) {
+      const timer = setTimeout(() => {
+        setShowPaymentNotice(true);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const closePaymentNotice = () => {
+    setShowPaymentNotice(false);
+    sessionStorage.setItem("hasSeenPaymentNotice", "true");
+  };
+
+  const copyAccountNumber = () => {
+    navigator.clipboard.writeText("1160478272");
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -1347,22 +1373,32 @@ export default function App() {
 
               {activeModal === "terms" ? (
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-slate-900">Terms & Conditions</h2>
-                  <div className="space-y-4 text-slate-600 leading-relaxed">
-                    <p className="font-bold text-slate-800">1. Layanan</p>
-                    <p>Tebasrumput.com menyediakan jasa pemotongan rumput, pembersihan lahan, dan perawatan taman untuk area perumahan dan komersial di wilayah Kota Palembang.</p>
+                  <h2 className="text-2xl font-bold text-slate-900">Sistem Pembayaran & Proses Kerja</h2>
+                  <div className="space-y-6 text-slate-600 leading-relaxed">
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-800">1. DP 20%</p>
+                      <p>Untuk booking jadwal, customer wajib melakukan DP sebesar 20% dari total biaya pengerjaan.</p>
+                    </div>
 
-                    <p className="font-bold text-slate-800">2. Pemesanan & Penjadwalan</p>
-                    <p>Pemesanan dianggap sah setelah pelanggan mengisi formulir atau menghubungi via WhatsApp dan mendapatkan konfirmasi jadwal dari tim kami.</p>
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-800">2. Tim ke Lokasi</p>
+                      <p>Setelah DP diterima, tim kami akan datang ke lokasi sesuai dengan jadwal yang telah disepakati bersama.</p>
+                    </div>
 
-                    <p className="font-bold text-slate-800">3. Biaya & Pembayaran</p>
-                    <p>Biaya layanan disesuaikan dengan paket yang dipilih atau hasil survey lokasi. Pembayaran dilakukan secara tunai (Cash on Delivery) atau transfer setelah pekerjaan selesai dikerjakan.</p>
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-800">3. Pengerjaan</p>
+                      <p>Pekerjaan dilakukan secara profesional sesuai dengan kesepakatan area dan hasil yang diinginkan pelanggan.</p>
+                    </div>
 
-                    <p className="font-bold text-slate-800">4. Akses Lokasi</p>
-                    <p>Pelanggan wajib memberikan akses masuk ke area pengerjaan pada waktu yang telah disepakati. Kami tidak bertanggung jawab atas keterlambatan akibat kendala akses lokasi.</p>
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-800">4. Pelunasan</p>
+                      <p>Sisa pembayaran (pelunasan) dilakukan segera setelah seluruh pekerjaan selesai dikerjakan.</p>
+                    </div>
 
-                    <p className="font-bold text-slate-800">5. Pembatalan</p>
-                    <p>Pembatalan atau perubahan jadwal harus diinformasikan maksimal 24 jam sebelum waktu pengerjaan yang dijadwalkan.</p>
+                    <div className="space-y-2">
+                      <p className="font-bold text-slate-800">5. Dokumentasi</p>
+                      <p>Kami akan memberikan dokumentasi berupa foto atau video hasil pengerjaan sebagai bukti penyelesaian tugas.</p>
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -1500,6 +1536,69 @@ export default function App() {
           <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 border-2 border-white rounded-full"></div>
         </motion.button>
       </motion.div>
+      {/* Modal Payment Notice */}
+      <AnimatePresence>
+        {showPaymentNotice && (
+          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
+              onClick={closePaymentNotice}
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              className="relative bg-white w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-slate-100"
+            >
+              <div className="p-6 md:p-8 space-y-6">
+                <div className="flex items-center gap-3">
+                  <div className="bg-amber-100 p-2 rounded-xl">
+                    <AlertTriangle className="w-5 h-5 text-amber-600" />
+                  </div>
+                  <h2 className="text-lg font-bold text-slate-900 leading-none">Notifikasi Penting</h2>
+                </div>
+
+                <div className="space-y-4">
+                  <p className="text-[13px] text-slate-500 leading-relaxed">
+                    Demi keamanan, pembayaran DP & Pelunasan hanya dilakukan ke rekening resmi:
+                  </p>
+                  
+                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-2">
+                    <div className="flex items-center justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                      <span>BCA - 1160478272</span>
+                    </div>
+                    
+                    <div className="flex items-center justify-between gap-3">
+                      <p className="text-sm font-bold text-slate-900 truncate">Muhamad Ridwan Saputra</p>
+                      <button 
+                        onClick={copyAccountNumber}
+                        className="p-2 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-all active:scale-95 shadow-sm"
+                        title="Salin Rekening"
+                      >
+                        {isCopied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4 text-slate-400" />}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-[10px] leading-relaxed text-red-500 font-medium italic">
+                  *Kami tidak bertanggung jawab atas transfer ke rekening lain.
+                </p>
+
+                <button
+                  onClick={closePaymentNotice}
+                  className="w-full bg-slate-900 text-white py-3.5 rounded-xl font-bold text-sm hover:bg-black transition-all active:scale-[0.98]"
+                >
+                  Saya Mengerti
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div >
   );
 }
