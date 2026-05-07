@@ -1388,7 +1388,7 @@ export default function App() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>0812 1115 6865</span>
+                <span>0895 0247 0657</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
