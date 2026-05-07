@@ -1,4 +1,4 @@
-# tebasrumput.com - Jasa Potong Rumput Palembang
+# tebasrumput.com - Jasa Potong Rumput Panggilan Seluruh Indonesia
 
 User-agent: *
 Allow: /

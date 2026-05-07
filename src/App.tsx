@@ -43,66 +43,66 @@ const WA_LINK = "https://wa.me/6281211156865";
 
 const blogs = [
   {
-    title: "Panduan Lengkap Merawat Rumput Gajah Mini di Cuaca Terik Palembang",
-    tags: ["Tips Perawatan", "Palembang", "Rumput Gajah Mini", "Taman"],
+    title: "Panduan Lengkap Merawat Rumput Gajah Mini di Cuaca Terik Indonesia",
+    tags: ["Tips Perawatan", "Nasional", "Rumput Gajah Mini", "Taman"],
     date: "26 Mar 2026",
-    desc: "Menghadapi cuaca Palembang yang ekstrem? Pelajari teknik penyiraman, pemupukan, dan perlindungan rumput gajah mini agar tetap hijau royo-royo.",
+    desc: "Menghadapi cuaca panas Indonesia yang ekstrem? Pelajari teknik penyiraman, pemupukan, dan perlindungan rumput gajah mini agar tetap hijau royo-royo.",
     source: "https://kumparan.com/jasa-taman/cara-merawat-rumput-gajah-mini",
     content: `
-      <h2>Tantangan Menanam Gajah Mini di Sumatera Selatan</h2>
-      <p>Kota Palembang dikenal memiliki indeks UV yang cukup tinggi dan suhu rata-rata yang bisa mencapai 35°C di siang hari. Bagi pemilik rumah di area seperti <strong>CitraGrand City</strong> atau <strong>OPI Regency</strong>, rumput gajah mini adalah pilihan estetis, namun rentan menguning jika salah perawatan.</p>
+      <h2>Tantangan Menanam Gajah Mini di Wilayah Tropis</h2>
+      <p>Wilayah Indonesia dikenal memiliki indeks UV yang cukup tinggi dan suhu rata-rata yang bisa mencapai 35°C di siang hari. Bagi pemilik rumah di perumahan modern maupun area terbuka, rumput gajah mini adalah pilihan estetis, namun rentan menguning jika salah perawatan.</p>
       
       <h3>1. Teknik Penyiraman 'Deep Watering'</h3>
-      <p>Banyak orang melakukan kesalahan dengan menyiram sedikit-sedikit tapi sering. Di Palembang, Anda disarankan menggunakan teknik <em>deep watering</em>.</p>
+      <p>Banyak orang melakukan kesalahan dengan menyiram sedikit-sedikit tapi sering. Di wilayah tropis, Anda disarankan menggunakan teknik <em>deep watering</em>.</p>
       <ul>
-        <li><strong>Waktu Ideal:</strong> Lakukan penyiraman antara jam 6 hingga 7 pagi. Ini memberikan waktu bagi air untuk meresap ke akar sebelum matahari mulai menyegat.</li>
+        <li><strong>Waktu Ideal:</strong> Lakukan penyiraman antara jam 6 hingga 7 pagi. Ini memberikan waktu bagi air untuk meresap ke akar sebelum matahari mulai menyengat.</li>
         <li><strong>Volume Air:</strong> Pastikan air meresap hingga kedalaman 10-15 cm di bawah permukaan tanah.</li>
-        <li><strong>Hindari Penyiraman Malam:</strong> Menyiram saat malam hari di cuaca lembap Palembang dapat memicu pertumbuhan jamur tanah.</li>
+        <li><strong>Hindari Penyiraman Malam:</strong> Menyiram saat malam hari di cuaca lembap dapat memicu pertumbuhan jamur tanah.</li>
       </ul>
 
       <h3>2. Nutrisi Tambahan (Pemupukan)</h3>
       <p>Rumput gajah mini membutuhkan asupan Nitrogen yang konsisten. Gunakan pupuk NPK 16-16-16 setiap 2 bulan sekali. Taburkan secara merata dan segera siram agar butiran pupuk hancur dan tidak membakar daun rumput.</p>
 
       <h3>3. Penyiangan Gulma (Rumput Teki)</h3>
-      <p>Masalah utama di Palembang adalah pertumbuhan rumput teki yang sangat cepat. Cabutlah gulma hingga ke akarnya menggunakan pencukil kecil minimal satu minggu sekali agar nutrisi tanah tidak direbut.</p>
+      <p>Masalah utama di taman tropis adalah pertumbuhan rumput teki yang sangat cepat. Cabutlah gulma hingga ke akarnya menggunakan pencukil kecil minimal satu minggu sekali agar nutrisi tanah tidak direbut.</p>
 
       <blockquote>
-        <p><strong>Butuh Bantuan?</strong> Jika kesibukan membuat Anda sulit merawat taman secara detail, tim <strong>Tebasrumput.com</strong> siap membantu perawatan rutin dengan tim profesional berpengalaman di seluruh wilayah Palembang.</p>
+        <p><strong>Butuh Bantuan?</strong> Jika kesibukan membuat Anda sulit merawat taman secara detail, tim <strong>Tebasrumput.com</strong> siap membantu perawatan rutin dengan tim profesional berpengalaman di seluruh wilayah Indonesia.</p>
       </blockquote>
     `
   },
   {
-    title: "Kapan Waktu Terbaik Memotong Rumput di Kalidoni dan Sako?",
-    tags: ["Jadwal", "Kalidoni", "Sako", "Layanan"],
+    title: "Kapan Waktu Terbaik Memotong Rumput di Wilayah Anda?",
+    tags: ["Jadwal", "Tips", "Edukasi", "Layanan"],
     date: "25 Mar 2026",
-    desc: "Frekuensi pemotongan rumput sangat dipengaruhi oleh lokasi. Simak panduan jadwal pemangkasan untuk wilayah Palembang Timur.",
+    desc: "Frekuensi pemotongan rumput sangat dipengaruhi oleh lokasi dan cuaca. Simak panduan jadwal pemangkasan untuk hasil terbaik.",
     source: "https://www.flamboyanasri.com/2021/04/jadwal-memotong-rumput.html",
     content: `
-      <h2>Mengapa Wilayah Kalidoni dan Sako Berbeda?</h2>
-      <p>Wilayah Palembang bagian Timur seperti <strong>Kalidoni</strong>, <strong>Sako</strong>, dan <strong>Sematang Borang</strong> cenderung memiliki kontur tanah yang lebih lembap. Hal ini mengakibatkan pertumbuhan rumput liar dan tanaman hias menjadi lebih masif dibandingkan wilayah lainnya.</p>
+      <h2>Mengapa Jadwal Pemotongan Berbeda-beda?</h2>
+      <p>Setiap wilayah memiliki karakteristik tanah dan tingkat kelembapan yang berbeda. Hal ini mengakibatkan pertumbuhan rumput liar dan tanaman hias menjadi lebih masif di beberapa wilayah dibandingkan wilayah lainnya.</p>
       
       <h3>Strategi Pemotongan Berdasarkan Musim</h3>
       <p>Menjaga kerapian halaman bukan hanya soal estetika, tapi juga soal mencegah sarang binatang melata seperti ular atau kelabang yang sering muncul di rumput tinggi.</p>
       <ul>
-        <li><strong>Musim Penghujan (Oktober - April):</strong> Rumput tumbuh 2x lebih cepat. Lakukan pemangkasan setiap <strong>10-14 hari sekali</strong>. Jangan menunggu hingga setinggi lutut karena batang rumput akan mengeras dan sulit dirapikan.</li>
-        <li><strong>Musim Kemarau Berdebu:</strong> Pertumbuhan melambat, namun debu sering menempel. Potonglah setiap <strong>3-4 minggu sekali</strong> dengan ketinggian yang sedikit lebih tinggi (sekitar 5 cm) untuk menjaga kelembapan akar.</li>
+        <li><strong>Musim Penghujan:</strong> Rumput tumbuh 2x lebih cepat. Lakukan pemangkasan setiap <strong>10-14 hari sekali</strong>. Jangan menunggu hingga setinggi lutut karena batang rumput akan mengeras dan sulit dirapikan.</li>
+        <li><strong>Musim Kemarau:</strong> Pertumbuhan melambat, namun debu sering menempel. Potonglah setiap <strong>3-4 minggu sekali</strong> dengan ketinggian yang sedikit lebih tinggi (sekitar 5 cm) untuk menjaga kelembapan akar.</li>
       </ul>
 
       <h3>Manfaat Memangkas Secara Konsisten</h3>
       <p>Memotong rumput secara rutin merangsang pertumbuhan tunas baru yang lebih hijau dan lembut. Selain itu, sinar matahari akan lebih mudah masuk ke sela-sela batang rumput, mencegah pertumbuhan lumut dan jamur yang merusak visual taman Anda.</p>
 
-      <p>Tebasrumput.com menyediakan layanan langganan bulanan khusus untuk area Kalidoni dan sekitarnya. Hubungi kami untuk jadwal survey gratis!</p>
+      <p>Tebasrumput.com menyediakan layanan langganan bulanan di seluruh wilayah layanan kami. Hubungi kami untuk info lebih lanjut!</p>
     `
   },
   {
     title: "Investasi Waktu: Jasa Potong Rumput Panggilan vs Memotong Sendiri",
-    tags: ["Edukasi", "Layanan Panggilan", "Palembang", "Hemat"],
+    tags: ["Edukasi", "Layanan Panggilan", "Nasional", "Hemat"],
     date: "24 Mar 2026",
     desc: "Seringkali kita merasa bisa melakukannya sendiri, tapi benarkah itu menguntungkan? Mari hitung biaya dan energinya.",
     source: "https://www.99.co/blog/indonesia/jasa-potong-rumput-panggilan/",
     content: `
       <h2>Analisis Biaya dan Tenaga Perawatan Taman</h2>
-      <p>Bagi warga Palembang yang bekerja di sektor perkantoran atau bisnis, waktu luang di akhir pekan sangatlah berharga. Seringkali rencana memotong rumput sendiri berakhir dengan kelelahan atau hasil yang tidak maksimal.</p>
+      <p>Bagi warga yang memiliki kesibukan tinggi, waktu luang di akhir pekan sangatlah berharga. Seringkali rencana memotong rumput sendiri berakhir dengan kelelahan atau hasil yang tidak maksimal.</p>
 
       <h3>Perbandingan Realistis:</h3>
       <p><strong>1. Menggunakan Tenaga Sendiri:</strong></p>
@@ -115,7 +115,7 @@ const blogs = [
       <p><strong>2. Menggunakan Jasa Tebasrumput.com:</strong></p>
       <ul>
         <li>Waktu: Anda bisa bersantai atau melakukan hobi lain.</li>
-        <li>Biaya: Transparan mulai dari 300rb, sudah termasuk angkut sampah.</li>
+        <li>Biaya: Transparan mulai dari harga terjangkau, sudah termasuk angkut sampah.</li>
         <li>Hasil: Rapi kualitas mesin profesional, sudut-sudut sulit terjangkau, dan taman langsung bersih seketika.</li>
       </ul>
 
@@ -130,7 +130,7 @@ const blogs = [
     source: "https://gdm.id/cara-mengatasi-gulma-rumput/",
     content: `
       <h2>Wajah Bisnis Anda Adalah Taman Depan Kantor</h2>
-      <p>Banyak gedung perkantoran di area <strong>Jl. Sudirman</strong> atau <strong>Basuki Rahmat</strong> yang memiliki area hijau. Masalah utama yang sering timbul adalah tumbuhnya rumput liar di sela-sela <em>paving block</em> atau taman mini yang merusak estetika profesional kantor Anda.</p>
+      <p>Banyak gedung perkantoran di kawasan bisnis yang memiliki area hijau. Masalah utama yang sering timbul adalah tumbuhnya rumput liar di sela-sela <em>paving block</em> atau taman mini yang merusak estetika profesional kantor Anda.</p>
       
       <h3>Dampak Negatif Membiarkan Gulma:</h3>
       <ol>
@@ -146,17 +146,17 @@ const blogs = [
     `
   },
   {
-    title: "Rumput Manila vs Rumput Jepang: Perbandingan untuk Taman Palembang",
+    title: "Rumput Manila vs Rumput Jepang: Perbandingan untuk Taman Anda",
     tags: ["Desain", "Edukasi", "Rumput Manila", "Rumput Jepang"],
     date: "22 Mar 2026",
-    desc: "Ingin membangun taman baru tapi bingung pilih jenis rumput? Baca panduan pemilihan untuk wilayah Sumatera Selatan.",
+    desc: "Ingin membangun taman baru tapi bingung pilih jenis rumput? Baca panduan pemilihan untuk wilayah Indonesia.",
     source: "https://arsitag.com/article/mengenal-jenis-rumput-taman",
     content: `
       <h2>Memilih Karpet Hijau yang Tepat</h2>
-      <p>Tidak semua rumput cocok dengan karakteristik tanah di Sumatera Selatan. Sebelum Anda memesan bibit, pahami perbedaan dua primadona ini.</p>
+      <p>Tidak semua rumput cocok dengan karakteristik tanah di wilayah Anda. Sebelum Anda memesan bibit, pahami perbedaan dua primadona ini.</p>
 
       <h3>1. Rumput Manila (Zoysia Matrella)</h3>
-      <p>Rumput ini sering digunakan untuk lapangan golf karena kekuatannya. Di Palembang, rumput manila sangat disukai karena:</p>
+      <p>Rumput ini sering digunakan untuk lapangan golf karena kekuatannya. Di Indonesia, rumput manila sangat disukai karena:</p>
       <ul>
         <li><strong>Tahan Injak:</strong> Sangat kuat untuk area bermain anak atau hewan peliharaan.</li>
         <li><strong>Warna Stabil:</strong> Hijau pekat meski terpapar matahari langsung.</li>
@@ -168,7 +168,7 @@ const blogs = [
       <ul>
         <li><strong>Estetika Tinggi:</strong> Terlihat sangat rapi dan formal, cocok untuk taman depan perumahan elit.</li>
         <li><strong>Mudah Tumbuh:</strong> Lebih cepat menutup tanah dibandingkan manila.</li>
-        <li><strong>Minus:</strong> Sangat manja. Jika telat siram sedikit saja saat kemarau Palembang, daunnya cepat menguning dan mati.</li>
+        <li><strong>Minus:</strong> Sangat manja. Jika telat siram sedikit saja saat kemarau, daunnya cepat menguning dan mati.</li>
       </ul>
 
       <p>Tim <strong>Tebasrumput.com</strong> memiliki keahlian khusus dalam menangani kedua jenis rumput ini. Kami tahu perbedaan mata pisau mesin yang tepat agar potongan tidak merusak struktur daunnya.</p>
@@ -176,13 +176,13 @@ const blogs = [
   },
   {
     title: "Mengatasi Masalah Genangan Air dan Drainase Taman Pasca Hujan",
-    tags: ["Teknis", "Drainase", "Tips Rumah", "Palembang"],
+    tags: ["Teknis", "Drainase", "Tips Rumah", "Nasional"],
     date: "21 Mar 2026",
-    desc: "Hujan deras di Palembang seringkali menyisakan genangan. Pelajari trik teknis agar taman Anda tidak becek.",
+    desc: "Hujan deras seringkali menyisakan genangan. Pelajari trik teknis agar taman Anda tidak becek.",
     source: "https://www.rumah123.com/panduan-properti/drainase-taman/",
     content: `
       <h2>Halaman Bebas Becek di Musim Hujan</h2>
-      <p>Intensitas hujan di wilayah Sumatera Selatan bisa sangat tinggi. Bagi Anda yang memiliki halaman cukup luas, genangan air yang menetap lebih dari 24 jam bisa membunuh akar rumput dan menyebabkan bau tidak sedap.</p>
+      <p>Intensitas hujan di wilayah tropis bisa sangat tinggi. Bagi Anda yang memiliki halaman cukup luas, genangan air yang menetap lebih dari 24 jam bisa membunuh akar rumput dan menyebabkan bau tidak sedap.</p>
 
       <h3>Tindakan Praktis yang Bisa Anda Lakukan:</h3>
       <ul>
@@ -215,8 +215,8 @@ const blogs = [
     `
   },
   {
-    title: "Estimasi Biaya dan Harga Jasa Potong Rumput di Palembang 2026",
-    tags: ["Harga", "Layanan", "Promo", "Info Palembang"],
+    title: "Estimasi Biaya dan Harga Jasa Potong Rumput Indonesia 2026",
+    tags: ["Harga", "Layanan", "Promo", "Info Nasional"],
     date: "19 Mar 2026",
     desc: "Berapa anggaran yang harus disiapkan untuk memanggil tukang rumput? Cek tabel perkiraan harga kami.",
     source: "https://www.sejutataman.com/harga-jasa-potong-rumput/",
@@ -231,10 +231,10 @@ const blogs = [
         <li><strong>Tingkat Kesulitan:</strong> Area yang banyak bebatuan atau kemiringan curam membutuhkan kehati-hatian ekstra.</li>
       </ol>
 
-      <h3>Estimasi Layanan Palembang:</h3>
+      <h3>Estimasi Layanan:</h3>
       <ul>
-        <li><strong>Paket 1 (Kavling Kecil):</strong> Rp 300.000 - Rp 350.000 (Cocok untuk rumah tipe 36 atau 45).</li>
-        <li><strong>Paket 2 (Lahan Sedang):</strong> Rp 450.000 - Rp 600.000 (Untuk lahan sisa atau samping rumah).</li>
+        <li><strong>Paket 1 (Kavling Kecil):</strong> Mulai Rp 300.000 (Cocok untuk rumah tipe 36 atau 45).</li>
+        <li><strong>Paket 2 (Lahan Sedang):</strong> Mulai Rp 450.000 (Untuk lahan sisa atau samping rumah).</li>
         <li><strong>Lahan Borongan:</strong> Nego di tempat setelah survey foto/video via WhatsApp.</li>
       </ul>
 
@@ -242,14 +242,14 @@ const blogs = [
     `
   },
   {
-    title: "Rahasia Menjaga Rumput Tetap Hijau Segar di Musim Kemarau Sumatera",
-    tags: ["Musiman", "Tips Kebun", "Kemarau", "Palembang"],
+    title: "Rahasia Menjaga Rumput Tetap Hijau Segar di Musim Kemarau",
+    tags: ["Musiman", "Tips Kebun", "Kemarau", "Nasional"],
     date: "18 Mar 2026",
-    desc: "Kemarau panjang sering melanda Sumatera Selatan. Simak trik agar rumput taman tidak kering dan mati.",
+    desc: "Kemarau panjang sering melanda berbagai wilayah. Simak trik agar rumput taman tidak kering dan mati.",
     source: "https://disway.id/read/tips-merawat-rumput-kemarau",
     content: `
       <h2>Bertahan di Bawah Terik Matahari</h2>
-      <p>Musim kemarau di Palembang bisa menyebabkan tanah pecah-pecah jika tidak dikelola dengan benar. Rumput yang kering tidak hanya buruk secara visual, tapi juga sulit dipulihkan.</p>
+      <p>Musim kemarau bisa menyebabkan tanah pecah-pecah jika tidak dikelola dengan benar. Rumput yang kering tidak hanya buruk secara visual, tapi juga sulit dipulihkan.</p>
 
       <h3>Golden Rules di Musim Kemarau:</h3>
       <ul>
@@ -278,7 +278,7 @@ const blogs = [
         <li><strong>Kerataan Sempurna:</strong> Tidak ada area yang lebih tinggi atau lebih rendah, taman terlihat seperti karpet hotel bintang lima.</li>
       </ul>
 
-      <p>Tebasrumput.com selalu menggunakan mesin terbaru dengan mata pisau yang selalu diasah setiap hari untuk memastikan hasil potongan yang sehat bagi rumput kesayangan Anda di wilayah Palembang.</p>
+      <p>Tebasrumput.com selalu menggunakan mesin terbaru dengan mata pisau yang selalu diasah setiap hari untuk memastikan hasil potongan yang sehat bagi rumput kesayangan Anda di wilayah Indonesia.</p>
     `
   },
   // New 10 Articles
@@ -290,7 +290,7 @@ const blogs = [
     source: "https://kumparan.com/pupuk-npk-untuk-rumput-gajah-mini",
     content: `
       <h2>Nutrisi Seimbang: Kunci Rumput Sehat</h2>
-      <p>Banyak pemilik rumah di Palembang mengeluh rumput mereka tiba-tiba mengerdil atau berwarna kekuningan. Hal ini biasanya terjadi karena tanah sudah kehabisan nutrisi penting seperti Nitrogen (N), Fosfor (P), dan Kalium (K).</p>
+      <p>banyak pemilik rumah mengeluh rumput mereka tiba-tiba mengerdil atau berwarna kekuningan. Hal ini biasanya terjadi karena tanah sudah kehabisan nutrisi penting seperti Nitrogen (N), Fosfor (P), dan Kalium (K).</p>
       
       <h3>Mengapa Pilih NPK Mutiara 16-16-16?</h3>
       <p>Pupuk NPK Mutiara memiliki komposisi hara yang seimbang. Nitrogen berfungsi untuk kesegaran daun, Fosfor untuk kekuatan akar, dan Kalium untuk daya tahan terhadap penyakit.</p>
@@ -304,16 +304,16 @@ const blogs = [
     `
   },
   {
-    title: "Inspirasi Taman Tropis Minimalis: Desain Ideal untuk Rumah Palembang",
-    tags: ["Desain", "Modern", "Palembang", "Inspirasi"],
+    title: "Inspirasi Taman Tropis Minimalis: Desain Ideal untuk Rumah Anda",
+    tags: ["Desain", "Modern", "Nasional", "Inspirasi"],
     date: "15 Mar 2026",
     desc: "Membangun taman di lahan sempit Sumatera Selatan butuh strategi. Simak konsep desain Tropical Zen kami.",
     source: "https://arsitag.com/taman-tropis-minimalis-palembang",
     content: `
       <h2>Cantik Tanpa Repot: Konsep Modern Tropis</h2>
-      <p>Bagi warga Palembang yang memiliki lahan terbatas di perumahan tipe 36 atau 45, konsep minimalis adalah solusi terbaik. Fokus utama desain ini adalah integrasi antara area hijau yang rapi dengan elemen keras seperti batuan alam atau kayu.</p>
+      <p>Bagi warga Indonesia yang memiliki lahan terbatas di perumahan tipe 36 atau 45, konsep minimalis adalah solusi terbaik. Fokus utama desain ini adalah integrasi antara area hijau yang rapi dengan elemen keras seperti batuan alam atau kayu.</p>
       
-      <h3>Elemen Wajib Taman Minimalis Palembang:</h3>
+      <h3>Elemen Wajib Taman Minimalis:</h3>
       <ol>
         <li><strong>Rumput sebagai Karpet Alami:</strong> Gunakan rumput manila atau gajah mini yang dipangkas pendek secara rutin.</li>
         <li><strong>Tanaman Vertikal:</strong> Gunakan dinding samping untuk menaruh tanaman gantung seperti <em>Lee Kwan Yew</em> untuk memberikan kesan air terjun hijau.</li>
@@ -327,11 +327,11 @@ const blogs = [
     title: "10 Tanaman Hias Outdoor yang Paling Kuat Menghadapi Terik Matahari",
     tags: ["Tanaman", "Outdoor", "Tahan Panas", "Kebun"],
     date: "14 Mar 2026",
-    desc: "Daftar tanaman tangguh yang tetap berbunga cantik meski terpapar panas Palembang sepanjang hari.",
+    desc: "Daftar tanaman tangguh yang tetap berbunga cantik di berbagai wilayah.",
     source: "https://www.rumah123.com/tanaman-hias-tahan-panas/",
     content: `
       <h2>Oase Berwarna di Halaman Depan</h2>
-      <p>Memilih tanaman hias di Palembang tidak bisa sembarangan. Tanaman yang tidak tahan panas (<em>indoor plants</em>) yang dipaksa di halaman terbuka akan cepat layu dan mati terbakar matahari.</p>
+      <p>Memilih tanaman hias tidak bisa sembarangan. Tanaman yang tidak tahan panas (<em>indoor plants</em>) yang dipaksa di halaman terbuka akan cepat layu dan mati terbakar matahari.</p>
       
       <h3>Rekomendasi Tanaman Tahan Panas:</h3>
       <ul>
@@ -352,7 +352,7 @@ const blogs = [
     source: "https://www.detik.com/properti/tips-pasang-paving-block/",
     content: `
       <h2>Ciptakan Halaman Lebih Fungsional</h2>
-      <p>Paving block adalah solusi cerdas bagi warga Palembang untuk mengatasi area halaman yang sering becek saat musim hujan. Namun, pemasangan yang asal-asalan akan membuat paving cepat amblas atau bergelombang.</p>
+      <p>Paving block adalah solusi cerdas bagi warga Indonesia untuk mengatasi area halaman yang sering becek saat musim hujan. Namun, pemasangan yang asal-asalan akan membuat paving cepat amblas atau bergelombang.</p>
       
       <h3>Langkah-langkah Pemasangan Profesional:</h3>
       <ol>
@@ -393,7 +393,7 @@ const blogs = [
     source: "https://kfclandscape.com/pentingnya-aerasi-rumput/",
     content: `
       <h2>Agar Rumput Bisa Bernapas Kembali</h2>
-      <p>Di wilayah dengan tanah liat seperti sebagian besar area Palembang, tanah cenderung menjadi sangat padat seiring berjalannya waktu. Padatnya tanah menghalangi oksigen, air, dan nutrisi untuk sampai ke akar rumput utama.</p>
+      <p>Di wilayah dengan tanah liat seperti tanah cenderung menjadi sangat padat seiring berjalannya waktu. Padatnya tanah menghalangi oksigen, air, dan nutrisi untuk sampai ke akar rumput utama.</p>
       
       <h3>Apa Itu Aerasi?</h3>
       <p>Aerasi adalah proses membuat lubang-lubang kecil sedalam 10 cm pada permukaan tanah secara merata. Ini bisa dilakukan menggunakan mesin aerator atau alat manual berbasis garpu tanah.</p>
@@ -429,14 +429,14 @@ const blogs = [
     `
   },
   {
-    title: "Tips Membangun Vertical Garden di Lahan Terbatas Kota Palembang",
-    tags: ["Urban Farming", "Vertical Garden", "DIY", "Palembang"],
+    title: "Tips Membangun Vertical Garden di Lahan Terbatas Kota Anda",
+    tags: ["Urban Farming", "Vertical Garden", "DIY", "Nasional"],
     date: "09 Mar 2026",
     desc: "Solusi cerdas bagi pemilik ruko atau rumah minimalis yang ingin tetap memiliki sudut hijau yang segar.",
     source: "https://palpres.disway.id/tips-vertical-garden-minimalis",
     content: `
       <h2>Hutan Vertikal di Dinding Rumah Anda</h2>
-      <p>Konsep <em>Vertical Garden</em> sangat populer di kota besar seperti Palembang karena tidak memakan tempat di lantai. Anda bisa memanfaatkan dinding belakang rumah atau pagar depan untuk area hijau ini.</p>
+      <p>Konsep <em>Vertical Garden</em> sangat populer di kota besar karena tidak memakan tempat di lantai. Anda bisa memanfaatkan dinding belakang rumah atau pagar depan untuk area hijau ini.</p>
       
       <h3>Cara Membuat Vertical Garden Sederhana:</h3>
       <ul>
@@ -490,26 +490,56 @@ const blogs = [
   }
 ];
 
-const PALEMBANG_REGIONS = [
-  "Alang-Alang Lebar",
-  "Bukit Kecil",
-  "Gandus",
-  "Ilir Barat I",
-  "Ilir Barat II",
-  "Ilir Timur I",
-  "Ilir Timur II",
-  "Ilir Timur III",
-  "Jakabaring",
-  "Kalidoni",
-  "Kemuning",
-  "Kertapati",
-  "Plaju",
-  "Sako",
-  "Seberang Ulu I",
-  "Seberang Ulu II",
-  "Sematang Borang",
-  "Sukarami"
+const INDONESIA_REGIONS = [
+  "Aceh", "Sumatera Utara", "Sumatera Barat", "Riau", "Kepulauan Riau",
+  "Jambi", "Bengkulu", "Sumatera Selatan", "Kepulauan Bangka Belitung", "Lampung",
+  "Banten", "DKI Jakarta", "Jawa Barat", "Jawa Tengah", "DI Yogyakarta", "Jawa Timur",
+  "Bali", "Nusa Tenggara Barat", "Nusa Tenggara Timur",
+  "Kalimantan Barat", "Kalimantan Tengah", "Kalimantan Selatan", "Kalimantan Timur", "Kalimantan Utara",
+  "Sulawesi Utara", "Sulawesi Tengah", "Sulawesi Selatan", "Sulawesi Tenggara", "Gorontalo", "Sulawesi Barat",
+  "Maluku", "Maluku Utara", "Papua Barat", "Papua", "Papua Selatan", "Papua Tengah", "Papua Pegunungan", "Papua Barat Daya"
 ];
+
+const INDONESIA_CITIES: Record<string, string[]> = {
+  "Aceh": ["Banda Aceh", "Lhokseumawe", "Langsa", "Meulaboh", "Sabang"],
+  "Sumatera Utara": ["Medan", "Binjai", "Pematangsiantar", "Tanjungbalai", "Tebing Tinggi"],
+  "Sumatera Barat": ["Padang", "Bukittinggi", "Payakumbuh", "Pariaman", "Solok"],
+  "Riau": ["Pekanbaru", "Dumai"],
+  "Kepulauan Riau": ["Tanjungpinang", "Batam"],
+  "Jambi": ["Jambi", "Sungai Penuh"],
+  "Bengkulu": ["Bengkulu"],
+  "Sumatera Selatan": ["Palembang", "Lubuklinggau", "Pagar Alam", "Prabumulih"],
+  "Kepulauan Bangka Belitung": ["Pangkal Pinang"],
+  "Lampung": ["Bandar Lampung", "Metro"],
+  "Banten": ["Serang", "Tangerang", "Cilegon", "Tangerang Selatan"],
+  "DKI Jakarta": ["Jakarta Pusat", "Jakarta Utara", "Jakarta Timur", "Jakarta Selatan", "Jakarta Barat"],
+  "Jawa Barat": ["Bandung", "Bekasi", "Depok", "Bogor", "Cimahi", "Tasikmalaya", "Cirebon", "Sukabumi", "Banjar"],
+  "Jawa Tengah": ["Semarang", "Surakarta", "Magelang", "Pekalongan", "Salatiga", "Tegal"],
+  "DI Yogyakarta": ["Yogyakarta"],
+  "Jawa Timur": ["Surabaya", "Malang", "Batu", "Blitar", "Kediri", "Madiun", "Mojokerto", "Pasuruan", "Probolinggo"],
+  "Bali": ["Denpasar"],
+  "Nusa Tenggara Barat": ["Mataram", "Bima"],
+  "Nusa Tenggara Timur": ["Kupang"],
+  "Kalimantan Barat": ["Pontianak", "Singkawang"],
+  "Kalimantan Tengah": ["Palangkaraya"],
+  "Kalimantan Selatan": ["Banjarmasin", "Banjarbaru"],
+  "Kalimantan Timur": ["Samarinda", "Balikpapan", "Bontang"],
+  "Kalimantan Utara": ["Tarakan"],
+  "Sulawesi Utara": ["Manado", "Bitung", "Kotamobagu", "Tomohon"],
+  "Sulawesi Tengah": ["Palu"],
+  "Sulawesi Selatan": ["Makassar", "Palopo", "Parepare"],
+  "Sulawesi Tenggara": ["Kendari", "Bau-Bau"],
+  "Gorontalo": ["Gorontalo"],
+  "Sulawesi Barat": ["Mamuju"],
+  "Maluku": ["Ambon", "Tual"],
+  "Maluku Utara": ["Ternate", "Tidore Kepulauan"],
+  "Papua Barat": ["Manokwari"],
+  "Papua": ["Jayapura"],
+  "Papua Selatan": ["Merauke"],
+  "Papua Tengah": ["Nabire"],
+  "Papua Pegunungan": ["Wamena"],
+  "Papua Barat Daya": ["Sorong"]
+};
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -550,6 +580,7 @@ export default function App() {
   const [formData, setFormData] = useState({
     name: "",
     region: "",
+    city: "",
     service: "Paket 1 (300rb - Kavling Kecil)"
   });
 
@@ -558,7 +589,8 @@ export default function App() {
 
     let message = "Halo tebasrumput.com, saya ingin memesan jasa potong rumput.";
     if (formData.name || formData.region) {
-      message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari wilayah ${formData.region || "Palembang"} ingin memesan layanan ${formData.service}.`;
+      const location = formData.city ? `${formData.city}, ${formData.region}` : (formData.region || "Indonesia");
+      message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari ${location} ingin memesan layanan ${formData.service}.`;
     }
 
     window.open(`${WA_LINK}?text=${encodeURIComponent(message)}`, "_blank");
@@ -623,7 +655,7 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="pt-40 pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative overflow-hidden">
+        <section className="pt-28 md:pt-40 pb-20 md:pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative overflow-hidden">
           {/* Grid Pattern Background */}
           <div className="absolute inset-0 -z-20 pointer-events-none"
             style={{
@@ -651,17 +683,17 @@ export default function App() {
             >
               <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase">
                 <MapPin className="w-3 h-3" />
-                <span>Wilayah <span className="text-primary font-bold">Palembang</span> & Sekitarnya</span>
+                <span>Panggilan <span className="text-primary font-bold">Seluruh Indonesia</span></span>
               </motion.div>
 
-              <motion.h1 variants={fadeIn} className="text-3xl sm:text-4xl md:text-6xl font-medium leading-[1.1] text-slate-900 tracking-tight">
-                <span className="font-bold text-primary">Jasa Tebas Rumput Panggilan Palembang</span> <br />
-                <span className="text-slate-900 font-black text-4xl md:text-6xl">Murah & Rapi</span>
+              <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] text-slate-900 tracking-tight">
+                <span className="font-bold text-primary text-[10px] md:text-sm block mb-2 uppercase tracking-[0.2em] opacity-90">Jasa Potong Rumput Panggilan Indonesia</span>
+                <span className="text-slate-900 block">Murah, Cepat</span>
+                <span className="text-primary block">& Profesional</span>
               </motion.h1>
-
-              <motion.p variants={fadeIn} className="text-lg text-slate-500 leading-relaxed font-light">
-                Solusi praktis untuk halaman rumah, kantor, dan lahan kosong. <br className="hidden md:block" />
-                <span className="font-medium text-slate-700">Rapi, Cepat, & Terpercaya</span> — Tim kami datang langsung ke lokasi Anda dengan peralatan modern lengkap.
+              <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl">
+                Layanan <span className="font-medium text-slate-700 italic">Jasa Potong Rumput</span> praktis untuk halaman rumah, kantor, dan lahan kosong di <span className="font-medium text-slate-700">seluruh Indonesia</span>. 
+                <span className="block mt-2 font-medium text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
 
               <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 items-center">
@@ -721,21 +753,42 @@ export default function App() {
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Wilayah Palembang</label>
-                  <div className="relative">
-                    <select
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white"
-                      value={formData.region}
-                      onChange={(e) => setFormData({ ...formData, region: e.target.value })}
-                      required
-                    >
-                      <option value="" disabled>Pilih Kecamatan</option>
-                      {PALEMBANG_REGIONS.map(region => (
-                        <option key={region} value={region}>{region}</option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Provinsi</label>
+                    <div className="relative">
+                      <select
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-sm"
+                        value={formData.region}
+                        onChange={(e) => setFormData({ ...formData, region: e.target.value, city: "" })}
+                        required
+                      >
+                        <option value="" disabled>Pilih Provinsi</option>
+                        {INDONESIA_REGIONS.map(region => (
+                          <option key={region} value={region}>{region}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Kota / Kabupaten</label>
+                    <div className="relative">
+                      <select
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-sm disabled:bg-slate-50 disabled:text-slate-400"
+                        value={formData.city}
+                        onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                        required
+                        disabled={!formData.region}
+                      >
+                        <option value="" disabled>{formData.region ? "Pilih Kota" : "Pilih Provinsi Dulu"}</option>
+                        {formData.region && INDONESIA_CITIES[formData.region]?.map(city => (
+                          <option key={city} value={city}>{city}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                    </div>
                   </div>
                 </div>
 
@@ -780,7 +833,7 @@ export default function App() {
               <span className="text-2xl font-black text-primary/20 tracking-tighter">ECOLAWN</span>
               <span className="text-2xl font-black text-primary/20 tracking-tighter">NATUREPRO</span>
               <span className="text-2xl font-black text-primary/20 tracking-tighter">PALM-GREEN</span>
-              <span className="text-2xl font-black text-primary/20 tracking-tighter">AMPERA-LAND</span>
+              <span className="text-2xl font-black text-primary/20 tracking-tighter">INDOSCAPE</span>
             </div>
             <div className="flex items-center gap-16 px-8">
               <span className="text-2xl font-black text-primary/20 tracking-tighter">GARDENIA</span>
@@ -789,7 +842,7 @@ export default function App() {
               <span className="text-2xl font-black text-primary/20 tracking-tighter">ECOLAWN</span>
               <span className="text-2xl font-black text-primary/20 tracking-tighter">NATUREPRO</span>
               <span className="text-2xl font-black text-primary/20 tracking-tighter">PALM-GREEN</span>
-              <span className="text-2xl font-black text-primary/20 tracking-tighter">AMPERA-LAND</span>
+              <span className="text-2xl font-black text-primary/20 tracking-tighter">INDOSCAPE</span>
             </div>
           </div>
         </section >
@@ -829,8 +882,8 @@ export default function App() {
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-3">
-                <h2 className="text-xs font-bold text-primary-light tracking-[0.2em] uppercase">Mengapa Kami?</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">Kualitas Terbaik Untuk Kepuasan Anda</h3>
+                <h2 className="text-xs font-bold text-primary-light tracking-[0.2em] uppercase">Keunggulan</h2>
+                <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">Cepat, Rapi & Profesional</h3>
               </div>
 
               <div className="space-y-6">
@@ -942,8 +995,8 @@ export default function App() {
         < section id="pricing" className="bg-soft-gray section-padding" >
           <div className="max-w-7xl mx-auto">
             <div className="text-center space-y-3 mb-16">
-              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Harga Paket</h2>
-              <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Pilih Paket Yang Sesuai</h3>
+              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Harga Transparan</h2>
+              <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Layanan Profesional Harga Murah</h3>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -1067,7 +1120,7 @@ export default function App() {
             <div className="space-y-4">
               {[
                 { q: "Apakah bisa panggilan mendadak?", a: "Tentu! Kami menyediakan slot untuk pengerjaan di hari yang sama jika jadwal masih tersedia. Sebaiknya hubungi kami di pagi hari." },
-                { q: "Area layanan di mana saja?", a: "Saat ini kami melayani seluruh area Palembang dan sekitarnya. Untuk area yang lebih jauh, silakan hubungi admin kami." },
+                { q: "Area layanan di mana saja?", a: "Kami melayani seluruh wilayah di Indonesia. Tim profesional kami siap datang ke lokasi Anda sesuai dengan jadwal yang telah disepakati." },
                 { q: "Apakah alat disediakan?", a: "Ya, tim kami membawa seluruh peralatan lengkap mulai dari mesin potong, gunting tanaman, hingga alat pembersih." },
                 { q: "Berapa lama pengerjaan?", a: "Tergantung luas area. Untuk halaman rumah standar (50m²), biasanya memakan waktu 1-2 jam." }
               ].map((faq, i) => (
@@ -1099,7 +1152,7 @@ export default function App() {
               <div className="text-left space-y-4">
                 <h2 className="text-primary font-bold text-sm tracking-widest uppercase">Tips & Blog</h2>
                 <h3 className="text-2xl md:text-5xl font-bold text-slate-900 tracking-tight">Inspirasi & Tips Perawatan Taman</h3>
-                <p className="text-slate-500 max-w-2xl font-light text-xs md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Palembang.</p>
+                <p className="text-slate-500 max-w-2xl font-light text-xs md:text-base">Informasi bermanfaat seputar perawatan rumput dan taman khusus untuk wilayah Indonesia.</p>
               </div>
               <div className="hidden md:flex gap-4">
                 <button
@@ -1176,7 +1229,7 @@ export default function App() {
                   <h2 className="text-primary font-bold text-sm tracking-widest uppercase">Lokasi Kami</h2>
                   <h3 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">Temukan Lokasi kami di <span className="text-primary">Google Map</span></h3>
                   <p className="text-slate-500 leading-relaxed font-light">
-                    Kami berbasis di Kalidoni, Palembang, namun layanan kami mencakup seluruh wilayah kota. Lihat lokasi kami di Google Map untuk ulasan pelanggan dan informasi terbaru.
+                    Kami melayani jasa potong rumput profesional untuk seluruh wilayah di Indonesia. Tim kami tersebar di berbagai titik untuk memastikan layanan cepat dan berkualitas. Lihat pusat layanan kami di Google Map.
                   </p>
                 </div>
 
@@ -1188,7 +1241,7 @@ export default function App() {
                       <Star className="w-6 h-6 fill-current" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900">Jasa Potong Rumput Palembang</h4>
+                      <h4 className="font-bold text-slate-900">Jasa Potong Rumput Indonesia</h4>
                       <div className="flex items-center text-amber-500 gap-1">
                         <Star className="w-4 h-4 fill-current" />
                         <Star className="w-4 h-4 fill-current" />
@@ -1204,7 +1257,7 @@ export default function App() {
                     <div className="flex gap-4">
                       <MapPin className="text-primary w-5 h-5 shrink-0" />
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Jl. Prajurit Nazaruddin Lorong Al-Hidayah, Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan 30119
+                        Layanan Profesional Seluruh Indonesia (HQ: Kalidoni, Palembang)
                       </p>
                     </div>
                     <div className="flex gap-4">
@@ -1238,7 +1291,7 @@ export default function App() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Google Maps Tebasrumput.com"
+                  title="Google Maps Tebasrumput.com Indonesia"
                 ></iframe>
               </motion.div>
             </div>
@@ -1253,16 +1306,16 @@ export default function App() {
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold text-slate-900">Area Layanan & Spesialisasi</h2>
                 <p className="text-slate-600 leading-relaxed">
-                  Kami menyediakan <strong>jasa potong rumput panggilan</strong> untuk seluruh wilayah kota Palembang. Tim kami ahli dalam <strong>jasa tebas rumput panggilan Palembang</strong>, menangani berbagai jenis lahan mulai dari halaman rumah minimalis hingga lahan kosong yang rimbun. Layanan <strong>jasa babat rumput area Palembang</strong> kami menjamin hasil yang rapi dan cepat.
+                  Kami menyediakan <strong>jasa potong rumput panggilan</strong> untuk seluruh wilayah di Indonesia. Tim kami ahli dalam <strong>jasa tebas rumput panggilan profesional</strong>, menangani berbagai jenis lahan mulai dari halaman rumah minimalis hingga lahan kosong yang rimbun. Layanan <strong>jasa babat rumput nasional</strong> kami menjamin hasil yang rapi dan cepat.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Jasa Babat Rumput Area Palembang",
-                    "Potong Rumput Panggilan",
-                    "Jasa Potong Rumput Wilayah Palembang",
-                    "Tukang Rumput Palembang",
+                    "Jasa Babat Rumput Nasional",
+                    "Potong Rumput Panggilan Indonesia",
+                    "Jasa Potong Rumput Terdekat",
+                    "Tukang Rumput Profesional",
                     "Pembersihan Lahan Kosong",
-                    "Perawatan Taman Palembang"
+                    "Perawatan Taman Indonesia"
                   ].map(keyword => (
                     <span key={keyword} className="px-3 py-1 bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-wider rounded-full border border-slate-100">
                       #{keyword}
@@ -1271,16 +1324,16 @@ export default function App() {
                 </div>
               </div>
               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                <h3 className="text-lg font-bold text-slate-900 mb-4">Cakupan Wilayah Palembang:</h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-4">Cakupan Wilayah Indonesia:</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-4 text-xs text-slate-500">
-                  {PALEMBANG_REGIONS.map(region => (
+                  {INDONESIA_REGIONS.map(region => (
                     <span key={region} className="flex items-center gap-1">
                       <div className="w-1 h-1 bg-primary rounded-full"></div> {region}
                     </span>
                   ))}
                 </div>
                 <p className="mt-6 text-[10px] text-slate-400 italic">
-                  *Pemesanan <strong>jasa potong rumput panggilan wilayah Palembang</strong> dapat dilakukan setiap hari.
+                  *Pemesanan <strong>jasa potong rumput panggilan nasional</strong> dapat dilakukan setiap hari.
                 </p>
               </div>
             </div>
@@ -1331,7 +1384,7 @@ export default function App() {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Jl. Prajurit Nazaruddin Lorong Al-Hidayah, Kalidoni, Kec. Kalidoni, Kota Palembang, Sumatera Selatan 30119</span>
+                <span>Layanan Profesional Seluruh Indonesia (HQ: Kalidoni, Palembang)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
