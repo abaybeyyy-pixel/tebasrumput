@@ -39,7 +39,7 @@ const staggerContainer = {
   }
 };
 
-const WA_LINK = "https://wa.me/6281211156865";
+const WA_LINK = "https://wa.me/6289502470657";
 
 const blogs = [
   {
@@ -1262,7 +1262,7 @@ export default function App() {
                     </div>
                     <div className="flex gap-4">
                       <Phone className="text-primary w-5 h-5 shrink-0" />
-                      <p className="text-sm text-slate-600">0812 1115 6865</p>
+                      <p className="text-sm text-slate-600">0895 0247 0657</p>
                     </div>
                   </div>
 
