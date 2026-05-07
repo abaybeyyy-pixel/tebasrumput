@@ -679,7 +679,7 @@ export default function App() {
               initial="initial"
               animate="animate"
               variants={staggerContainer}
-              className="text-left space-y-10"
+              className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-10"
             >
               <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase">
                 <MapPin className="w-3 h-3" />
@@ -691,7 +691,7 @@ export default function App() {
                 <span className="text-slate-900 block">Murah, Cepat</span>
                 <span className="text-primary block">& Profesional</span>
               </motion.h1>
-              <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl">
+              <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
                 Layanan <span className="font-medium text-slate-700 italic">Jasa Potong Rumput</span> praktis untuk halaman rumah, kantor, dan lahan kosong di <span className="font-medium text-slate-700">seluruh Indonesia</span>. 
                 <span className="block mt-2 font-medium text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
@@ -708,7 +708,7 @@ export default function App() {
                 </a>
               </motion.div>
 
-              <motion.div variants={fadeIn} className="flex flex-col items-start gap-4 pt-8">
+              <motion.div variants={fadeIn} className="flex flex-col items-center lg:items-start gap-4 pt-8">
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4, 5].map(i => (
                     <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-slate-100 flex items-center justify-center text-slate-400 shadow-sm">
