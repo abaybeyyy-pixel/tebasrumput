@@ -23,7 +23,10 @@ import {
   Copy,
   Check,
   Users,
-  Quote
+  Quote,
+  Clock,
+  Wallet,
+  Briefcase
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { INDONESIA_REGIONS, INDONESIA_CITIES } from "../data/regions";
@@ -158,7 +161,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary">
+    <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
@@ -172,10 +175,11 @@ export default function Home() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#layanan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Layanan</a>
+            <a href="#alur" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Alur</a>
             <a href="#keunggulan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Keunggulan</a>
             <a href="#testimoni" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Testimoni</a>
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">FAQ</a>
-            <button onClick={handleBooking} className="btn-primary text-sm py-2 px-6 flex items-center gap-2">
+            <button onClick={handleBooking} className="btn-primary text-sm py-2.5 px-6 flex items-center gap-2 font-bold">
               <MessageCircle className="w-4 h-4" /> Booking Sekarang
             </button>
           </div>
@@ -194,6 +198,7 @@ export default function Home() {
             className="md:hidden bg-white border-b border-slate-100 px-6 py-8 flex flex-col gap-4"
           >
             <a href="#layanan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Layanan</a>
+            <a href="#alur" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Alur</a>
             <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Keunggulan</a>
             <a href="#testimoni" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Testimoni</a>
             <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">FAQ</a>
@@ -206,80 +211,79 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="pt-28 md:pt-40 pb-20 md:pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative overflow-hidden">
-          {/* Grid Pattern Background */}
-          <div className="absolute inset-0 -z-20 pointer-events-none"
-            style={{
-              backgroundImage: `linear-gradient(to right, rgba(22, 163, 74, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(22, 163, 74, 0.05) 1px, transparent 1px)`,
-              backgroundSize: '40px 40px'
-            }}>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <section className="pt-32 md:pt-48 pb-20 md:pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative">
+          {/* Abstract Background Element */}
+          <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
+          
+          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center relative z-10">
             <motion.div
               initial="initial"
               animate="animate"
               variants={staggerContainer}
-              className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-10"
+              className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-8"
             >
-              <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase">
+              <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-[0.2em] uppercase">
                 <MapPin className="w-3 h-3" />
-                <span>Panggilan <span className="text-primary font-bold">Seluruh Indonesia</span></span>
+                <span>Panggilan <span className="text-primary">Seluruh Indonesia</span></span>
               </motion.div>
 
-              <motion.h1 variants={fadeIn} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] text-slate-900 tracking-tight">
-                <span className="font-bold text-primary text-[10px] md:text-xs block mb-2 uppercase tracking-[0.2em] opacity-90">Jasa Potong Rumput Panggilan Indonesia</span>
-                <span className="text-slate-900 block">Murah, Cepat</span>
-                <span className="text-primary block">& Profesional</span>
+              <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-slate-900 tracking-tight">
+                <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Jasa Potong Rumput Panggilan Indonesia</span>
+                <span className="block mb-1">Murah, Cepat</span>
+                <span className="text-primary">& Profesional</span>
               </motion.h1>
-              <motion.p variants={fadeIn} className="text-sm md:text-base text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+              
+              <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 border-l-2 border-primary/20 pl-6 py-2">
                 Layanan <span className="font-medium text-slate-700 italic">Jasa Potong Rumput</span> praktis untuk halaman rumah, kantor, dan lahan kosong di <span className="font-medium text-slate-700">seluruh Indonesia</span>. 
-                <span className="block mt-1 font-medium text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
+                <span className="block mt-1 font-bold text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
 
-              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 items-center">
+              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 items-center w-full lg:w-auto">
                 <button
                   onClick={handleBooking}
-                  className="btn-primary w-full sm:w-auto text-base px-10 py-4 flex items-center justify-center gap-3 shadow-lg hover:bg-primary-dark"
+                  className="group btn-primary w-full sm:w-auto text-base px-12 py-5 flex items-center justify-center gap-3 shadow-2xl shadow-primary/30 hover:scale-[1.02] transition-all"
                 >
-                  <MessageCircle className="w-5 h-5" /> Booking Sekarang
+                  <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform" /> 
+                  <span className="font-black">Booking Sekarang</span>
                 </button>
               </motion.div>
             </motion.div>
 
             <motion.div
               id="hero-form"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="bg-white p-6 md:p-8 rounded-3xl shadow-2xl border border-slate-100 relative"
+              className="bg-white p-8 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-slate-100 relative group"
             >
-              <div className="absolute -top-4 -right-4 bg-primary text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+              <div className="absolute -top-3 -right-3 bg-slate-900 text-white text-[10px] font-black px-4 py-2 rounded-full shadow-xl tracking-widest uppercase">
                 Respon Cepat!
               </div>
 
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Pesan Sekarang</h3>
-              <p className="text-slate-500 text-sm mb-8">Isi form di bawah untuk booking via WhatsApp.</p>
+              <div className="mb-8">
+                <h3 className="text-2xl font-black text-slate-900 mb-1">Pesan Sekarang</h3>
+                <p className="text-slate-400 text-xs font-medium uppercase tracking-wider">Isi form di bawah untuk booking via WhatsApp.</p>
+              </div>
 
-              <form onSubmit={handleBooking} className="space-y-5">
+              <form onSubmit={handleBooking} className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Nama Lengkap</label>
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Nama Lengkap</label>
                   <input
                     type="text"
                     placeholder="Contoh: Budi Santoso"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all font-medium"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
                   />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Provinsi</label>
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Provinsi</label>
                     <div className="relative">
                       <select
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-sm"
+                        className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none text-sm font-medium"
                         value={formData.region}
                         onChange={(e) => setFormData({ ...formData, region: e.target.value, city: "" })}
                         required
@@ -289,15 +293,15 @@ export default function Home() {
                           <option key={region} value={region}>{region}</option>
                         ))}
                       </select>
-                      <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Kota / Kabupaten</label>
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Kota / Kabupaten</label>
                     <div className="relative">
                       <select
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white text-sm disabled:bg-slate-50 disabled:text-slate-400"
+                        className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none text-sm font-medium disabled:opacity-50"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         required
@@ -308,16 +312,16 @@ export default function Home() {
                           <option key={city} value={city}>{city}</option>
                         ))}
                       </select>
-                      <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                     </div>
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-dark hover:shadow-primary/40 transition-all active:scale-[0.98] flex items-center justify-center gap-3 mt-4"
+                  className="w-full bg-slate-900 text-white py-5 rounded-2xl font-black text-lg shadow-2xl hover:bg-black transition-all active:scale-[0.98] flex items-center justify-center gap-3 mt-4 group"
                 >
-                  <MessageCircle className="w-6 h-6" /> Kirim Ke WhatsApp
+                  <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" /> Kirim Ke WhatsApp
                 </button>
               </form>
             </motion.div>
@@ -328,10 +332,10 @@ export default function Home() {
         < section id="layanan" className="section-padding max-w-7xl mx-auto" >
           <div className="text-center space-y-3 mb-16">
             <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Layanan Kami</h2>
-            <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Solusi Lengkap Untuk Halaman Anda</h3>
+            <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Solusi Lengkap Untuk Halaman Anda</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: <Scissors />, title: "Potong Rumput", desc: "Pemotongan rumput taman rumah dengan hasil rapi dan presisi." },
               { icon: <Leaf />, title: "Perawatan Rutin", desc: "Pemeliharaan berkala agar taman tetap sehat dan indah setiap saat." },
@@ -341,27 +345,66 @@ export default function Home() {
               <motion.div
                 key={i}
                 whileHover={{ y: -3 }}
-                className="card p-6 group"
+                className="card p-8 group border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-slate-50/50"
               >
-                <div className="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center text-primary mb-4 transition-colors group-hover:bg-primary group-hover:text-white">
+                <div className="bg-white w-10 h-10 rounded-xl flex items-center justify-center text-primary mb-6 shadow-sm transition-colors group-hover:bg-primary group-hover:text-white">
                   {React.cloneElement(item.icon as React.ReactElement, { className: "w-5 h-5" })}
                 </div>
-                <h4 className="text-lg font-bold mb-2 text-slate-900">{item.title}</h4>
-                <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
+                <h4 className="text-lg font-black mb-3 text-slate-900 leading-tight">{item.title}</h4>
+                <p className="text-slate-500 text-xs leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </section >
 
+        {/* Flow Section */}
+        <section id="alur" className="section-padding bg-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-3 mb-20">
+              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Alur Kerja</h2>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Cara Pemesanan Layanan</h3>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-8 relative">
+              {/* Connector Line (Desktop) */}
+              <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-slate-100 -z-0"></div>
+              
+              {[
+                { icon: <MessageCircle />, title: "Pilih Layanan & Booking", desc: "Hubungi kami via WhatsApp atau isi form pendaftaran." },
+                { icon: <Wallet />, title: "Konfirmasi & DP", desc: "Tim admin mengonfirmasi jadwal dan pembayaran DP 10%." },
+                { icon: <Briefcase />, title: "Pengerjaan di Lokasi", desc: "Tim profesional datang dan mengerjakan lahan Anda." },
+                { icon: <CheckCircle2 />, title: "Pelunasan & Selesai", desc: "Cek hasil, pelunasan, dan halaman Anda kembali rapi." }
+              ].map((step, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex flex-col items-center text-center space-y-6 relative z-10"
+                >
+                  <div className="w-20 h-20 rounded-full bg-white border border-slate-100 shadow-xl flex items-center justify-center text-primary relative">
+                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-slate-900 text-white text-[10px] font-black flex items-center justify-center">0{i+1}</div>
+                    {React.cloneElement(step.icon as React.ReactElement, { className: "w-8 h-8" })}
+                  </div>
+                  <div className="space-y-3 px-4">
+                    <h4 className="text-lg font-black text-slate-900">{step.title}</h4>
+                    <p className="text-slate-500 text-xs leading-relaxed font-medium">{step.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials Marquee */}
         <section id="testimoni" className="py-24 bg-slate-900 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
              <h2 className="text-xs font-bold text-primary-light tracking-[0.2em] uppercase mb-4">Testimoni Pelanggan</h2>
-             <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Apa Kata Mereka?</h3>
+             <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight">Apa Kata Mereka?</h3>
           </div>
           
           <div className="flex flex-col gap-8">
-            {/* First Row */}
             <div className="flex w-fit animate-marquee hover:[animation-play-state:paused]">
               {[...testimonials, ...testimonials].map((t, i) => (
                 <div key={i} className="w-[300px] md:w-[380px] mx-3 bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col gap-3">
@@ -405,7 +448,7 @@ export default function Home() {
         </section>
 
         {/* Keunggulan Section */}
-        <section id="keunggulan" className="section-padding bg-soft-gray">
+        <section id="keunggulan" className="section-padding bg-slate-50">
           <div className="max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-12">
               <div className="text-center space-y-4">
@@ -420,13 +463,13 @@ export default function Home() {
                   { title: "Tim Profesional", desc: "Pekerja berpengalaman dan ramah." },
                   { title: "Alat Lengkap", desc: "Menggunakan mesin modern untuk hasil yang presisi." }
                 ].map((item, i) => (
-                  <div key={i} className="flex flex-col items-center text-center gap-4 p-8 bg-white rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                  <div key={i} className="flex flex-col items-center text-center gap-4 p-8 bg-white rounded-3xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
                     <div className="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center text-primary shrink-0">
                       <CheckCircle2 className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
-                      <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+                      <h4 className="font-black text-slate-900 mb-1 leading-tight">{item.title}</h4>
+                      <p className="text-slate-500 text-xs leading-relaxed font-medium">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -436,11 +479,11 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        < section id="faq" className="section-padding bg-slate-50" >
+        < section id="faq" className="section-padding bg-white" >
           <div className="max-w-3xl mx-auto">
             <div className="text-center space-y-3 mb-16">
               <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">FAQ</h2>
-              <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Pertanyaan Umum</h3>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Pertanyaan Umum</h3>
             </div>
 
             <div className="space-y-4">
@@ -450,19 +493,19 @@ export default function Home() {
                 { q: "Apakah alat disediakan?", a: "Ya, tim kami membawa seluruh peralatan lengkap mulai dari mesin potong, gunting tanaman, hingga alat pembersih." },
                 { q: "Berapa lama pengerjaan?", a: "Tergantung luas area. Untuk halaman rumah standar (50m²), biasanya memakan waktu 1-2 jam." }
               ].map((faq, i) => (
-                <details key={i} className="group bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all hover:border-primary/30 shadow-sm">
+                <details key={i} className="group bg-white border border-slate-100 rounded-2xl overflow-hidden transition-all hover:border-primary/30 shadow-sm">
                   <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50/50 transition-colors list-none">
                     <div className="flex items-center gap-4">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">
                         {i + 1}
                       </div>
-                      <span className="font-bold text-slate-900">{faq.q}</span>
+                      <span className="font-black text-slate-900">{faq.q}</span>
                     </div>
                     <div className="w-6 h-6 rounded-full border border-slate-200 flex items-center justify-center group-open:bg-primary group-open:border-primary transition-all">
                       <ChevronDown className="w-4 h-4 text-slate-400 group-open:text-white transition-transform group-open:rotate-180" />
                     </div>
                   </summary>
-                  <div className="px-6 pb-6 pl-18 text-slate-600 text-sm leading-relaxed">
+                  <div className="px-6 pb-6 pl-18 text-slate-600 text-sm leading-relaxed font-medium">
                     {faq.a}
                   </div>
                 </details>
@@ -473,11 +516,11 @@ export default function Home() {
 
         {/* CTA Banner */}
         < section className="px-5 md:px-12 lg:px-24 py-12" >
-          <div className="max-w-7xl mx-auto bg-primary rounded-3xl p-8 md:p-20 text-center text-white relative overflow-hidden shadow-xl">
+          <div className="max-w-7xl mx-auto bg-primary rounded-[3rem] p-8 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
             <div className="relative z-10 space-y-6">
-              <h3 className="text-2xl md:text-4xl font-semibold max-w-xl mx-auto leading-tight tracking-tight">Rumput Anda Sudah Terlalu Panjang?</h3>
-              <p className="text-white/80 font-medium text-sm md:text-base">Jangan biarkan halaman Anda jadi hutan. Booking sekarang dan dapatkan diskon 10%!</p>
-              <button onClick={handleBooking} className="bg-white text-primary px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-lg hover:bg-slate-50 transition-all active:scale-95 flex items-center gap-2 mx-auto">
+              <h3 className="text-2xl md:text-4xl font-black max-w-xl mx-auto leading-tight tracking-tight">Rumput Anda Sudah Terlalu Panjang?</h3>
+              <p className="text-white/80 font-medium text-sm md:text-base">Jangan biarkan halaman Anda jadi hutan. Booking sekarang dan dapatkan layanan terbaik dari kami!</p>
+              <button onClick={handleBooking} className="bg-white text-primary px-10 py-4 rounded-full font-black text-sm md:text-base shadow-xl hover:bg-slate-50 transition-all active:scale-95 flex items-center gap-2 mx-auto">
                 <MessageCircle className="w-5 h-5" /> Booking Sekarang <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -497,31 +540,32 @@ export default function Home() {
                 tebasrumput.com
               </span>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <p className="text-slate-400 text-sm leading-relaxed font-medium">
               Partner terpercaya untuk perawatan halaman dan taman Anda. Kami mengutamakan kualitas dan kepuasan pelanggan.
             </p>
           </div>
 
           <div className="space-y-6">
-            <h5 className="font-bold text-lg">Tautan Cepat</h5>
-            <ul className="space-y-4 text-slate-400 text-sm">
+            <h5 className="font-black text-lg">Tautan Cepat</h5>
+            <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li><a href="#layanan" className="hover:text-primary transition-colors">Layanan</a></li>
+              <li><a href="#alur" className="hover:text-primary transition-colors">Alur</a></li>
               <li><a href="#testimoni" className="hover:text-primary transition-colors">Testimoni</a></li>
               <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
 
           <div className="space-y-6">
-            <h5 className="font-bold text-lg">Legal</h5>
-            <ul className="space-y-4 text-slate-400 text-sm">
+            <h5 className="font-black text-lg">Legal</h5>
+            <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li><button onClick={() => setActiveModal("terms")} className="hover:text-primary transition-colors cursor-pointer">Terms & Conditions</button></li>
               <li><button onClick={() => setActiveModal("privacy")} className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</button></li>
             </ul>
           </div>
 
           <div className="space-y-6">
-            <h5 className="font-bold text-lg">Kontak</h5>
-            <ul className="space-y-4 text-slate-400 text-sm">
+            <h5 className="font-black text-lg">Kontak</h5>
+            <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
                 <span>Seluruh Indonesia (HQ: Kalidoni, Palembang)</span>
@@ -540,12 +584,12 @@ export default function Home() {
         {activeModal && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setActiveModal(null)} className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" />
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative bg-white w-full max-w-2xl p-8 rounded-3xl overflow-y-auto max-h-[80vh]">
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative bg-white w-full max-w-2xl p-8 rounded-[2rem] overflow-y-auto max-h-[80vh] shadow-2xl">
               <button onClick={() => setActiveModal(null)} className="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100"><X /></button>
-              <h2 className="text-2xl font-bold mb-6">{activeModal === 'terms' ? 'Terms & Conditions' : 'Privacy Policy'}</h2>
-              <div className="text-slate-600 space-y-4 text-sm leading-relaxed">
+              <h2 className="text-2xl font-black mb-6 tracking-tight">{activeModal === 'terms' ? 'Terms & Conditions' : 'Privacy Policy'}</h2>
+              <div className="text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
                 {activeModal === 'terms' ? (
-                  <p>1. DP 20% untuk booking jadwal. <br/> 2. Pelunasan setelah pengerjaan selesai. <br/> 3. Dokumentasi hasil akan diberikan.</p>
+                  <p>1. DP 10% untuk booking jadwal. <br/> 2. Pelunasan setelah pengerjaan selesai. <br/> 3. Dokumentasi hasil akan diberikan.</p>
                 ) : (
                   <p>Kami menjaga privasi data Anda. Informasi hanya digunakan untuk koordinasi layanan potong rumput.</p>
                 )}
@@ -557,7 +601,7 @@ export default function Home() {
 
       {/* Floating WA */}
       <div className="fixed bottom-6 right-6 z-[90]">
-        <button onClick={handleBooking} className="w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform">
+        <button onClick={handleBooking} className="w-16 h-16 bg-[#25D366] text-white rounded-full shadow-[0_20px_50px_rgba(37,211,102,0.4)] flex items-center justify-center hover:scale-110 transition-transform">
           <MessageCircle className="w-8 h-8" />
         </button>
       </div>
@@ -567,20 +611,23 @@ export default function Home() {
         {showPaymentNotice && (
           <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={closePaymentNotice} className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" />
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative bg-white w-full max-w-sm rounded-3xl p-6 md:p-8">
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative bg-white w-full max-w-sm rounded-[2.5rem] p-8 shadow-2xl">
               <div className="flex items-center gap-3 mb-6">
-                <AlertTriangle className="text-amber-500" />
-                <h2 className="text-lg font-bold">Notifikasi Penting</h2>
+                <AlertTriangle className="text-amber-500 w-6 h-6" />
+                <h2 className="text-xl font-black tracking-tight">Notifikasi Penting</h2>
               </div>
-              <p className="text-sm text-slate-500 mb-4">Pembayaran resmi hanya ke rekening:</p>
-              <div className="bg-slate-50 p-4 rounded-2xl mb-6">
-                <p className="text-xs font-bold text-slate-400">BCA - 1160478272</p>
-                <div className="flex justify-between items-center mt-1">
-                  <p className="font-bold text-sm">Muhamad Ridwan Saputra</p>
-                  <button onClick={copyAccountNumber}>{isCopied ? <Check className="text-green-500 w-4 h-4"/> : <Copy className="text-slate-400 w-4 h-4"/>}</button>
+              <p className="text-sm text-slate-500 mb-6 font-medium leading-relaxed">Pembayaran resmi hanya dilakukan ke rekening berikut:</p>
+              <div className="bg-slate-50 p-6 rounded-2xl mb-8 border border-slate-100">
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">BCA Account</p>
+                <p className="text-lg font-black text-slate-900 mb-1">1160478272</p>
+                <div className="flex justify-between items-center">
+                  <p className="font-bold text-sm text-slate-600">Muhamad Ridwan Saputra</p>
+                  <button onClick={copyAccountNumber} className="p-2 hover:bg-white rounded-lg transition-colors">
+                    {isCopied ? <Check className="text-green-500 w-4 h-4"/> : <Copy className="text-slate-400 w-4 h-4"/>}
+                  </button>
                 </div>
               </div>
-              <button onClick={closePaymentNotice} className="w-full bg-slate-900 text-white py-3 rounded-xl font-bold">Saya Mengerti</button>
+              <button onClick={closePaymentNotice} className="w-full bg-slate-900 text-white py-4 rounded-2xl font-black shadow-xl hover:bg-black transition-all">Saya Mengerti</button>
             </motion.div>
           </div>
         )}
