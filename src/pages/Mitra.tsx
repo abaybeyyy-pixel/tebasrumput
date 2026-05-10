@@ -12,10 +12,6 @@ import {
   ShieldCheck,
   Smartphone,
   ChevronDown,
-  Upload,
-  Instagram,
-  Facebook,
-  Twitter,
   Leaf,
   Menu,
   X,
@@ -50,15 +46,8 @@ export default function Mitra() {
     kota: "",
     kecamatan: "",
     pengalaman: "",
-    punyaAlat: "Ya",
-    jenisJasa: "",
-    sosmed: "",
     setuju: false
   });
-
-  const handleBooking = () => {
-    window.open(WA_LINK, "_blank");
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -76,9 +65,6 @@ Nama: ${formData.nama}
 WhatsApp: ${formData.whatsapp}
 Lokasi: ${formData.kecamatan}, ${formData.kota}, ${formData.provinsi}
 Pengalaman: ${formData.pengalaman}
-Punya Alat: ${formData.punyaAlat}
-Jenis Jasa: ${formData.jenisJasa}
-Sosial Media: ${formData.sosmed || "-"}
 ---------------------------------------
 Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari TebasRumput.com.`;
 
@@ -339,7 +325,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm"
+              className="bg-slate-50 p-6 md:p-12 rounded-[2rem] border border-slate-100 shadow-sm max-w-2xl mx-auto"
             >
               {isSuccess ? (
                 <div className="text-center space-y-6 py-12">
@@ -351,36 +337,35 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                   <button onClick={() => setIsSuccess(false)} className="text-primary font-bold hover:underline">Isi form kembali</button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Nama Lengkap */}
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Nama Lengkap</label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Contoh: Ahmad Subardjo"
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium"
-                        value={formData.nama}
-                        onChange={(e) => setFormData({ ...formData, nama: e.target.value })}
-                      />
-                    </div>
-                    {/* Nomor WhatsApp */}
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Nomor WhatsApp</label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="0812xxxx"
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium"
-                        value={formData.whatsapp}
-                        onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                      />
-                    </div>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Nama Lengkap */}
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Nama Lengkap</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Contoh: Ahmad Subardjo"
+                      className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium"
+                      value={formData.nama}
+                      onChange={(e) => setFormData({ ...formData, nama: e.target.value })}
+                    />
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Provinsi */}
+                  {/* Nomor WhatsApp */}
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Nomor WhatsApp</label>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="0812xxxx"
+                      className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium"
+                      value={formData.whatsapp}
+                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                    />
+                  </div>
+
+                  {/* Lokasi Dropdowns */}
+                  <div className="space-y-6">
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Provinsi Domisili</label>
                       <div className="relative">
@@ -396,7 +381,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                         <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                       </div>
                     </div>
-                    {/* Kota / Kabupaten */}
+
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Kota / Kabupaten</label>
                       <div className="relative">
@@ -413,35 +398,34 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                         <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                       </div>
                     </div>
-                  </div>
 
-                  {/* Kecamatan / Area Kerja */}
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Kecamatan / Area Kerja Utama</label>
-                    <div className="relative">
-                      {formData.kota && INDONESIA_DISTRICTS[formData.kota] ? (
-                        <select
-                          required
-                          className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium appearance-none"
-                          value={formData.kecamatan}
-                          onChange={(e) => setFormData({ ...formData, kecamatan: e.target.value })}
-                        >
-                          <option value="">Pilih Kecamatan</option>
-                          {INDONESIA_DISTRICTS[formData.kota].map(dist => <option key={dist} value={dist}>{dist}</option>)}
-                          <option value="Lainnya">Lainnya / Seluruh Kota</option>
-                        </select>
-                      ) : (
-                        <input
-                          type="text"
-                          required
-                          disabled={!formData.kota}
-                          placeholder="Masukkan nama kecamatan"
-                          className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium disabled:bg-slate-50 disabled:text-slate-400"
-                          value={formData.kecamatan}
-                          onChange={(e) => setFormData({ ...formData, kecamatan: e.target.value })}
-                        />
-                      )}
-                      {formData.kota && INDONESIA_DISTRICTS[formData.kota] && <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />}
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Kecamatan / Area Kerja Utama</label>
+                      <div className="relative">
+                        {formData.kota && INDONESIA_DISTRICTS[formData.kota] ? (
+                          <select
+                            required
+                            className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium appearance-none"
+                            value={formData.kecamatan}
+                            onChange={(e) => setFormData({ ...formData, kecamatan: e.target.value })}
+                          >
+                            <option value="">Pilih Kecamatan</option>
+                            {INDONESIA_DISTRICTS[formData.kota].map(dist => <option key={dist} value={dist}>{dist}</option>)}
+                            <option value="Lainnya">Lainnya / Seluruh Kota</option>
+                          </select>
+                        ) : (
+                          <input
+                            type="text"
+                            required
+                            disabled={!formData.kota}
+                            placeholder="Masukkan nama kecamatan"
+                            className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium disabled:bg-slate-50 disabled:text-slate-400"
+                            value={formData.kecamatan}
+                            onChange={(e) => setFormData({ ...formData, kecamatan: e.target.value })}
+                          />
+                        )}
+                        {formData.kota && INDONESIA_DISTRICTS[formData.kota] && <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />}
+                      </div>
                     </div>
                   </div>
 
@@ -450,63 +434,11 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Pengalaman Kerja</label>
                     <textarea
                       required
-                      placeholder="Ceritakan pengalaman Anda di bidang potong rumput/taman"
-                      className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium min-h-[120px]"
+                      placeholder="Ceritakan pengalaman singkat Anda..."
+                      className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium min-h-[100px]"
                       value={formData.pengalaman}
                       onChange={(e) => setFormData({ ...formData, pengalaman: e.target.value })}
                     />
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Punya Alat Sendiri */}
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Memiliki Alat Sendiri?</label>
-                      <div className="relative">
-                        <select
-                          className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium appearance-none"
-                          value={formData.punyaAlat}
-                          onChange={(e) => setFormData({ ...formData, punyaAlat: e.target.value })}
-                        >
-                          <option value="Ya">Ya (Mesin Gendong/Dorong)</option>
-                          <option value="Tidak">Tidak / Perlu Pinjam</option>
-                        </select>
-                        <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
-                      </div>
-                    </div>
-                    {/* Jenis Jasa */}
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Jenis Jasa yang Dikerjakan</label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Potong rumput, Pangkas, dll"
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium"
-                        value={formData.jenisJasa}
-                        onChange={(e) => setFormData({ ...formData, jenisJasa: e.target.value })}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Upload Foto Pekerjaan (Simulated) */}
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Upload Foto Hasil Kerja</label>
-                      <div className="w-full px-5 py-4 rounded-2xl border-2 border-dashed border-slate-200 bg-white hover:border-primary/50 transition-all cursor-pointer group flex flex-col items-center justify-center gap-2">
-                        <Upload className="w-6 h-6 text-slate-300 group-hover:text-primary transition-colors" />
-                        <span className="text-xs text-slate-400 font-medium group-hover:text-primary transition-colors">Klik untuk upload (Opsional di form ini)</span>
-                      </div>
-                    </div>
-                    {/* Link Sosial Media */}
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Link Sosial Media (Opsional)</label>
-                      <input
-                        type="text"
-                        placeholder="Instagram / Facebook Profil"
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all bg-white font-medium"
-                        value={formData.sosmed}
-                        onChange={(e) => setFormData({ ...formData, sosmed: e.target.value })}
-                      />
-                    </div>
                   </div>
 
                   {/* Checkbox Setuju */}
