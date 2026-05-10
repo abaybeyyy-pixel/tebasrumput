@@ -573,9 +573,6 @@ export default function Home() {
             <a href="#layanan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Layanan</a>
             <a href="#keunggulan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Keunggulan</a>
             <a href="#pricing" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Harga</a>
-            <Link to="/mitra" className="flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-dark transition-colors px-4 py-2 bg-primary/5 rounded-full">
-               <Users className="w-4 h-4" /> Jadi Mitra
-            </Link>
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">FAQ</a>
             <button onClick={handleBooking} className="btn-primary text-sm py-2 px-6 flex items-center gap-2">
               <MessageCircle className="w-4 h-4" /> Booking Sekarang
@@ -598,7 +595,6 @@ export default function Home() {
             <a href="#layanan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Layanan</a>
             <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Keunggulan</a>
             <a href="#pricing" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Harga</a>
-            <Link to="/mitra" onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-primary">Jadi Mitra</Link>
             <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">FAQ</a>
             <button onClick={handleBooking} className="btn-primary w-full mt-4 flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" /> Booking Sekarang
@@ -647,9 +643,6 @@ export default function Home() {
                 >
                   <MessageCircle className="w-5 h-5" /> Booking Sekarang
                 </button>
-                <Link to="/mitra" className="text-slate-600 font-bold hover:text-primary transition-colors flex items-center gap-2 text-sm sm:text-base">
-                  Daftar Jadi Mitra <ArrowRight className="w-5 h-5" />
-                </Link>
               </motion.div>
             </motion.div>
 
@@ -938,7 +931,6 @@ export default function Home() {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><a href="#layanan" className="hover:text-primary transition-colors">Layanan</a></li>
               <li><a href="#pricing" className="hover:text-primary transition-colors">Harga</a></li>
-              <li><Link to="/mitra" className="hover:text-primary transition-colors font-bold text-primary-light">Jadi Mitra</Link></li>
               <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
