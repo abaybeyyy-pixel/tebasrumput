@@ -81,8 +81,8 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 cursor-pointer group">
-            <Leaf className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform shrink-0" />
-            <span className="text-2xl font-black tracking-tighter text-black">
+            <Leaf className="w-6 h-6 text-primary group-hover:rotate-12 transition-transform shrink-0" />
+            <span className="text-xl font-black tracking-tighter text-black">
               tebasrumput.com
             </span>
           </Link>
@@ -173,25 +173,25 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <Smartphone className="w-8 h-8" />, title: "Dapat Order Tanpa Cari Customer", desc: "Kami yang melakukan pemasaran, Anda tinggal terima job." },
-              { icon: <Clock className="w-8 h-8" />, title: "Fleksibel Ambil Job", desc: "Atur waktu kerja Anda sendiri. Ambil job saat Anda tersedia." },
-              { icon: <Users className="w-8 h-8" />, title: "Cocok untuk Freelance", desc: "Tambah penghasilan di waktu luang Anda dengan keahlian yang dimiliki." },
-              { icon: <MessageSquare className="w-8 h-8" />, title: "Sistem Mudah via WhatsApp", desc: "Koordinasi job dan konfirmasi pengerjaan cukup lewat WhatsApp." },
-              { icon: <RupiahIcon className="text-2xl" />, title: "Peluang Penghasilan Tambahan", desc: "Penghasilan kompetitif dengan sistem bagi hasil yang transparan." },
-              { icon: <MapPin className="w-8 h-8" />, title: "Bisa Kerja Sesuai Area Domisili", desc: "Pilih job yang paling dekat dengan lokasi rumah Anda." }
+              { icon: <Smartphone className="w-5 h-5" />, title: "Dapat Order Tanpa Cari Customer", desc: "Kami yang melakukan pemasaran, Anda tinggal terima job." },
+              { icon: <Clock className="w-5 h-5" />, title: "Fleksibel Ambil Job", desc: "Atur waktu kerja Anda sendiri. Ambil job saat Anda tersedia." },
+              { icon: <Users className="w-5 h-5" />, title: "Cocok untuk Freelance", desc: "Tambah penghasilan di waktu luang Anda dengan keahlian yang dimiliki." },
+              { icon: <MessageSquare className="w-5 h-5" />, title: "Sistem Mudah via WhatsApp", desc: "Koordinasi job dan konfirmasi pengerjaan cukup lewat WhatsApp." },
+              { icon: <RupiahIcon className="text-lg" />, title: "Peluang Penghasilan Tambahan", desc: "Penghasilan kompetitif dengan sistem bagi hasil yang transparan." },
+              { icon: <MapPin className="w-5 h-5" />, title: "Bisa Kerja Sesuai Area Domisili", desc: "Pilih job yang paling dekat dengan lokasi rumah Anda." }
             ].map((benefit, i) => (
               <motion.div
                 key={i}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="p-8 rounded-3xl border border-slate-100 bg-white hover:border-primary/20 hover:shadow-xl transition-all group"
+                className="p-6 rounded-2xl border border-slate-100 bg-white hover:border-primary/20 hover:shadow-lg transition-all group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                   {benefit.icon}
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-slate-900 leading-snug">{benefit.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">{benefit.desc}</p>
+                <h4 className="text-lg font-bold mb-2 text-slate-900 leading-snug">{benefit.title}</h4>
+                <p className="text-slate-500 text-xs leading-relaxed">{benefit.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -219,19 +219,18 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                 ].map((step, i) => (
                   <motion.div 
                     key={i}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex flex-col items-center text-center space-y-6"
+                    className="flex flex-col items-center text-center space-y-4"
                   >
-                    <div className="w-24 h-24 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center text-3xl font-black text-primary-light shadow-[0_0_40px_rgba(76,175,80,0.1)] relative">
+                    <div className="w-16 h-16 rounded-full bg-slate-800 border-2 border-slate-900 flex items-center justify-center text-xl font-black text-primary-light shadow-[0_0_20px_rgba(76,175,80,0.1)] relative">
                       {step.step}
-                      <div className="absolute inset-0 rounded-full border border-primary/20 animate-pulse"></div>
                     </div>
-                    <div className="space-y-3">
-                      <h4 className="text-xl font-bold">{step.title}</h4>
-                      <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-bold">{step.title}</h4>
+                      <p className="text-slate-400 text-xs leading-relaxed">{step.desc}</p>
                     </div>
                   </motion.div>
                 ))}

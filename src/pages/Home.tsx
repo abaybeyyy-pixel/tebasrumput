@@ -22,7 +22,8 @@ import {
   AlertTriangle,
   Copy,
   Check,
-  Users
+  Users,
+  Quote
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { INDONESIA_REGIONS, INDONESIA_CITIES } from "../data/regions";
@@ -96,402 +97,17 @@ const blogs = [
 
       <p>Tebasrumput.com menyediakan layanan langganan bulanan di seluruh wilayah layanan kami. Hubungi kami untuk info lebih lanjut!</p>
     `
-  },
-  {
-    title: "Investasi Waktu: Jasa Potong Rumput Panggilan vs Memotong Sendiri",
-    tags: ["Edukasi", "Layanan Panggilan", "Nasional", "Hemat"],
-    date: "24 Mar 2026",
-    desc: "Seringkali kita merasa bisa melakukannya sendiri, tapi benarkah itu menguntungkan? Mari hitung biaya dan energinya.",
-    source: "https://www.99.co/blog/indonesia/jasa-potong-rumput-panggilan/",
-    content: `
-      <h2>Analisis Biaya dan Tenaga Perawatan Taman</h2>
-      <p>Bagi warga yang memiliki kesibukan tinggi, waktu luang di akhir pekan sangatlah berharga. Seringkali rencana memotong rumput sendiri berakhir dengan kelelahan atau hasil yang tidak maksimal.</p>
-
-      <h3>Perbandingan Realistis:</h3>
-      <p><strong>1. Menggunakan Tenaga Sendiri:</strong></p>
-      <ul>
-        <li>Waktu yang dihabiskan: 3-5 jam (termasuk persiapan dan bersih-bersih).</li>
-        <li>Biaya alat: Pembelian mesin potong, bensin, oli, dan perawatan alat.</li>
-        <li>Risiko: Kelelahan fisik, cedera jika tidak terbiasa, dan hasil yang tidak rata.</li>
-      </ul>
-
-      <p><strong>2. Menggunakan Jasa Tebasrumput.com:</strong></p>
-      <ul>
-        <li>Waktu: Anda bisa bersantai atau melakukan hobi lain.</li>
-        <li>Biaya: Transparan mulai dari harga terjangkau, sudah termasuk angkut sampah.</li>
-        <li>Hasil: Rapi kualitas mesin profesional, sudut-sudut sulit terjangkau, dan taman langsung bersih seketika.</li>
-      </ul>
-
-      <p>Kesimpulannya, menggunakan jasa profesional bukan sekadar pengeluaran, melainkan investasi untuk kenyamanan dan kesehatan mental Anda. Halaman bersih tanpa keringat!</p>
-    `
-  },
-  {
-    title: "Mengatasi Gulma dan Rumput Liar di Halaman Kantor Perusahaan",
-    tags: ["Bisnis", "Kantor", "Gulma", "Pembersihan Lahan"],
-    date: "23 Mar 2026",
-    desc: "Citra perusahaan dimulai dari pandangan pertama tamu saat memasuki halaman. Pastikan area bisnis Anda selalu tampak profesional.",
-    source: "https://gdm.id/cara-mengatasi-gulma-rumput/",
-    content: `
-      <h2>Wajah Bisnis Anda Adalah Taman Depan Kantor</h2>
-      <p>Banyak gedung perkantoran di kawasan bisnis yang memiliki area hijau. Masalah utama yang sering timbul adalah tumbuhnya rumput liar di sela-sela <em>paving block</em> atau taman mini yang merusak estetika profesional kantor Anda.</p>
-      
-      <h3>Dampak Negatif Membiarkan Gulma:</h3>
-      <ol>
-        <li><strong>Kesan Kurang Terawat:</strong> Membuat klien meragukan kedisiplinan perusahaan dalam hal detail.</li>
-        <li><strong>Kerusakan Infrastruktur:</strong> Akar gulma yang kuat bisa mengangkat paving block atau merusak saluran drainase kecil.</li>
-        <li><strong>Sarang Hama:</strong> Menjadi tempat persembunyian nyamuk dan serangga pengganggu kenyamanan kantor.</li>
-      </ol>
-      
-      <h3>Solusi Perawatan Korporat</h3>
-      <p>Kami menawarkan paket <strong>Pembersihan Lahan Komersial</strong>. Tim kami akan melakukan pembersihan total, mulai dari pemangkasan rumput utama hingga pembersihan rumput liar di sela bangunan menggunakan mesin senar khusus agar tidak merusak tembok atau lantai.</p>
-      
-      <p>Segera buat kontrak perawatan rutin agar kantor Anda selalu tampak asri menyegarkan bagi karyawan dan tamu bisnis Anda.</p>
-    `
-  },
-  {
-    title: "Rumput Manila vs Rumput Jepang: Perbandingan untuk Taman Anda",
-    tags: ["Desain", "Edukasi", "Rumput Manila", "Rumput Jepang"],
-    date: "22 Mar 2026",
-    desc: "Ingin membangun taman baru tapi bingung pilih jenis rumput? Baca panduan pemilihan untuk wilayah Indonesia.",
-    source: "https://arsitag.com/article/mengenal-jenis-rumput-taman",
-    content: `
-      <h2>Memilih Karpet Hijau yang Tepat</h2>
-      <p>Tidak semua rumput cocok dengan karakteristik tanah di wilayah Anda. Sebelum Anda memesan bibit, pahami perbedaan dua primadona ini.</p>
-
-      <h3>1. Rumput Manila (Zoysia Matrella)</h3>
-      <p>Rumput ini sering digunakan untuk lapangan golf karena kekuatannya. Di Indonesia, rumput manila sangat disukai karena:</p>
-      <ul>
-        <li><strong>Tahan Injak:</strong> Sangat kuat untuk area bermain anak atau hewan peliharaan.</li>
-        <li><strong>Warna Stabil:</strong> Hijau pekat meski terpapar matahari langsung.</li>
-        <li><strong>Minus:</strong> Pertumbuhannya sangat lambat, butuh kesabaran ekstra saat penanaman awal.</li>
-      </ul>
-
-      <h3>2. Rumput Jepang (Zoysia Japonica)</h3>
-      <p>Memiliki bentuk daun yang lebih runcing dan tegak. Kelebihannya:</p>
-      <ul>
-        <li><strong>Estetika Tinggi:</strong> Terlihat sangat rapi dan formal, cocok untuk taman depan perumahan elit.</li>
-        <li><strong>Mudah Tumbuh:</strong> Lebih cepat menutup tanah dibandingkan manila.</li>
-        <li><strong>Minus:</strong> Sangat manja. Jika telat siram sedikit saja saat kemarau, daunnya cepat menguning dan mati.</li>
-      </ul>
-
-      <p>Tim <strong>Tebasrumput.com</strong> memiliki keahlian khusus dalam menangani kedua jenis rumput ini. Kami tahu perbedaan mata pisau mesin yang tepat agar potongan tidak merusak struktur daunnya.</p>
-    `
-  },
-  {
-    title: "Mengatasi Masalah Genangan Air dan Drainase Taman Pasca Hujan",
-    tags: ["Teknis", "Drainase", "Tips Rumah", "Nasional"],
-    date: "21 Mar 2026",
-    desc: "Hujan deras seringkali menyisakan genangan. Pelajari trik teknis agar taman Anda tidak becek.",
-    source: "https://www.rumah123.com/panduan-properti/drainase-taman/",
-    content: `
-      <h2>Halaman Bebas Becek di Musim Hujan</h2>
-      <p>Intensitas hujan di wilayah tropis bisa sangat tinggi. Bagi Anda yang memiliki halaman cukup luas, genangan air yang menetap lebih dari 24 jam bisa membunuh akar rumput dan menyebabkan bau tidak sedap.</p>
-
-      <h3>Tindakan Praktis yang Bisa Anda Lakukan:</h3>
-      <ul>
-        <li><strong>Pembuatan Biopori:</strong> Buatlah lubang silindris vertikal ke dalam tanah. Isi dengan sampah organik untuk meningkatkan daya serap air tanah secara alami.</li>
-        <li><strong>Koreksi Kemiringan (Slopeing):</strong> Pastikan permukaan tanah taman memiliki kemiringan 1-2 derajat ke arah parit atau saluran pembuangan utama.</li>
-        <li><strong>Aerasi Manual:</strong> Gunakan garpu taman untuk menusuk-nusuk area yang sering tergenang. Ini akan memecah kepadatan tanah dan memberi jalan air masuk ke lapisan bawah.</li>
-      </ul>
-
-      <p>Saat tim kami bertugas memotong rumput, kami juga bisa membantu memeriksa saluran drainase taman Anda agar bebas dari tumpukan sampah atau sisa potongan rumput lama yang menyumbat.</p>
-    `
-  },
-  {
-    title: "Taman Rapi: Pengaruh Kebersihan Halaman Terhadap Kesehatan Mental",
-    tags: ["Gaya Hidup", "Kesehatan", "Psikologi", "Rumah"],
-    date: "20 Mar 2026",
-    desc: "Kesehatan mental dimulai dari apa yang kita lihat setiap hari. Mengapa taman yang berantakan bikin stres?",
-    source: "https://www.liputan6.com/lifestyle/read/manfaat-berkebun-bagi-kesehatan-mental",
-    content: `
-      <h2>Visual Relaksasi di Depan Mata</h2>
-      <p>Pernahkah Anda merasa lebih tenang saat melihat rumput yang baru saja dipangkas rapi? Ternyata itu bukan sekadar perasaan. Secara psikologis, lingkungan yang teratur membantu otak untuk memproses informasi lebih tenang.</p>
-
-      <h3>Mengapa Halaman Bersih Sangat Penting?</h3>
-      <ul>
-        <li><strong>Lingkungan Bebas Cemas:</strong> Rumput liar yang tinggi secara tidak sadar memicu kecemasan akan keberadaan hewan berbahaya (ular/serangga).</li>
-        <li><strong>Area Terbuka untuk Anak:</strong> Taman yang rapi memberikan ruang aman bagi anak untuk beraktivitas outdoor, menjauhkan mereka sejenak dari layar gadget.</li>
-        <li><strong>Kepuasan Visual:</strong> Melihat warna hijau yang teratur meningkatkan hormon dopamin yang membuat kita merasa bahagia dan bangga akan hunian kita.</li>
-      </ul>
-
-      <p>Biarkan <strong>Tebasrumput.com</strong> mengambil beban pekerjaan berat di halaman Anda. Anda cukup duduk manis di teras, minum kopi, dan menikmati pemandangan taman yang asri setiap sore.</p>
-    `
-  },
-  {
-    title: "Estimasi Biaya dan Harga Jasa Potong Rumput Indonesia 2026",
-    tags: ["Harga", "Layanan", "Promo", "Info Nasional"],
-    date: "19 Mar 2026",
-    desc: "Berapa anggaran yang harus disiapkan untuk memanggil tukang rumput? Cek tabel perkiraan harga kami.",
-    source: "https://www.sejutataman.com/harga-jasa-potong-rumput/",
-    content: `
-      <h2>Transparansi Harga Tanpa Biaya Tersembunyi</h2>
-      <p>Banyak pelanggan khawatir dengan biaya "tembak" di lapangan. Di Tebasrumput.com, kami mengedepankan transparansi agar Anda bisa merencanakan pengeluaran perawatan rumah dengan tepat.</p>
-
-      <h3>Faktor-faktor Penentu Harga:</h3>
-      <ol>
-        <li><strong>Luas Lahan:</strong> Satuan kavling standar biasanya lebih murah dibanding lahan luas borongan.</li>
-        <li><strong>Tinggi Rumput:</strong> Rumput yang sudah setinggi dada manusia membutuhkan tenaga dan bensin mesin yang lebih besar.</li>
-        <li><strong>Tingkat Kesulitan:</strong> Area yang banyak bebatuan atau kemiringan curam membutuhkan kehati-hatian ekstra.</li>
-      </ol>
-
-      <h3>Estimasi Layanan:</h3>
-      <ul>
-        <li><strong>Paket 1 (Kavling Kecil):</strong> Mulai Rp 300.000 (Cocok untuk rumah tipe 36 atau 45).</li>
-        <li><strong>Paket 2 (Lahan Sedang):</strong> Mulai Rp 450.000 (Untuk lahan sisa atau samping rumah).</li>
-        <li><strong>Lahan Borongan:</strong> Nego di tempat setelah survey foto/video via WhatsApp.</li>
-      </ul>
-
-      <p>Harga kami sudah termasuk biaya angkut sampah sisa potongan dan pembersihan area jalan setapak di sekitar taman. Sangat ekonomis dan terpercaya!</p>
-    `
-  },
-  {
-    title: "Rahasia Menjaga Rumput Tetap Hijau Segar di Musim Kemarau",
-    tags: ["Musiman", "Tips Kebun", "Kemarau", "Nasional"],
-    date: "18 Mar 2026",
-    desc: "Kemarau panjang sering melanda berbagai wilayah. Simak trik agar rumput taman tidak kering dan mati.",
-    source: "https://disway.id/read/tips-merawat-rumput-kemarau",
-    content: `
-      <h2>Bertahan di Bawah Terik Matahari</h2>
-      <p>Musim kemarau bisa menyebabkan tanah pecah-pecah jika tidak dikelola dengan benar. Rumput yang kering tidak hanya buruk secara visual, tapi juga sulit dipulihkan.</p>
-
-      <h3>Golden Rules di Musim Kemarau:</h3>
-      <ul>
-        <li><strong>Naikkan Ketinggian Potongan:</strong> Saat musim panas, jangan potong rumput terlalu pendek (minimal sisakan 5-7 cm). Daun yang lebih panjang akan memayungi tanah di bawahnya agar air tidak cepat menguap.</li>
-        <li><strong>Mulching:</strong> Jika memungkinkan, biarkan sisa potongan rumput halus tertinggal di atas lahan. Ini berfungsi sebagai pupuk alami sekaligus mulsa pengunci kelembapan.</li>
-        <li><strong>Waktu Siram:</strong> Fokuskan penyiraman di sore hari agar air memiliki waktu semalaman untuk meresap sebelum matahari muncul kembali.</li>
-      </ul>
-
-      <p>Tim profesional kami selalu menyesuaikan setelan mesin potong rumput berdasarkan cuaca saat itu. Kami menjamin rumput Anda tetap aman meski di cuaca ekstrim sekalipun.</p>
-    `
-  },
-  {
-    title: "Investasi Alat: Mesin Potong Rumput Modern vs Alat Manual",
-    tags: ["Peralatan", "Teknis", "Profesional", "Kebun"],
-    date: "17 Mar 2026",
-    desc: "Mengapa menggunakan mesin bermotor jauh lebih baik bagi kesehatan rumput Anda? Simak ulasan teknisnya.",
-    source: "https://www.alatpro.id/perbedaan-mesin-potong-rumput/",
-    content: `
-      <h2>Kualitas Hasil Tergantung pada Ketajaman Alat</h2>
-      <p>Banyak warga menggunakan sabit atau gunting manual untuk merapikan taman. Meskipun murah, secara teknis hal ini bisa menghambat pertumbuhan rumput Anda.</p>
-
-      <h3>Kelebihan Mesin Potong Rumput Bermotor:</h3>
-      <ul>
-        <li><strong>Kecepatan Putaran Tinggi:</strong> Menghasilkan potongan yang bersih (<em>clean cut</em>). Sabit manual seringkali membuat batang rumput "sobek", yang bisa memicu penyakit tanaman.</li>
-        <li><strong>Efisiensi Waktu:</strong> Pekerjaan yang dilakukan manual 1 hari bisa selesai dalam 1-2 jam menggunakan mesin profesional.</li>
-        <li><strong>Kerataan Sempurna:</strong> Tidak ada area yang lebih tinggi atau lebih rendah, taman terlihat seperti karpet hotel bintang lima.</li>
-      </ul>
-
-      <p>Tebasrumput.com selalu menggunakan mesin terbaru dengan mata pisau yang selalu diasah setiap hari untuk memastikan hasil potongan yang sehat bagi rumput kesayangan Anda di wilayah Indonesia.</p>
-    `
-  },
-  {
-    title: "Panduan Aplikasi Pupuk NPK Mutiara untuk Rumput Gajah Mini",
-    tags: ["Pupuk", "NPK", "Gajah Mini", "Tips"],
-    date: "16 Mar 2026",
-    desc: "Pelajari dosis tepat NPK 16-16-16 agar rumput gajah mini Anda tumbuh rimbun dan tidak mudah mati.",
-    source: "https://kumparan.com/pupuk-npk-untuk-rumput-gajah-mini",
-    content: `
-      <h2>Nutrisi Seimbang: Kunci Rumput Sehat</h2>
-      <p>banyak pemilik rumah mengeluh rumput mereka tiba-tiba mengerdil atau berwarna kekuningan. Hal ini biasanya terjadi karena tanah sudah kehabisan nutrisi penting seperti Nitrogen (N), Fosfor (P), dan Kalium (K).</p>
-      
-      <h3>Mengapa Pilih NPK Mutiara 16-16-16?</h3>
-      <p>Pupuk NPK Mutiara memiliki komposisi hara yang seimbang. Nitrogen berfungsi untuk kesegaran daun, Fosfor untuk kekuatan akar, dan Kalium untuk daya tahan terhadap penyakit.</p>
-      <ul>
-        <li><strong>Dosis:</strong> Gunakan sekitar 30 gram per meter persegi lahan.</li>
-        <li><strong>Persiapan:</strong> Siram rumput secara merata 1 hari sebelum pemupukan agar tanah dalam kondisi lembap.</li>
-        <li><strong>Waktu Terbaik:</strong> Taburkan saat sore hari setelah matahari tidak menyengat. Segera siram setelah pupuk ditabur agar butirannya mencair dan tidak membuat daun rumput "hangus".</li>
-      </ul>
-
-      <p>Ingat, pemupukan yang berlebihan justru bisa merusak pH tanah. Lakukan pemupukan rutin setiap 2-3 bulan sekali untuk hasil yang optimal.</p>
-    `
-  },
-  {
-    title: "Inspirasi Taman Tropis Minimalis: Desain Ideal untuk Rumah Anda",
-    tags: ["Desain", "Modern", "Nasional", "Inspirasi"],
-    date: "15 Mar 2026",
-    desc: "Membangun taman di lahan sempit Sumatera Selatan butuh strategi. Simak konsep desain Tropical Zen kami.",
-    source: "https://arsitag.com/taman-tropis-minimalis-palembang",
-    content: `
-      <h2>Cantik Tanpa Repot: Konsep Modern Tropis</h2>
-      <p>Bagi warga Indonesia yang memiliki lahan terbatas di perumahan tipe 36 atau 45, konsep minimalis adalah solusi terbaik. Fokus utama desain ini adalah integrasi antara area hijau yang rapi dengan elemen keras seperti batuan alam atau kayu.</p>
-      
-      <h3>Elemen Wajib Taman Minimalis:</h3>
-      <ol>
-        <li><strong>Rumput sebagai Karpet Alami:</strong> Gunakan rumput manila atau gajah mini yang dipangkas pendek secara rutin.</li>
-        <li><strong>Tanaman Vertikal:</strong> Gunakan dinding samping untuk menaruh tanaman gantung seperti <em>Lee Kwan Yew</em> untuk memberikan kesan air terjun hijau.</li>
-        <li><strong>Bebatuan Koral:</strong> Gunakan batu koral putih atau sikat di pinggiran taman untuk mempertegas batas area dan mempermudah pembersihan.</li>
-      </ol>
-
-      <p>Sebagus apapun desain taman Anda, kuncinya tetap pada pemangkasan rutin. Taman minimalis yang rimbun tanpa kontrol akan terlihat sangat berantakan dan menutupi cahaya masuk ke dalam rumah.</p>
-    `
-  },
-  {
-    title: "10 Tanaman Hias Outdoor yang Paling Kuat Menghadapi Terik Matahari",
-    tags: ["Tanaman", "Outdoor", "Tahan Panas", "Kebun"],
-    date: "14 Mar 2026",
-    desc: "Daftar tanaman tangguh yang tetap berbunga cantik di berbagai wilayah.",
-    source: "https://www.rumah123.com/tanaman-hias-tahan-panas/",
-    content: `
-      <h2>Oase Berwarna di Halaman Depan</h2>
-      <p>Memilih tanaman hias tidak bisa sembarangan. Tanaman yang tidak tahan panas (<em>indoor plants</em>) yang dipaksa di halaman terbuka akan cepat layu dan mati terbakar matahari.</p>
-      
-      <h3>Rekomendasi Tanaman Tahan Panas:</h3>
-      <ul>
-        <li><strong>Bougainvillea (Bunga Kertas):</strong> Sangat tangguh, semakin terpapar panas justru bunganya akan semakin banyak dan berwarna cerah.</li>
-        <li><strong>Kaktus dan Sukulen Besar:</strong> Memiliki kemampuan menyimpan air yang luar biasa, cocok untuk dekorasi taman kering.</li>
-        <li><strong>Euphorbia:</strong> Memiliki bunga kecil yang cantik dan duri pelindung, sangat tahan terhadap kekeringan.</li>
-        <li><strong>Bunga Matahari:</strong> Memberikan keceriaan pada taman Anda dan sangat menyukai sinar matahari penuh.</li>
-      </ul>
-
-      <p>Memiliki tanaman ini akan sangat menghemat waktu Anda dalam hal penyiraman, namun tetap pastikan area sekitarnya bersih dari tumpukan daun kering agar taman tetap terlihat estetis.</p>
-    `
-  },
-  {
-    title: "Panduan Teknis DIY: Cara Memasang Paving Block yang Rata dan Awet",
-    tags: ["Teknis", "DIY", "Halaman", "Paving"],
-    date: "13 Mar 2026",
-    desc: "Ingin mengubah area becek menjadi area parkir atau jalan setapak yang rapi? Simak panduan lengkapnya.",
-    source: "https://www.detik.com/properti/tips-pasang-paving-block/",
-    content: `
-      <h2>Ciptakan Halaman Lebih Fungsional</h2>
-      <p>Paving block adalah solusi cerdas bagi warga Indonesia untuk mengatasi area halaman yang sering becek saat musim hujan. Namun, pemasangan yang asal-asalan akan membuat paving cepat amblas atau bergelombang.</p>
-      
-      <h3>Langkah-langkah Pemasangan Profesional:</h3>
-      <ol>
-        <li><strong>Galian Tanah Dasar:</strong> Gali tanah sedalam 15-20 cm dan pastikan padat menggunakan alat stamper.</li>
-        <li><strong>Gunakan Pasir Urug:</strong> Hampar pasir setebal 5-7 cm sebagai dasar. Ratakan menggunakan papan kayu yang panjang.</li>
-        <li><strong>Penyusunan Paving:</strong> Mulailah dari sudut paling pojok. Pastikan antar block terpatri rapat.</li>
-        <li><strong>Finishing dengan Abu Batu:</strong> Taburkan abu batu di atas permukaan paving yang sudah terpasang, lalu sapu hingga masuk ke sela-sela (nat) untuk mengunci posisi paving agar tidak bergeser.</li>
-      </ol>
-
-      <p>Halaman yang rapi dengan kombinasi paving dan rumput hijau akan meningkatkan nilai properti Anda di mata orang lain!</p>
-    `
-  },
-  {
-    title: "Membasmi Hama Uret (Larva Kumbang) Pada Rumput Secara Efektif",
-    tags: ["Hama", "Organik", "Penyakit", "Tips"],
-    date: "12 Mar 2026",
-    desc: "Waspadai tanda-tanda kerusakan akar rumput. Jangan biarkan hama uret menghancurkan investasi taman Anda.",
-    source: "https://agrokomplekskita.com/membasmi-hama-uret/",
-    content: `
-      <h2>Musuh Tersembunyi di Bawah Tanah</h2>
-      <p>Pernahkah Anda menemui bercak kuning melingkar pada rumput yang saat dicabut ternyata tidak memiliki akar? Itu adalah tanda serangan hama uret (larva kumbang) yang memakan akar rumput gajah mini kesayangan Anda.</p>
-      
-      <h3>Cara Identifikasi dan Pembasmian:</h3>
-      <ul>
-        <li><strong>Cek Kepadatan Tanah:</strong> Jika tanah terasa gembur atau berongga saat diinjak, kemungkinan besar ada aktivitas uret merusak akar.</li>
-        <li><strong>Solusi Pestisida Organik:</strong> Campurkan air sabun cuci piring dengan air biasa, lalu siramkan ke area yang terinfeksi. Larva uret akan naik ke permukaan dan bisa Anda bersihkan secara manual.</li>
-        <li><strong>Pencegahan dengan Jamur Metarhizium:</strong> Gunakan agen hayati ini yang dicampur pada pupuk dasar untuk membasmi larva secara alami tanpa merusak kesuburan tanah.</li>
-      </ul>
-
-      <p>Jika serangan sudah meluas, segera konsultasikan dengan tim <strong>Tebasrumput.com</strong> untuk penanganan profesional.</p>
-    `
-  },
-  {
-    title: "Mengenal Teknik Aerasi (Pelubangan Tanah) untuk Kesuburan Akar",
-    tags: ["Perawatan", "Tanah", "Aerasi", "Profesional"],
-    date: "11 Mar 2026",
-    desc: "Tanah yang terlalu padat bikin rumput 'sesak napas'. Simak pentingnya teknik aerasi setiap 6 bulan sekali.",
-    source: "https://kfclandscape.com/pentingnya-aerasi-rumput/",
-    content: `
-      <h2>Agar Rumput Bisa Bernapas Kembali</h2>
-      <p>Di wilayah dengan tanah liat seperti tanah cenderung menjadi sangat padat seiring berjalannya waktu. Padatnya tanah menghalangi oksigen, air, dan nutrisi untuk sampai ke akar rumput utama.</p>
-      
-      <h3>Apa Itu Aerasi?</h3>
-      <p>Aerasi adalah proses membuat lubang-lubang kecil sedalam 10 cm pada permukaan tanah secara merata. Ini bisa dilakukan menggunakan mesin aerator atau alat manual berbasis garpu tanah.</p>
-      
-      <h3>Manfaat Luar Biasa Aerasi:</h3>
-      <ul>
-        <li>Memudahkan air hujan meresap, mengurangi risiko genangan.</li>
-        <li>Mengoptimalkan penyerapan pupuk oleh akar.</li>
-        <li>Memperkuat struktur akar agar rumput lebih tahan terhadap cuaca panas.</li>
-      </ul>
-
-      <p>Sebaiknya aerasi dilakukan bersamaan dengan jadwal pemupukan rutin untuk hasil maksimal.</p>
-    `
-  },
-  {
-    title: "Mengapa Lahan Kosong yang Rimbun Harus Segera Dibersihkan?",
-    tags: ["Layanan", "Keamanan", "Lahan Kosong", "Palembang"],
-    date: "10 Mar 2026",
-    desc: "Rumput liar setinggi dada bukan cuma merusak pemandangan, tapi ancaman nyata bagi keamanan lingkungan sekitar.",
-    source: "https://tebasrumput.com/manfaat-bersih-lahan",
-    content: `
-      <h2>Hindari Ancaman Hewan Berbahaya di Lahan Kosong</h2>
-      <p>Banyak lahan di wilayah baru <strong>Jakabaring</strong> atau <strong>Gandus</strong> yang dibiarkan terbengkalai. Rumput liar yang rimbun dan tidak terawat adalah magnet bagi predator berbahaya.</p>
-      
-      <h3>Risiko Membiarkan Lahan Rimbun:</h3>
-      <ol>
-        <li><strong>Sarang Ular:</strong> Kobra dan sanca sangat suka bersembunyi di sela-sela rumput tinggi yang lembap.</li>
-        <li><strong>Wabah Nyamuk:</strong> Menjadi tempat berkembang biak nyamuk DBD yang mengancam kesehatan anak-anak di sekitar.</li>
-        <li><strong>Kejahatan:</strong> Lahan rimbun sering digunakan untuk aktivitas negatif karena tidak terpantau dari jalan utama.</li>
-      </ol>
-
-      <p>Tim <strong>Tebasrumput.com</strong> memiliki keahlian khusus untuk pembersihan lahan skala besar menggunakan mesin tebas yang kuat. Kami siap membersihkan semak belukar hingga ke akarnya!</p>
-    `
-  },
-  {
-    title: "Tips Membangun Vertical Garden di Lahan Terbatas Kota Anda",
-    tags: ["Urban Farming", "Vertical Garden", "DIY", "Nasional"],
-    date: "09 Mar 2026",
-    desc: "Solusi cerdas bagi pemilik ruko atau rumah minimalis yang ingin tetap memiliki sudut hijau yang segar.",
-    source: "https://palpres.disway.id/tips-vertical-garden-minimalis",
-    content: `
-      <h2>Hutan Vertikal di Dinding Rumah Anda</h2>
-      <p>Konsep <em>Vertical Garden</em> sangat populer di kota besar karena tidak memakan tempat di lantai. Anda bisa memanfaatkan dinding belakang rumah atau pagar depan untuk area hijau ini.</p>
-      
-      <h3>Cara Membuat Vertical Garden Sederhana:</h3>
-      <ul>
-        <li><strong>Pemilihan Rak:</strong> Gunakan rangka besi atau modular plastik yang bisa ditempel di tembok.</li>
-        <li><strong>Sistem Pengairan:</strong> Karena media tanam sangat sedikit, perhatikan sistem pengairan otomatis atau lakukan penyiraman manual minimal 2x sehari karena penguapan di dinding sangat cepat.</li>
-        <li><strong>Jenis Tanaman:</strong> Gunakan <em>Epipremnum</em> (Sirih Gading) atau <em>Bromelia</em> yang tahan banting di berbagai kondisi cahaya.</li>
-      </ul>
-
-      <p>Penyusunan tanaman yang rapi secara vertikal akan memberikan efek sejuk pada dinding rumah sehingga suhu ruangan di dalamnya bisa turun secara alami.</p>
-    `
-  },
-  {
-    title: "Cara Identifikasi dan Identifikasi Penyakit Jamur Tanah Pada Rumput",
-    tags: ["Penyakit", "Fungisida", "Tips", "Kesehatan"],
-    date: "08 Mar 2026",
-    desc: "Musim hujan berkepanjangan sering membawa jamur. Jangan biarkan bercak putih menyebar di taman Anda.",
-    source: "https://pertanian.go.id/penyakit-jamur-rumput-taman",
-    content: `
-      <h2>Waspadai Bercak Putih Kapas di Pagi Hari</h2>
-      <p>Penyakit jamur tanah sering menyerang rumput jepang yang terlalu rapat di kondisi lembap. Cirinya adalah munculnya bercak berwarna cokelat atau putih seperti kapas pada permukaan rumput.</p>
-      
-      <h3>Langkah Penyelamatan:</h3>
-      <ol>
-        <li><strong>Kurangi Penyiraman:</strong> Hentikan penyiraman selama 1-2 hari agar permukaan tanah mengering.</li>
-        <li><strong>Pemangkasan Segera:</strong> Potong bagian yang terinfeksi dan jangan membuang sisa potongannya di area taman lain karena spora jamur bisa menyebar.</li>
-        <li><strong>Gunakan Fungisida:</strong> Semprotkan larutan fungisida sesuai dosis untuk membunuh akar jamur di dalam tanah.</li>
-      </ol>
-
-      <p>Kebersihan alat potong juga sangat berpengaruh. Tim kami selalu mensterilkan mata pisau sebelum mulai mengerjaan lahan pelanggan baru untuk mencegah penularan penyakit tanaman antar rumah.</p>
-    `
-  },
-  {
-    title: "Kenapa Mesin Potong Rumput Bermotor Lebih Aman Bagi Rumput?",
-    tags: ["Teknologi", "Layanan", "Mesin", "Efisien"],
-    date: "07 Mar 2026",
-    desc: "Efisiensi tinggi dan kesehatan tanaman adalah alasan utama kami meninggalkan cara pemotongan tradisional.",
-    source: "https://www.alatpro.id/kelebihan-mesin-potong-rumput",
-    content: `
-      <h2>Potongan Rapi, Tumbuhan Happy</h2>
-      <p>Banyak orang menganggap semua teknik pemotongan sama saja selama rumput menjadi pendek. Secara sains, hal itu salah besar. Cara memotong sangat menentukan kecepatan pemulihan rumput Anda.</p>
-      
-      <h3>Keunggulan Mesin Rotari Modern:</h3>
-      <ul>
-        <li><strong>Clean Cut (Potongan Bersih):</strong> Mesin modern memotong helai rumput secepat kilat tanpa merobek pori-pori daun. Rumput yang terpotong bersih akan segera menutup lukanya dan tumbuh kembali lebih hijau.</li>
-        <li><strong>Pemadatan Tanah Minim:</strong> Tekanan mesin yang didorong/gendong lebih merata dibandingkan tekanan kaki manusia saat berjam-jam memotong menggunakan sabit tradisional.</li>
-        <li><strong>Penghancur Sampah:</strong> Beberapa mesin kami memiliki fitur <em>mulching</em> yang bisa menghancurkan sisa potongan menjadi serpihan halus sebagai pupuk langsung.</li>
-      </ul>
-
-      <p>Dapatkan pengalaman jasa potong rumput kelas profesional hanya di <strong>Tebasrumput.com</strong>. Kami datang membawa alat terbaik, Anda tinggal menikmati hasilnya!</p>
-    `
   }
 ];
 
+const testimonials = [
+  { name: "Andi Saputra", role: "Pemilik Rumah", text: "Wah rapi bener hasilnya, timnya juga sopan dateng tepat waktu. Halaman jadi seger lagi.", rating: 5 },
+  { name: "Siska Wijaya", role: "Ibu Rumah Tangga", text: "Biasanya susah nyari tukang rumput, sekarang tinggal WA beres. Mantap tebasrumput!", rating: 5 },
+  { name: "Budi Pratama", role: "Pengelola Kantor", text: "Harganya worth it banget buat hasil yang bersih kayak gini. Udah langganan buat kantor.", rating: 5 },
+  { name: "Dewi Lestari", role: "Pemilik Lahan", text: "Panggil buat bersihin lahan kosong, beres sekejap. Gak nyesel langganan di sini.", rating: 5 },
+  { name: "Rian Hidayat", role: "Wiraswasta", text: "Sistem bookingnya gampang banget, timnya profesional bawa alat lengkap. Recomended!", rating: 4 },
+  { name: "Maya Indah", role: "Pemilik Cafe", text: "Taman cafe saya jadi rapi terus sejak pakai jasa rutin tebasrumput. Customer jadi betah.", rating: 5 }
+];
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -522,18 +138,11 @@ export default function Home() {
     setTimeout(() => setIsCopied(false), 2000);
   };
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo = direction === 'left' ? scrollLeft - clientWidth / 2 : scrollLeft + clientWidth / 2;
-      scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
-    }
-  };
   const [formData, setFormData] = useState({
     name: "",
     region: "",
     city: "",
-    service: "Paket 1 (300rb - Kavling Kecil)"
+    service: "Custom / Borongan"
   });
 
   const handleBooking = (e?: React.FormEvent) => {
@@ -542,18 +151,10 @@ export default function Home() {
     let message = "Halo tebasrumput.com, saya ingin memesan jasa potong rumput.";
     if (formData.name || formData.region) {
       const location = formData.city ? `${formData.city}, ${formData.region}` : (formData.region || "Indonesia");
-      message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari ${location} ingin memesan layanan ${formData.service}.`;
+      message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari ${location} ingin memesan layanan potong rumput.`;
     }
 
     window.open(`${WA_LINK}?text=${encodeURIComponent(message)}`, "_blank");
-  };
-
-  const selectPackage = (packageName: string) => {
-    setFormData(prev => ({ ...prev, service: packageName }));
-    const heroSection = document.getElementById('hero-form');
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
@@ -562,8 +163,8 @@ export default function Home() {
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <Leaf className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform shrink-0" />
-            <span className="text-2xl font-black tracking-tighter text-black">
+            <Leaf className="w-6 h-6 text-primary group-hover:rotate-12 transition-transform shrink-0" />
+            <span className="text-xl font-black tracking-tighter text-black">
               tebasrumput.com
             </span>
           </div>
@@ -572,7 +173,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#layanan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Layanan</a>
             <a href="#keunggulan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Keunggulan</a>
-            <a href="#pricing" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Harga</a>
+            <a href="#testimoni" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Testimoni</a>
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">FAQ</a>
             <button onClick={handleBooking} className="btn-primary text-sm py-2 px-6 flex items-center gap-2">
               <MessageCircle className="w-4 h-4" /> Booking Sekarang
@@ -594,7 +195,7 @@ export default function Home() {
           >
             <a href="#layanan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Layanan</a>
             <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Keunggulan</a>
-            <a href="#pricing" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Harga</a>
+            <a href="#testimoni" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Testimoni</a>
             <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">FAQ</a>
             <button onClick={handleBooking} className="btn-primary w-full mt-4 flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" /> Booking Sekarang
@@ -626,14 +227,14 @@ export default function Home() {
                 <span>Panggilan <span className="text-primary font-bold">Seluruh Indonesia</span></span>
               </motion.div>
 
-              <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] text-slate-900 tracking-tight">
-                <span className="font-bold text-primary text-[10px] md:text-sm block mb-2 uppercase tracking-[0.2em] opacity-90">Jasa Potong Rumput Panggilan Indonesia</span>
+              <motion.h1 variants={fadeIn} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] text-slate-900 tracking-tight">
+                <span className="font-bold text-primary text-[10px] md:text-xs block mb-2 uppercase tracking-[0.2em] opacity-90">Jasa Potong Rumput Panggilan Indonesia</span>
                 <span className="text-slate-900 block">Murah, Cepat</span>
                 <span className="text-primary block">& Profesional</span>
               </motion.h1>
-              <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+              <motion.p variants={fadeIn} className="text-sm md:text-base text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
                 Layanan <span className="font-medium text-slate-700 italic">Jasa Potong Rumput</span> praktis untuk halaman rumah, kantor, dan lahan kosong di <span className="font-medium text-slate-700">seluruh Indonesia</span>. 
-                <span className="block mt-2 font-medium text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
+                <span className="block mt-1 font-medium text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
 
               <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 items-center">
@@ -712,22 +313,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Pilih Paket Layanan</label>
-                  <div className="relative">
-                    <select
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white font-medium text-slate-700"
-                      value={formData.service}
-                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    >
-                      <option value="Paket 1 (300rb - Kavling Kecil)">Paket 1: 300rb (60-80 m²)</option>
-                      <option value="Paket 2 (500rb - Kavling Sedang)">Paket 2: 500rb (80-120 m²)</option>
-                      <option value="Custom / Borongan">Custom / Borongan (Survey Lokasi)</option>
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
-                  </div>
-                </div>
-
                 <button
                   type="submit"
                   className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-dark hover:shadow-primary/40 transition-all active:scale-[0.98] flex items-center justify-center gap-3 mt-4"
@@ -755,109 +340,100 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                whileHover={{ y: -5 }}
-                className="card group"
+                whileHover={{ y: -3 }}
+                className="card p-6 group"
               >
-                <div className="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center text-primary mb-6 transition-colors group-hover:bg-primary group-hover:text-white">
-                  {item.icon}
+                <div className="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center text-primary mb-4 transition-colors group-hover:bg-primary group-hover:text-white">
+                  {React.cloneElement(item.icon as React.ReactElement, { className: "w-5 h-5" })}
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                <h4 className="text-lg font-bold mb-2 text-slate-900">{item.title}</h4>
+                <p className="text-slate-600 text-xs leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </section >
 
-        {/* Stats Section */}
-        < section className="bg-primary py-16 px-6 md:px-12 lg:px-24" >
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
-              {[
-                { label: "Halaman Selesai", value: "500+" },
-                { label: "Pelanggan Puas", value: "100%" },
-                { label: "Tahun Pengalaman", value: "5+" },
-                { label: "Tim Profesional", value: "15+" }
-              ].map((stat, i) => (
-                <div key={i} className="text-center space-y-1 border-white/20 lg:border-l first:border-l-0">
-                  <h4 className="text-3xl md:text-4xl font-black text-white tracking-tight">{stat.value}</h4>
-                  <p className="text-[10px] md:text-xs font-bold text-white/70 uppercase tracking-[0.2em]">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+        {/* Testimonials Marquee */}
+        <section id="testimoni" className="py-24 bg-slate-900 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+             <h2 className="text-xs font-bold text-primary-light tracking-[0.2em] uppercase mb-4">Testimoni Pelanggan</h2>
+             <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Apa Kata Mereka?</h3>
           </div>
-        </section >
-
-        {/* Pricing Section */}
-        < section id="pricing" className="bg-soft-gray section-padding" >
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-3 mb-16">
-              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Harga Transparan</h2>
-              <h3 className="text-2xl md:text-3xl font-semibold text-slate-900 tracking-tight">Layanan Profesional Harga Murah</h3>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {[
-                {
-                  name: "Paket 1",
-                  price: "300rb",
-                  desc: "Luas 1 kavling kecil (60–80 m²)",
-                  features: [
-                    "Pemotongan rumput standar",
-                    "Pembersihan sisa potongan rumput",
-                    "Waktu pengerjaan 1 hari",
-                    "Menggunakan mesin potong rumput",
-                    "Rumput liar, taman atau halaman rumah"
-                  ],
-                  recommended: false
-                },
-                {
-                  name: "Paket 2",
-                  price: "500rb",
-                  desc: "Luas 1 kavling sedang (80–120 m²)",
-                  features: [
-                    "Pemotongan rumput rapi & merata",
-                    "Pembersihan sisa potongan rumput",
-                    "Waktu pengerjaan 1 hari",
-                    "Menggunakan mesin potong rumput",
-                    "Rumput liar, taman atau halaman rumah",
-                    "Pemupukan ringan setelah pemotongan",
-                    "Pembakaran sisa rumput (Opsional)"
-                  ],
-                  recommended: true
-                }
-              ].map((plan, i) => (
-                <div
-                  key={i}
-                  className={`p-8 rounded-3xl border transition-all ${plan.recommended ? 'bg-white border-primary shadow-xl scale-105 z-10' : 'bg-white/50 border-slate-200'}`}
-                >
-                  {plan.recommended && (
-                    <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Paling Populer</span>
-                  )}
-                  <h4 className="text-xl font-bold text-slate-900 mb-1">{plan.name}</h4>
-                  <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-3xl font-black text-primary">{plan.price}</span>
-                    <span className="text-slate-400 text-sm">/ kavling</span>
+          
+          <div className="flex flex-col gap-8">
+            {/* First Row */}
+            <div className="flex w-fit animate-marquee hover:[animation-play-state:paused]">
+              {[...testimonials, ...testimonials].map((t, i) => (
+                <div key={i} className="w-[300px] md:w-[380px] mx-3 bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col gap-3">
+                  <div className="flex items-center gap-1 text-amber-400">
+                    {[...Array(t.rating)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
                   </div>
-                  <p className="text-xs text-slate-500 font-medium mb-6">{plan.desc}</p>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-slate-600">
-                        <CheckCircle2 className="text-primary w-4 h-4 mt-0.5 shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    onClick={() => selectPackage(plan.name === "Paket 1" ? "Paket 1 (300rb - Kavling Kecil)" : "Paket 2 (500rb - Kavling Sedang)")}
-                    className={`w-full py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 ${plan.recommended ? 'bg-primary text-white hover:bg-primary-dark' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}
-                  >
-                    <MessageCircle className="w-4 h-4" /> Pilih Paket
-                  </button>
+                  <p className="text-slate-300 italic text-sm leading-relaxed">"{t.text}"</p>
+                  <div className="mt-2 flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">
+                      {t.name[0]}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-sm">{t.name}</h4>
+                      <p className="text-slate-500 text-[10px]">{t.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex w-fit animate-marquee-reverse hover:[animation-play-state:paused]">
+              {[...testimonials, ...testimonials].reverse().map((t, i) => (
+                <div key={i} className="w-[300px] md:w-[380px] mx-3 bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 flex flex-col gap-3">
+                  <div className="flex items-center gap-1 text-amber-400">
+                    {[...Array(t.rating)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
+                  </div>
+                  <p className="text-slate-300 italic text-sm leading-relaxed">"{t.text}"</p>
+                  <div className="mt-2 flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">
+                      {t.name[0]}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-sm">{t.name}</h4>
+                      <p className="text-slate-500 text-[10px]">{t.role}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </section >
+        </section>
+
+        {/* Keunggulan Section */}
+        <section id="keunggulan" className="section-padding bg-soft-gray">
+          <div className="max-w-4xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-12">
+              <div className="text-center space-y-4">
+                <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Mengapa Pilih Kami</h2>
+                <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">Solusi Terbaik Untuk Kebersihan Halaman</h3>
+                <p className="text-slate-500 leading-relaxed text-sm font-light max-w-2xl mx-auto">Kami mengedepankan kualitas dan kepuasan pelanggan dengan tim profesional yang terlatih dan alat yang modern.</p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { title: "Respon Cepat", desc: "Admin sigap membalas dan menjadwalkan kunjungan." },
+                  { title: "Tim Profesional", desc: "Pekerja berpengalaman dan ramah." },
+                  { title: "Alat Lengkap", desc: "Menggunakan mesin modern untuk hasil yang presisi." }
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col items-center text-center gap-4 p-8 bg-white rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                    <div className="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center text-primary shrink-0">
+                      <CheckCircle2 className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         < section id="faq" className="section-padding bg-slate-50" >
@@ -930,7 +506,7 @@ export default function Home() {
             <h5 className="font-bold text-lg">Tautan Cepat</h5>
             <ul className="space-y-4 text-slate-400 text-sm">
               <li><a href="#layanan" className="hover:text-primary transition-colors">Layanan</a></li>
-              <li><a href="#pricing" className="hover:text-primary transition-colors">Harga</a></li>
+              <li><a href="#testimoni" className="hover:text-primary transition-colors">Testimoni</a></li>
               <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
