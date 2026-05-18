@@ -178,6 +178,7 @@ export default function Home() {
             <a href="#alur" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Alur</a>
             <a href="#keunggulan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Keunggulan</a>
             <a href="#testimoni" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Testimoni</a>
+            <a href="#lokasi" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Lokasi</a>
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">FAQ</a>
             <button onClick={handleBooking} className="btn-primary text-sm py-2.5 px-6 flex items-center gap-2 font-bold">
               <MessageCircle className="w-4 h-4" /> Booking Sekarang
@@ -201,6 +202,7 @@ export default function Home() {
             <a href="#alur" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Alur</a>
             <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Keunggulan</a>
             <a href="#testimoni" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Testimoni</a>
+            <a href="#lokasi" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Lokasi</a>
             <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">FAQ</a>
             <button onClick={handleBooking} className="btn-primary w-full mt-4 flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" /> Booking Sekarang
@@ -478,8 +480,93 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Lokasi & Jangkauan Section */}
+        <section id="lokasi" className="section-padding bg-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Map Column */}
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="w-full h-[400px] md:h-[500px] bg-white p-4 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] border border-slate-100 overflow-hidden relative group"
+              >
+                <iframe
+                  src="https://maps.google.com/maps?q=Jasa+Potong+Rumput+Panggilan+Jakarta+by+Tebasrumput.com&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokasi Tebasrumput Jakarta"
+                  className="w-full h-full rounded-[1.8rem] grayscale-[10%] contrast-[110%] group-hover:grayscale-0 transition-all duration-500"
+                ></iframe>
+              </motion.div>
+
+              {/* Stats & Details Column */}
+              <motion.div 
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-8"
+              >
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-[0.2em] uppercase">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>Area Layanan & HQ</span>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight tracking-tight">
+                    Hadir Lebih Dekat Melayani Seluruh <span className="text-primary">DKI Jakarta</span>
+                  </h3>
+                  <p className="text-slate-500 leading-relaxed text-sm font-light">
+                    Sebagai jasa potong rumput panggilan andalan, kami bangga telah dipercaya menyelesaikan <span className="font-semibold text-slate-800 text-primary-dark">ratusan pengerjaan halaman</span> di berbagai perumahan, perkantoran, dan lahan kosong di seluruh kota administrasi Jakarta. Basis operasional utama kami berada di Kebayoran Lama, siap memberikan respon tercepat langsung ke lokasi Anda.
+                  </p>
+                </div>
+
+                {/* Statistics Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { number: "350+", label: "Halaman Dirapikan", desc: "Ratusan proyek selesai dengan rapi & bersih" },
+                    { number: "98%", label: "Tingkat Kepuasan", desc: "Ulasan bintang 5 dari warga Jakarta" },
+                    { number: "4.8/5", label: "Rating Layanan", desc: "Hasil terpercaya dan memuaskan" },
+                    { number: "24/7", label: "Respon Chat", desc: "Admin sigap jadwalkan kunjungan" }
+                  ].map((stat, idx) => (
+                    <div key={idx} className="p-5 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm group hover:border-primary/20 transition-all hover:bg-white hover:shadow-md">
+                      <div className="text-2xl font-black text-primary mb-1 group-hover:scale-105 transition-transform duration-300 origin-left">{stat.number}</div>
+                      <div className="text-xs font-black text-slate-800 mb-1">{stat.label}</div>
+                      <div className="text-[10px] text-slate-400 font-medium leading-relaxed">{stat.desc}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="https://www.google.com/search?q=potong+rumput+panggilan&oq=potong+rumput+panggilan&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MggIARAAGBYYHjIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yBggGEEUYPTIGCAcQRRg80gEINzAwNmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#sv=CAwS_gEKBmxjbF9wdhJFCgNwdnESPkNnMHZaeTh4TVc1cWRqZDVPRGh4SWgwS0YzQnZkRzl1WnlCeWRXMXdkWFFnY0dGdVoyZHBiR0Z1RUFJWUF3EmcKA2xxaRJgQ2hkd2IzUnZibWNnY25WdGNIVjBJSEJoYm1kbmFXeGhibG9aSWhkd2IzUnZibWNnY25WdGNIVjBJSEJoYm1kbmFXeGhicElCRVd4aGQyNWZZMkZ5WlY5elpYSjJhV05sEhIKA3RicxILbHJmOiEzc0lBRT0SHAoBcRIXcG90b25nIHJ1bXB1dCBwYW5nZ2lsYW4aEmxvY2FsLXBsYWNlLXZpZXdlchgKIM6B1ogO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary text-xs px-8 py-3.5 inline-flex items-center gap-2 font-bold hover:shadow-md cursor-pointer"
+                  >
+                    <span>Lihat di Google Maps</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                  <button
+                    onClick={() => handleBooking()}
+                    className="btn-primary text-xs px-8 py-3.5 inline-flex items-center gap-2 font-bold shadow-lg shadow-primary/25 cursor-pointer"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Cek Jangkauan Area Anda</span>
+                  </button>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
-        < section id="faq" className="section-padding bg-white" >
+        < section id="faq" className="section-padding bg-slate-50" >
           <div className="max-w-3xl mx-auto">
             <div className="text-center space-y-3 mb-16">
               <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">FAQ</h2>
@@ -551,6 +638,7 @@ export default function Home() {
               <li><a href="#layanan" className="hover:text-primary transition-colors">Layanan</a></li>
               <li><a href="#alur" className="hover:text-primary transition-colors">Alur</a></li>
               <li><a href="#testimoni" className="hover:text-primary transition-colors">Testimoni</a></li>
+              <li><a href="#lokasi" className="hover:text-primary transition-colors">Lokasi</a></li>
               <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
