@@ -568,7 +568,7 @@ export default function Home() {
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Seluruh Wilayah DKI Jakarta (HQ: Tebet, Jakarta Selatan)</span>
+                <span>Seluruh Wilayah DKI Jakarta (HQ: Grogol Utara, Kec. Kebayoran Lama, Kota Jakarta Selatan)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
