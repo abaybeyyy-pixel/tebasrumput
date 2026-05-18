@@ -29,7 +29,7 @@ import {
   Briefcase
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import { INDONESIA_REGIONS, INDONESIA_CITIES } from "../data/regions";
+import { JAKARTA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
 import { Link } from "react-router-dom";
 
 const fadeIn = {
@@ -50,14 +50,14 @@ const WA_LINK = "https://wa.me/6289502470657";
 
 const blogs = [
   {
-    title: "Panduan Lengkap Merawat Rumput Gajah Mini di Cuaca Terik Indonesia",
-    tags: ["Tips Perawatan", "Nasional", "Rumput Gajah Mini", "Taman"],
+    title: "Panduan Lengkap Merawat Rumput Gajah Mini di Cuaca Terik Jakarta",
+    tags: ["Tips Perawatan", "DKI Jakarta", "Rumput Gajah Mini", "Taman"],
     date: "26 Mar 2026",
-    desc: "Menghadapi cuaca panas Indonesia yang ekstrem? Pelajari teknik penyiraman, pemupukan, dan perlindungan rumput gajah mini agar tetap hijau royo-royo.",
+    desc: "Menghadapi cuaca panas perkotaan Jakarta yang ekstrem? Pelajari teknik penyiraman, pemupukan, dan perlindungan rumput gajah mini agar tetap hijau royo-royo.",
     source: "https://kumparan.com/jasa-taman/cara-merawat-rumput-gajah-mini",
     content: `
-      <h2>Tantangan Menanam Gajah Mini di Wilayah Tropis</h2>
-      <p>Wilayah Indonesia dikenal memiliki indeks UV yang cukup tinggi dan suhu rata-rata yang bisa mencapai 35°C di siang hari. Bagi pemilik rumah di perumahan modern maupun area terbuka, rumput gajah mini adalah pilihan estetis, namun rentan menguning jika salah perawatan.</p>
+      <h2>Tantangan Menanam Gajah Mini di Wilayah Perkotaan Tropis</h2>
+      <p>Wilayah perkotaan padat seperti Jakarta dikenal memiliki indeks UV yang cukup tinggi dan suhu rata-rata yang bisa mencapai 35°C di siang hari. Bagi pemilik rumah di perumahan modern maupun area terbuka, rumput gajah mini adalah pilihan estetis, namun rentan menguning jika salah perawatan.</p>
       
       <h3>1. Teknik Penyiraman 'Deep Watering'</h3>
       <p>Banyak orang melakukan kesalahan dengan menyiram sedikit-sedikit tapi sering. Di wilayah tropis, Anda disarankan menggunakan teknik <em>deep watering</em>.</p>
@@ -71,45 +71,45 @@ const blogs = [
       <p>Rumput gajah mini membutuhkan asupan Nitrogen yang konsisten. Gunakan pupuk NPK 16-16-16 setiap 2 bulan sekali. Taburkan secara merata dan segera siram agar butiran pupuk hancur dan tidak membakar daun rumput.</p>
 
       <h3>3. Penyiangan Gulma (Rumput Teki)</h3>
-      <p>Masalah utama di taman tropis adalah pertumbuhan rumput teki yang sangat cepat. Cabutlah gulma hingga ke akarnya menggunakan pencukil kecil minimal satu minggu sekali agar nutrisi tanah tidak direbut.</p>
+      <p>Masalah utama di taman perkotaan adalah pertumbuhan rumput teki yang sangat cepat. Cabutlah gulma hingga ke akarnya menggunakan pencukil kecil minimal satu minggu sekali agar nutrisi tanah tidak direbut.</p>
 
       <blockquote>
-        <p><strong>Butuh Bantuan?</strong> Jika kesibukan membuat Anda sulit merawat taman secara detail, tim <strong>Tebasrumput.com</strong> siap membantu perawatan rutin dengan tim profesional berpengalaman di seluruh wilayah Indonesia.</p>
+        <p><strong>Butuh Bantuan?</strong> Jika kesibukan membuat Anda sulit merawat taman secara detail, tim <strong>Tebasrumput.com</strong> siap membantu perawatan rutin dengan tim profesional berpengalaman di seluruh wilayah DKI Jakarta.</p>
       </blockquote>
     `
   },
   {
-    title: "Kapan Waktu Terbaik Memotong Rumput di Wilayah Anda?",
+    title: "Kapan Waktu Terbaik Memotong Rumput di Wilayah Jakarta?",
     tags: ["Jadwal", "Tips", "Edukasi", "Layanan"],
     date: "25 Mar 2026",
-    desc: "Frekuensi pemotongan rumput sangat dipengaruhi oleh lokasi dan cuaca. Simak panduan jadwal pemangkasan untuk hasil terbaik.",
+    desc: "Frekuensi pemotongan rumput sangat dipengaruhi oleh lokasi dan cuaca ibu kota. Simak panduan jadwal pemangkasan untuk hasil terbaik.",
     source: "https://www.flamboyanasri.com/2021/04/jadwal-memotong-rumput.html",
     content: `
       <h2>Mengapa Jadwal Pemotongan Berbeda-beda?</h2>
-      <p>Setiap wilayah memiliki karakteristik tanah dan tingkat kelembapan yang berbeda. Hal ini mengakibatkan pertumbuhan rumput liar dan tanaman hias menjadi lebih masif di beberapa wilayah dibandingkan wilayah lainnya.</p>
+      <p>Setiap wilayah memiliki karakteristik tanah dan tingkat kelembapan yang berbeda. Hal ini mengakibatkan pertumbuhan rumput liar dan tanaman hias menjadi lebih masif di beberapa area dibandingkan area lainnya.</p>
       
       <h3>Strategi Pemotongan Berdasarkan Musim</h3>
-      <p>Menjaga kerapian halaman bukan hanya soal estetika, tapi juga soal mencegah sarang binatang melata seperti ular atau kelabang yang sering muncul di rumput tinggi.</p>
+      <p>Menjaga kerapian halaman bukan hanya soal estetika, tapi juga soal kenyamanan dan kebersihan lingkungan rumah di perkotaan.</p>
       <ul>
         <li><strong>Musim Penghujan:</strong> Rumput tumbuh 2x lebih cepat. Lakukan pemangkasan setiap <strong>10-14 hari sekali</strong>. Jangan menunggu hingga setinggi lutut karena batang rumput akan mengeras dan sulit dirapikan.</li>
-        <li><strong>Musim Kemarau:</strong> Pertumbuhan melambat, namun debu sering menempel. Potonglah setiap <strong>3-4 minggu sekali</strong> dengan ketinggian yang sedikit lebih tinggi (sekitar 5 cm) untuk menjaga kelembapan akar.</li>
+        <li><strong>Musim Kemarau:</strong> Pertumbuhan melambat, namun debu perkotaan sering menempel. Potonglah setiap <strong>3-4 minggu sekali</strong> dengan ketinggian yang sedikit lebih tinggi (sekitar 5 cm) untuk menjaga kelembapan akar.</li>
       </ul>
 
       <h3>Manfaat Memangkas Secara Konsisten</h3>
       <p>Memotong rumput secara rutin merangsang pertumbuhan tunas baru yang lebih hijau dan lembut. Selain itu, sinar matahari akan lebih mudah masuk ke sela-sela batang rumput, mencegah pertumbuhan lumut dan jamur yang merusak visual taman Anda.</p>
 
-      <p>Tebasrumput.com menyediakan layanan langganan bulanan di seluruh wilayah layanan kami. Hubungi kami untuk info lebih lanjut!</p>
+      <p>Tebasrumput.com menyediakan layanan langganan bulanan di seluruh kecamatan se-DKI Jakarta. Hubungi kami untuk info lebih lanjut!</p>
     `
   }
 ];
 
 const testimonials = [
-  { name: "Andi Saputra", role: "Pemilik Rumah", text: "Wah rapi bener hasilnya, timnya juga sopan dateng tepat waktu. Halaman jadi seger lagi.", rating: 5 },
-  { name: "Siska Wijaya", role: "Ibu Rumah Tangga", text: "Biasanya susah nyari tukang rumput, sekarang tinggal WA beres. Mantap tebasrumput!", rating: 5 },
-  { name: "Budi Pratama", role: "Pengelola Kantor", text: "Harganya worth it banget buat hasil yang bersih kayak gini. Udah langganan buat kantor.", rating: 5 },
-  { name: "Dewi Lestari", role: "Pemilik Lahan", text: "Panggil buat bersihin lahan kosong, beres sekejap. Gak nyesel langganan di sini.", rating: 5 },
-  { name: "Rian Hidayat", role: "Wiraswasta", text: "Sistem bookingnya gampang banget, timnya profesional bawa alat lengkap. Recomended!", rating: 4 },
-  { name: "Maya Indah", role: "Pemilik Cafe", text: "Taman cafe saya jadi rapi terus sejak pakai jasa rutin tebasrumput. Customer jadi betah.", rating: 5 }
+  { name: "Andi Saputra", role: "Pemilik Rumah (Jakarta Selatan)", text: "Wah rapi bener hasilnya, timnya juga sopan dateng tepat waktu. Halaman jadi seger lagi.", rating: 5 },
+  { name: "Siska Wijaya", role: "Ibu Rumah Tangga (Jakarta Barat)", text: "Biasanya susah nyari tukang rumput di Jakarta, sekarang tinggal WA beres. Mantap tebasrumput!", rating: 5 },
+  { name: "Budi Pratama", role: "Pengelola Kantor (Jakarta Pusat)", text: "Harganya worth it banget buat hasil yang bersih kayak gini. Udah langganan buat kantor di Thamrin.", rating: 5 },
+  { name: "Dewi Lestari", role: "Pemilik Lahan (Jakarta Timur)", text: "Panggil buat bersihin lahan kosong di Duren Sawit, beres sekejap. Gak nyesel langganan di sini.", rating: 5 },
+  { name: "Rian Hidayat", role: "Wiraswasta (Jakarta Utara)", text: "Sistem bookingnya gampang banget, timnya profesional bawa alat lengkap ke Kelapa Gading. Recomended!", rating: 4 },
+  { name: "Maya Indah", role: "Pemilik Cafe (Kebayoran Baru)", text: "Taman cafe saya jadi rapi terus sejak pakai jasa rutin tebasrumput. Customer jadi betah.", rating: 5 }
 ];
 
 export default function Home() {
@@ -153,7 +153,7 @@ export default function Home() {
 
     let message = "Halo tebasrumput.com, saya ingin memesan jasa potong rumput.";
     if (formData.name || formData.region) {
-      const location = formData.city ? `${formData.city}, ${formData.region}` : (formData.region || "Indonesia");
+      const location = formData.city ? `${formData.city}, ${formData.region}, DKI Jakarta` : (formData.region ? `${formData.region}, DKI Jakarta` : "DKI Jakarta");
       message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari ${location} ingin memesan layanan potong rumput.`;
     }
 
@@ -224,17 +224,17 @@ export default function Home() {
             >
               <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-[0.2em] uppercase">
                 <MapPin className="w-3 h-3" />
-                <span>Panggilan <span className="text-primary">Seluruh Indonesia</span></span>
+                <span>Panggilan <span className="text-primary">Seluruh DKI Jakarta</span></span>
               </motion.div>
 
               <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-slate-900 tracking-tight">
-                <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Jasa Potong Rumput Panggilan Indonesia</span>
+                <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Jasa Potong Rumput Panggilan Jakarta</span>
                 <span className="block mb-1">Murah, Cepat</span>
                 <span className="text-primary">& Profesional</span>
               </motion.h1>
               
               <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 border-l-2 border-primary/20 pl-6 py-2">
-                Layanan <span className="font-medium text-slate-700 italic">Jasa Potong Rumput</span> praktis untuk halaman rumah, kantor, dan lahan kosong di <span className="font-medium text-slate-700">seluruh Indonesia</span>. 
+                Layanan <span className="font-medium text-slate-700 italic">Jasa Potong Rumput</span> praktis untuk halaman rumah, kantor, dan lahan kosong di <span className="font-medium text-slate-700">seluruh wilayah DKI Jakarta</span>. 
                 <span className="block mt-1 font-bold text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
 
@@ -280,7 +280,7 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 gap-4">
                   <div className="space-y-2">
-                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Provinsi</label>
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Kota Administrasi</label>
                     <div className="relative">
                       <select
                         className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none text-sm font-medium"
@@ -288,8 +288,8 @@ export default function Home() {
                         onChange={(e) => setFormData({ ...formData, region: e.target.value, city: "" })}
                         required
                       >
-                        <option value="" disabled>Pilih Provinsi</option>
-                        {INDONESIA_REGIONS.map(region => (
+                        <option value="" disabled>Pilih Kota Administrasi</option>
+                        {JAKARTA_CITIES.map(region => (
                           <option key={region} value={region}>{region}</option>
                         ))}
                       </select>
@@ -298,7 +298,7 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Kota / Kabupaten</label>
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Kecamatan</label>
                     <div className="relative">
                       <select
                         className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none text-sm font-medium disabled:opacity-50"
@@ -307,8 +307,8 @@ export default function Home() {
                         required
                         disabled={!formData.region}
                       >
-                        <option value="" disabled>{formData.region ? "Pilih Kota" : "Pilih Provinsi Dulu"}</option>
-                        {formData.region && INDONESIA_CITIES[formData.region]?.map(city => (
+                        <option value="" disabled>{formData.region ? "Pilih Kecamatan" : "Pilih Kota Dulu"}</option>
+                        {formData.region && INDONESIA_DISTRICTS[formData.region]?.map(city => (
                           <option key={city} value={city}>{city}</option>
                         ))}
                       </select>
@@ -489,7 +489,7 @@ export default function Home() {
             <div className="space-y-4">
               {[
                 { q: "Apakah bisa panggilan mendadak?", a: "Tentu! Kami menyediakan slot untuk pengerjaan di hari yang sama jika jadwal masih tersedia. Sebaiknya hubungi kami di pagi hari." },
-                { q: "Area layanan di mana saja?", a: "Kami melayani seluruh wilayah di Indonesia. Tim profesional kami siap datang ke lokasi Anda sesuai dengan jadwal yang telah disepakati." },
+                { q: "Area layanan di mana saja?", a: "Kami melayani seluruh wilayah di DKI Jakarta, mencakup Jakarta Selatan, Jakarta Pusat, Jakarta Barat, Jakarta Timur, Jakarta Utara, dan Kepulauan Seribu hingga ke seluruh kecamatan." },
                 { q: "Apakah alat disediakan?", a: "Ya, tim kami membawa seluruh peralatan lengkap mulai dari mesin potong, gunting tanaman, hingga alat pembersih." },
                 { q: "Berapa lama pengerjaan?", a: "Tergantung luas area. Untuk halaman rumah standar (50m²), biasanya memakan waktu 1-2 jam." }
               ].map((faq, i) => (
@@ -541,7 +541,7 @@ export default function Home() {
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed font-medium">
-              Partner terpercaya untuk perawatan halaman dan taman Anda. Kami mengutamakan kualitas dan kepuasan pelanggan.
+              Partner terpercaya untuk perawatan halaman dan taman Anda. Kami mengutamakan kualitas dan kepuasan pelanggan di seluruh wilayah DKI Jakarta.
             </p>
           </div>
 
@@ -568,7 +568,7 @@ export default function Home() {
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Seluruh Indonesia (HQ: Kalidoni, Palembang)</span>
+                <span>Seluruh Wilayah DKI Jakarta (HQ: Tebet, Jakarta Selatan)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />

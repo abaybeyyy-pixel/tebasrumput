@@ -1,4 +1,4 @@
-# tebasrumput.com - Jasa Potong Rumput Panggilan Seluruh Indonesia
+# tebasrumput.com - Jasa Potong Rumput Panggilan Seluruh Wilayah Jakarta
 
 User-agent: *
 Allow: /

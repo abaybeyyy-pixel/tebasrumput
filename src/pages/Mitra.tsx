@@ -20,7 +20,7 @@ import {
   AlertCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { INDONESIA_REGIONS, INDONESIA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
+import { INDONESIA_REGIONS, JAKARTA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
 
 const WA_LINK = "https://wa.me/6289502470657";
 
@@ -133,7 +133,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase"
             >
               <Users className="w-4 h-4" />
-              <span>Program Kemitraan Nasional</span>
+              <span>Program Kemitraan Wilayah Jakarta</span>
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -149,7 +149,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               transition={{ delay: 0.1 }}
               className="text-lg text-slate-600 max-w-2xl mx-auto"
             >
-              Bergabunglah dengan jaringan penyedia jasa potong rumput terbesar di Indonesia. Dapatkan order rutin tanpa pusing mencari customer.
+              Bergabunglah dengan jaringan penyedia jasa potong rumput profesional di DKI Jakarta. Dapatkan order rutin tanpa pusing mencari customer.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -382,7 +382,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Kota / Kabupaten</label>
+                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Kota Administrasi</label>
                       <div className="relative">
                         <select
                           required
@@ -391,8 +391,8 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                           value={formData.kota}
                           onChange={(e) => setFormData({ ...formData, kota: e.target.value, kecamatan: "" })}
                         >
-                          <option value="">{formData.provinsi ? "Pilih Kota" : "Pilih Provinsi Dahulu"}</option>
-                          {formData.provinsi && INDONESIA_CITIES[formData.provinsi]?.map(city => <option key={city} value={city}>{city}</option>)}
+                          <option value="">{formData.provinsi ? "Pilih Kota Administrasi" : "Pilih Provinsi Dahulu"}</option>
+                          {formData.provinsi && JAKARTA_CITIES.map(city => <option key={city} value={city}>{city}</option>)}
                         </select>
                         <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                       </div>
@@ -410,7 +410,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                           >
                             <option value="">Pilih Kecamatan</option>
                             {INDONESIA_DISTRICTS[formData.kota].map(dist => <option key={dist} value={dist}>{dist}</option>)}
-                            <option value="Lainnya">Lainnya / Seluruh Kota</option>
+                            <option value="Lainnya">Lainnya / Seluruh Wilayah</option>
                           </select>
                         ) : (
                           <input
@@ -488,7 +488,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Membangun jaringan profesional penyedia jasa potong rumput di seluruh Indonesia. Bergabunglah menjadi mitra kami hari ini.
+              Membangun jaringan profesional penyedia jasa potong rumput di seluruh wilayah DKI Jakarta. Bergabunglah menjadi mitra kami hari ini.
             </p>
           </div>
 
