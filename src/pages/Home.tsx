@@ -127,6 +127,7 @@ export default function Home() {
   const [calcWidth, setCalcWidth] = useState<string>("");
   const [calcCategory, setCalcCategory] = useState<"sedang" | "tinggi" | "semak">("sedang");
   const [calcImageIndex, setCalcImageIndex] = useState(0);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   useEffect(() => {
     setCalcImageIndex(0);
@@ -391,15 +392,15 @@ export default function Home() {
         </section >
 
         {/* Calculator Section */}
-        <section id="kalkulator" className="section-padding bg-slate-50 relative overflow-hidden">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="text-center space-y-3 mb-16">
+        <section id="kalkulator" className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto w-full px-0 sm:px-6">
+            <div className="text-center space-y-3 mb-12 sm:mb-16 px-6">
               <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Estimasi Biaya</h2>
               <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Kalkulator Harga Potong Rumput</h3>
               <p className="text-slate-500 text-sm max-w-2xl mx-auto">Hitung perkiraan biaya jasa kami dengan mudah berdasarkan luas lahan dan kondisi rumput Anda.</p>
             </div>
 
-            <div className="bg-white p-4 sm:p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="bg-white p-6 sm:p-8 md:p-12 rounded-none sm:rounded-[2rem] md:rounded-[2.5rem] shadow-none sm:shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="space-y-8 px-2 sm:px-0">
                 <div className="space-y-3">
                   <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Ukuran Lahan (Meter)</label>
@@ -456,7 +457,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-slate-900 text-white rounded-[1.5rem] md:rounded-[2rem] p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl h-full">
+              <div className="bg-slate-900 text-white rounded-3xl md:rounded-[2rem] p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl h-full w-full">
                 <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/30 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
                 
@@ -474,7 +475,10 @@ export default function Home() {
                   </div>
 
                   {/* Contoh Visual Image Slider */}
-                  <div className="rounded-xl overflow-hidden border border-white/10 relative h-60 sm:h-72 md:h-80 lg:h-[350px] shadow-xl group w-full mt-4">
+                  <div 
+                    className="rounded-xl overflow-hidden border border-white/10 relative h-60 sm:h-72 md:h-80 lg:h-[350px] shadow-xl group w-full mt-4 cursor-pointer"
+                    onClick={() => setActiveImage(categoryDetails[calcCategory].images[calcImageIndex])}
+                  >
                     <img 
                       key={categoryDetails[calcCategory].images[calcImageIndex]}
                       src={categoryDetails[calcCategory].images[calcImageIndex]} 
@@ -902,6 +906,20 @@ export default function Home() {
                 </div>
               </div>
               <button onClick={closePaymentNotice} className="w-full bg-slate-900 text-white py-4 rounded-2xl font-black shadow-xl hover:bg-black transition-all">Saya Mengerti</button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+      {/* Lightbox Image */}
+      <AnimatePresence>
+        {activeImage && (
+          <div className="fixed inset-0 z-[120] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 sm:p-8">
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative w-full max-w-5xl max-h-[90vh] flex flex-col items-center justify-center">
+              <button onClick={() => setActiveImage(null)} className="absolute -top-14 right-0 sm:-right-4 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-all flex items-center gap-2 backdrop-blur-sm z-50">
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="text-sm font-bold pr-3">Kembali</span>
+              </button>
+              <img src={activeImage} alt="Preview" className="w-full max-h-[85vh] object-contain rounded-xl shadow-2xl" />
             </motion.div>
           </div>
         )}
