@@ -399,8 +399,8 @@ export default function Home() {
               <p className="text-slate-500 text-sm max-w-2xl mx-auto">Hitung perkiraan biaya jasa kami dengan mudah berdasarkan luas lahan dan kondisi rumput Anda.</p>
             </div>
 
-            <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] border border-slate-100 grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-              <div className="space-y-8">
+            <div className="bg-white p-4 sm:p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div className="space-y-8 px-2 sm:px-0">
                 <div className="space-y-3">
                   <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Ukuran Lahan (Meter)</label>
                   <div className="flex items-center gap-3">
@@ -456,7 +456,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-slate-900 text-white rounded-[2rem] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl h-full">
+              <div className="bg-slate-900 text-white rounded-[1.5rem] md:rounded-[2rem] p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl h-full">
                 <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/30 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
                 
