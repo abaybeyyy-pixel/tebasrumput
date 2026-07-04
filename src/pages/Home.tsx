@@ -380,7 +380,7 @@ export default function Home() {
               
               {[
                 { icon: <MessageCircle />, title: "Pilih Layanan & Booking", desc: "Hubungi kami via WhatsApp atau isi form pendaftaran." },
-                { icon: <Wallet />, title: "Konfirmasi & DP", desc: "Tim admin mengonfirmasi jadwal dan pembayaran DP 10%." },
+                { icon: <Wallet />, title: "Konfirmasi & DP", desc: "Tim admin mengonfirmasi jadwal dan pembayaran DP 15%." },
                 { icon: <Briefcase />, title: "Pengerjaan di Lokasi", desc: "Tim profesional datang dan mengerjakan lahan Anda." },
                 { icon: <CheckCircle2 />, title: "Pelunasan & Selesai", desc: "Cek hasil, pelunasan, dan halaman Anda kembali rapi." }
               ].map((step, i) => (
@@ -684,7 +684,7 @@ export default function Home() {
               <h2 className="text-2xl font-black mb-6 tracking-tight">{activeModal === 'terms' ? 'Terms & Conditions' : 'Privacy Policy'}</h2>
               <div className="text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
                 {activeModal === 'terms' ? (
-                  <p>1. DP 10% untuk booking jadwal. <br/> 2. Pelunasan setelah pengerjaan selesai. <br/> 3. Dokumentasi hasil akan diberikan.</p>
+                  <p>1. DP 15% untuk booking jadwal. <br/> 2. Pelunasan setelah pengerjaan selesai. <br/> 3. Dokumentasi hasil akan diberikan.</p>
                 ) : (
                   <p>Kami menjaga privasi data Anda. Informasi hanya digunakan untuk koordinasi layanan potong rumput.</p>
                 )}
