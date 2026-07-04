@@ -6,6 +6,8 @@ import {
   ShieldCheck,
   Star,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Instagram,
   Facebook,
   Twitter,
@@ -124,11 +126,16 @@ export default function Home() {
   const [calcLength, setCalcLength] = useState<string>("");
   const [calcWidth, setCalcWidth] = useState<string>("");
   const [calcCategory, setCalcCategory] = useState<"sedang" | "tinggi" | "semak">("sedang");
+  const [calcImageIndex, setCalcImageIndex] = useState(0);
+
+  useEffect(() => {
+    setCalcImageIndex(0);
+  }, [calcCategory]);
 
   const categoryDetails = {
-    sedang: { title: "Rumput Sedang", price: 2000, desc: "Tinggi ≤40 cm. Tidak ada semak. Mesin bekerja 1x lintasan." },
-    tinggi: { title: "Rumput Tinggi", price: 3000, desc: "Tinggi 40–100 cm. Banyak alang-alang/gulma. Memerlukan beberapa lintasan." },
-    semak: { title: "Semak Belukar", price: 3500, desc: "Rumput >1m / bercampur semak. Memerlukan pisau khusus & waktu lama." }
+    sedang: { title: "Rumput Sedang", price: 2000, desc: "Tinggi ≤40 cm. Tidak ada semak. Mesin bekerja 1x lintasan.", images: ["/images/rumput sedang 1.jpg", "/images/rumput sedang 2.jpg", "/images/rumput sedang 3.jpg"] },
+    tinggi: { title: "Rumput Tinggi", price: 3000, desc: "Tinggi 40–100 cm. Banyak alang-alang/gulma. Memerlukan beberapa lintasan.", images: ["/images/rumput tinggi 1.jpg", "/images/rumput tinggi 2.jpg", "/images/rumput tinggi 3.jpg"] },
+    semak: { title: "Semak Belukar", price: 3500, desc: "Rumput >1m / bercampur semak. Memerlukan pisau khusus & waktu lama.", images: ["/images/semak belukar 1.jpg", "/images/semak belukar 2.jpg", "/images/semak belukar 3.jpg", "/images/semak belukar 4.jpg"] }
   };
 
   const calculatePrice = () => {
@@ -460,13 +467,51 @@ export default function Home() {
                       Rp{calculatePrice().toLocaleString('id-ID')}
                     </div>
                     {calcCategory === 'semak' && (
-                      <p className="text-amber-400 text-xs font-medium bg-amber-400/10 px-3 py-2 rounded-lg inline-block border border-amber-400/20">
+                      <p className="text-amber-400 text-xs font-medium bg-amber-400/10 px-3 py-2 rounded-lg inline-block border border-amber-400/20 mb-2">
                         *Harga mulai dari, dapat disesuaikan setelah survei kondisi lapangan.
                       </p>
                     )}
                   </div>
 
-                  <div className="space-y-4 pt-6 border-t border-white/10">
+                  {/* Contoh Visual Image Slider */}
+                  <div className="rounded-xl overflow-hidden border border-white/10 relative h-56 sm:h-64 md:h-72 lg:h-80 shadow-xl group w-full mt-4">
+                    <img 
+                      key={categoryDetails[calcCategory].images[calcImageIndex]}
+                      src={categoryDetails[calcCategory].images[calcImageIndex]} 
+                      alt={`${categoryDetails[calcCategory].title} ${calcImageIndex + 1}`} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent pointer-events-none"></div>
+                    
+                    {/* Navigation Arrows */}
+                    <button 
+                      onClick={() => setCalcImageIndex((prev) => prev === 0 ? categoryDetails[calcCategory].images.length - 1 : prev - 1)}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 text-white flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity hover:bg-black/70 z-10 backdrop-blur-sm active:scale-95"
+                    >
+                      <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
+                    </button>
+                    <button 
+                      onClick={() => setCalcImageIndex((prev) => prev === categoryDetails[calcCategory].images.length - 1 ? 0 : prev + 1)}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 text-white flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity hover:bg-black/70 z-10 backdrop-blur-sm active:scale-95"
+                    >
+                      <ChevronRight className="w-6 h-6 md:w-7 md:h-7" />
+                    </button>
+
+                    {/* Indicators */}
+                    <div className="absolute top-3 right-3 flex items-center gap-1.5 z-10 bg-black/30 px-2.5 py-1.5 rounded-full backdrop-blur-md">
+                      {categoryDetails[calcCategory].images.map((_, i) => (
+                        <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === calcImageIndex ? 'w-4 bg-primary' : 'w-1.5 bg-white/50'}`} />
+                      ))}
+                    </div>
+
+                    <div className="absolute bottom-4 left-5 right-5 z-10 pointer-events-none">
+                      <p className="text-xs md:text-sm font-bold text-white uppercase tracking-widest flex items-center gap-2 opacity-90">
+                        <Leaf className="w-4 h-4 text-primary" /> Contoh {categoryDetails[calcCategory].title} <span className="ml-auto text-[10px] bg-black/50 px-2 py-1 rounded-md">{calcImageIndex + 1}/{categoryDetails[calcCategory].images.length}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 pt-4 border-t border-white/10">
                     <p className="text-xs text-slate-300 flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 text-primary shrink-0" /> 
                       <span className="leading-relaxed">Harga sudah termasuk jasa potong rumput dan pembersihan area.</span>
