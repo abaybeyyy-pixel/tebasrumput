@@ -121,6 +121,23 @@ export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
+  const [calcLength, setCalcLength] = useState<string>("");
+  const [calcWidth, setCalcWidth] = useState<string>("");
+  const [calcCategory, setCalcCategory] = useState<"sedang" | "tinggi" | "semak">("sedang");
+
+  const categoryDetails = {
+    sedang: { title: "Rumput Sedang", price: 2000, desc: "Tinggi ≤40 cm. Tidak ada semak. Mesin bekerja 1x lintasan." },
+    tinggi: { title: "Rumput Tinggi", price: 3000, desc: "Tinggi 40–100 cm. Banyak alang-alang/gulma. Memerlukan beberapa lintasan." },
+    semak: { title: "Semak Belukar", price: 3500, desc: "Rumput >1m / bercampur semak. Memerlukan pisau khusus & waktu lama." }
+  };
+
+  const calculatePrice = () => {
+    const length = parseFloat(calcLength) || 0;
+    const width = parseFloat(calcWidth) || 0;
+    const area = length * width;
+    return area * categoryDetails[calcCategory].price;
+  };
+
   useEffect(() => {
     const hasSeenNotice = sessionStorage.getItem("hasSeenPaymentNotice");
     if (!hasSeenNotice) {
@@ -365,6 +382,116 @@ export default function Home() {
             ))}
           </div>
         </section >
+
+        {/* Calculator Section */}
+        <section id="kalkulator" className="section-padding bg-slate-50 relative overflow-hidden">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="text-center space-y-3 mb-16">
+              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Estimasi Biaya</h2>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Kalkulator Harga Potong Rumput</h3>
+              <p className="text-slate-500 text-sm max-w-2xl mx-auto">Hitung perkiraan biaya jasa kami dengan mudah berdasarkan luas lahan dan kondisi rumput Anda.</p>
+            </div>
+
+            <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] border border-slate-100 grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div className="space-y-8">
+                <div className="space-y-3">
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Ukuran Lahan (Meter)</label>
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-full">
+                      <input
+                        type="number"
+                        min="0"
+                        step="any"
+                        placeholder="Panjang"
+                        className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all font-medium text-lg"
+                        value={calcLength}
+                        onChange={(e) => setCalcLength(e.target.value)}
+                      />
+                      <span className="absolute right-5 top-1/2 -translate-y-1/2 font-bold text-slate-400">m</span>
+                    </div>
+                    <div className="text-slate-300 font-black shrink-0 text-xl">×</div>
+                    <div className="relative w-full">
+                      <input
+                        type="number"
+                        min="0"
+                        step="any"
+                        placeholder="Lebar"
+                        className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all font-medium text-lg"
+                        value={calcWidth}
+                        onChange={(e) => setCalcWidth(e.target.value)}
+                      />
+                      <span className="absolute right-5 top-1/2 -translate-y-1/2 font-bold text-slate-400">m</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Kondisi Rumput</label>
+                  <div className="space-y-3">
+                    {(Object.keys(categoryDetails) as Array<keyof typeof categoryDetails>).map((key) => (
+                      <label key={key} className={`flex items-start gap-4 p-4 rounded-2xl border cursor-pointer transition-all ${calcCategory === key ? 'border-primary bg-primary/5 shadow-md' : 'border-slate-100 hover:border-primary/30 hover:bg-slate-50'}`}>
+                        <input type="radio" name="calcCategory" value={key} className="hidden" checked={calcCategory === key} onChange={() => setCalcCategory(key)} />
+                        <div className="pt-1">
+                          <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${calcCategory === key ? 'border-primary' : 'border-slate-300'}`}>
+                            {calcCategory === key && <div className="w-2.5 h-2.5 rounded-full bg-primary" />}
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-center mb-1">
+                            <h4 className="font-bold text-slate-900">{categoryDetails[key].title}</h4>
+                            <span className="text-xs font-black text-primary bg-primary/10 px-2 py-1 rounded-md">Rp{categoryDetails[key].price.toLocaleString('id-ID')}/m²</span>
+                          </div>
+                          <p className="text-xs text-slate-500 leading-relaxed pr-2">{categoryDetails[key].desc}</p>
+                        </div>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-slate-900 text-white rounded-[2rem] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl h-full">
+                <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/30 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+                
+                <div className="relative z-10 space-y-8">
+                  <div>
+                    <h4 className="text-white/60 text-[10px] font-black uppercase tracking-widest mb-2">Estimasi Total Harga</h4>
+                    <div className="text-4xl md:text-5xl font-black mb-3 text-white">
+                      Rp{calculatePrice().toLocaleString('id-ID')}
+                    </div>
+                    {calcCategory === 'semak' && (
+                      <p className="text-amber-400 text-xs font-medium bg-amber-400/10 px-3 py-2 rounded-lg inline-block border border-amber-400/20">
+                        *Harga mulai dari, dapat disesuaikan setelah survei kondisi lapangan.
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-4 pt-6 border-t border-white/10">
+                    <p className="text-xs text-slate-300 flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0" /> 
+                      <span className="leading-relaxed">Harga sudah termasuk jasa potong rumput dan pembersihan area.</span>
+                    </p>
+                    <p className="text-xs text-slate-300 flex items-start gap-3">
+                      <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0" /> 
+                      <span className="leading-relaxed">Pengangkutan sampah hasil potongan atau penyesuaian untuk lahan sulit/ekstrem dapat dikenakan biaya tambahan.</span>
+                    </p>
+                  </div>
+                </div>
+                
+                <button
+                  onClick={() => {
+                    const area = (parseFloat(calcLength) || 0) * (parseFloat(calcWidth) || 0);
+                    const msg = `Halo tebasrumput.com, saya ingin konsultasi layanan potong rumput dengan luas lahan ${area}m² (${calcLength || 0}m x ${calcWidth || 0}m) (Kategori: ${categoryDetails[calcCategory].title}).`;
+                    window.open(`${WA_LINK}?text=${encodeURIComponent(msg)}`, "_blank");
+                  }}
+                  className="w-full bg-primary text-white py-4 px-6 rounded-xl font-black mt-8 shadow-[0_8px_30px_rgba(var(--color-primary-rgb),0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group relative z-10"
+                >
+                  <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform" /> Konsultasi & Jadwalkan
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Flow Section */}
         <section id="alur" className="section-padding bg-white relative overflow-hidden">
