@@ -410,24 +410,24 @@ export default function Home() {
                         min="0"
                         step="any"
                         placeholder="Panjang"
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all font-medium text-lg"
+                        className="w-full pl-4 pr-12 py-3.5 md:py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all font-medium text-base md:text-lg"
                         value={calcLength}
                         onChange={(e) => setCalcLength(e.target.value)}
                       />
-                      <span className="absolute right-5 top-1/2 -translate-y-1/2 font-bold text-slate-400">m</span>
+                      <span className="absolute right-4 top-1/2 -translate-y-1/2 font-bold text-slate-400 text-sm md:text-base">m</span>
                     </div>
-                    <div className="text-slate-300 font-black shrink-0 text-xl">×</div>
+                    <div className="text-slate-300 font-black shrink-0 text-lg md:text-xl">×</div>
                     <div className="relative w-full">
                       <input
                         type="number"
                         min="0"
                         step="any"
                         placeholder="Lebar"
-                        className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all font-medium text-lg"
+                        className="w-full pl-4 pr-12 py-3.5 md:py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all font-medium text-base md:text-lg"
                         value={calcWidth}
                         onChange={(e) => setCalcWidth(e.target.value)}
                       />
-                      <span className="absolute right-5 top-1/2 -translate-y-1/2 font-bold text-slate-400">m</span>
+                      <span className="absolute right-4 top-1/2 -translate-y-1/2 font-bold text-slate-400 text-sm md:text-base">m</span>
                     </div>
                   </div>
                 </div>
@@ -474,7 +474,7 @@ export default function Home() {
                   </div>
 
                   {/* Contoh Visual Image Slider */}
-                  <div className="rounded-xl overflow-hidden border border-white/10 relative aspect-[4/3] sm:aspect-video shadow-xl group w-full mt-4">
+                  <div className="rounded-xl overflow-hidden border border-white/10 relative h-60 sm:h-72 md:h-80 lg:h-[350px] shadow-xl group w-full mt-4">
                     <img 
                       key={categoryDetails[calcCategory].images[calcImageIndex]}
                       src={categoryDetails[calcCategory].images[calcImageIndex]} 
