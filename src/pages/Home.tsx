@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "motion/react";
 import {
   CheckCircle2,
@@ -162,6 +163,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
+      <Helmet>
+        <title>tebasrumput.com - Jasa Potong Rumput Panggilan Jakarta</title>
+        <meta name="description" content="Layanan jasa potong rumput panggilan praktis, cepat, dan profesional untuk halaman rumah, kantor, dan lahan kosong di seluruh wilayah DKI Jakarta." />
+        <meta name="keywords" content="jasa potong rumput, potong rumput jakarta, tebasrumput, perawatan taman, tukang rumput" />
+      </Helmet>
+
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
@@ -688,8 +695,13 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Floating WA */}
-      <div className="fixed bottom-6 right-6 z-[90]">
-        <button onClick={handleBooking} className="w-16 h-16 bg-[#25D366] text-white rounded-full shadow-[0_20px_50px_rgba(37,211,102,0.4)] flex items-center justify-center hover:scale-110 transition-transform">
+      <div className="fixed bottom-6 right-6 z-[90] flex items-center gap-3">
+        <div className="hidden md:flex bg-white px-4 py-2 rounded-xl shadow-lg border border-slate-100 animate-pulse relative">
+          {/* Tooltip triangle */}
+          <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-r border-t border-slate-100"></div>
+          <p className="text-sm font-bold text-slate-800">Butuh bantuan? Chat kami sekarang!</p>
+        </div>
+        <button onClick={handleBooking} className="w-16 h-16 bg-[#25D366] text-white rounded-full shadow-[0_20px_50px_rgba(37,211,102,0.4)] flex items-center justify-center hover:scale-110 transition-transform relative z-10">
           <MessageCircle className="w-8 h-8" />
         </button>
       </div>
