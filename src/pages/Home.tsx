@@ -189,9 +189,48 @@ export default function Home() {
   return (
     <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Helmet>
-        <title>tebasrumput.com - Jasa Potong Rumput Panggilan Jakarta</title>
-        <meta name="description" content="Layanan jasa potong rumput panggilan praktis, cepat, dan profesional untuk halaman rumah, kantor, dan lahan kosong di seluruh wilayah DKI Jakarta." />
-        <meta name="keywords" content="jasa potong rumput, potong rumput jakarta, tebasrumput, perawatan taman, tukang rumput" />
+        <title>Jasa Potong Rumput Jakarta (Panggilan Terdekat & Murah) | tebasrumput.com</title>
+        <meta name="description" content="Layanan jasa potong rumput panggilan terdekat, profesional, cepat, dan murah untuk wilayah Jakarta Selatan, Jakarta Timur, Jakarta Barat, Jakarta Pusat, dan Jakarta Utara." />
+        <meta name="keywords" content="jasa potong rumput jakarta, potong rumput panggilan, jasa potong rumput terdekat, tukang potong rumput, potong rumput jakarta selatan, potong rumput jakarta timur, potong rumput jakarta barat, potong rumput jakarta utara, potong rumput jakarta pusat, tebasrumput, perawatan taman" />
+        
+        {/* Schema Markup for Local SEO */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Tebasrumput.com",
+              "image": "https://tebasrumput.com/images/rumput%20sedang%201.jpg",
+              "description": "Layanan jasa potong rumput panggilan profesional untuk seluruh wilayah DKI Jakarta.",
+              "url": "https://tebasrumput.com",
+              "telephone": "089502470657",
+              "priceRange": "Rp",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Grogol Utara, Kec. Kebayoran Lama",
+                "addressLocality": "Jakarta Selatan",
+                "addressRegion": "DKI Jakarta",
+                "addressCountry": "ID"
+              },
+              "areaServed": [
+                { "@type": "City", "name": "Jakarta Selatan" },
+                { "@type": "City", "name": "Jakarta Barat" },
+                { "@type": "City", "name": "Jakarta Timur" },
+                { "@type": "City", "name": "Jakarta Pusat" },
+                { "@type": "City", "name": "Jakarta Utara" }
+              ],
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": -6.2088,
+                  "longitude": 106.8456
+                },
+                "geoRadius": "40000"
+              }
+            }
+          `}
+        </script>
       </Helmet>
 
       {/* Navbar */}
@@ -707,7 +746,7 @@ export default function Home() {
                     Hadir Lebih Dekat Melayani Seluruh <span className="text-primary">DKI Jakarta</span>
                   </h3>
                   <p className="text-slate-500 leading-relaxed text-sm font-light">
-                    Sebagai jasa potong rumput panggilan andalan, kami bangga telah dipercaya menyelesaikan <span className="font-semibold text-slate-800 text-primary-dark">ratusan pengerjaan halaman</span> di berbagai perumahan, perkantoran, dan lahan kosong di seluruh kota administrasi Jakarta. Basis operasional utama kami berada di Kebayoran Lama, siap memberikan respon tercepat langsung ke lokasi Anda.
+                    Sebagai penyedia <strong>jasa potong rumput Jakarta</strong> terdekat dan andalan, kami siap memberikan layanan panggilan ke seluruh wilayah tanpa terkecuali. Cakupan layanan kami meliputi <strong>Jakarta Selatan</strong> (Kebayoran, Kemang, Tebet, Cilandak), <strong>Jakarta Barat</strong> (Puri Kembangan, Kebon Jeruk, Grogol), <strong>Jakarta Timur</strong> (Cibubur, Duren Sawit, Pulogadung), <strong>Jakarta Pusat</strong> (Menteng, Cempaka Putih), hingga <strong>Jakarta Utara</strong> (Kelapa Gading, PIK, Pluit). Apapun kondisi lahan Anda, tim kami siap membersihkannya dengan cepat, rapi, dan profesional.
                   </p>
                 </div>
 
@@ -746,6 +785,32 @@ export default function Home() {
                   </button>
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Regions Section */}
+        <section className="py-16 md:py-24 bg-white border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center space-y-3 mb-12">
+              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Cakupan Wilayah</h2>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Melayani Seluruh Kecamatan di DKI Jakarta</h3>
+              <p className="text-slate-500 text-sm max-w-2xl mx-auto">Kami menjangkau setiap sudut ibu kota. Di mana pun lokasi Anda, tim kami siap datang memberikan layanan potong rumput terbaik.</p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+              {JAKARTA_CITIES.map((city) => (
+                <div key={city} className="space-y-4">
+                  <h4 className="font-bold text-slate-900 border-b border-primary/20 pb-2 text-sm">{city}</h4>
+                  <ul className="space-y-2">
+                    {INDONESIA_DISTRICTS[city]?.map((district: string) => (
+                      <li key={district} className="text-xs text-slate-500 hover:text-primary transition-colors cursor-default">
+                        Potong Rumput {district}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
