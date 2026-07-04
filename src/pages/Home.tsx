@@ -474,11 +474,13 @@ export default function Home() {
                   </div>
 
                   {/* Contoh Visual Image Slider */}
-                  <div className="rounded-xl overflow-hidden border border-white/10 relative h-56 sm:h-64 md:h-72 lg:h-80 shadow-xl group w-full mt-4">
+                  <div className="rounded-xl overflow-hidden border border-white/10 relative aspect-[4/3] sm:aspect-video shadow-xl group w-full mt-4">
                     <img 
                       key={categoryDetails[calcCategory].images[calcImageIndex]}
                       src={categoryDetails[calcCategory].images[calcImageIndex]} 
                       alt={`${categoryDetails[calcCategory].title} ${calcImageIndex + 1}`} 
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent pointer-events-none"></div>
