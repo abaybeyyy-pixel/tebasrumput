@@ -477,7 +477,7 @@ export default function Home() {
                   {/* Contoh Visual Image Slider */}
                   <div 
                     className="rounded-xl overflow-hidden border border-white/10 relative h-60 sm:h-72 md:h-80 lg:h-[350px] shadow-xl group w-full mt-4 cursor-pointer"
-                    onClick={() => setActiveImage(categoryDetails[calcCategory].images[calcImageIndex])}
+                    onDoubleClick={() => setActiveImage(categoryDetails[calcCategory].images[calcImageIndex])}
                   >
                     <img 
                       key={categoryDetails[calcCategory].images[calcImageIndex]}
@@ -915,11 +915,10 @@ export default function Home() {
         {activeImage && (
           <div className="fixed inset-0 z-[120] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 sm:p-8">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative w-full max-w-5xl max-h-[90vh] flex flex-col items-center justify-center">
-              <button onClick={() => setActiveImage(null)} className="absolute -top-14 right-0 sm:-right-4 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-all flex items-center gap-2 backdrop-blur-sm z-50">
-                <X className="w-5 h-5 sm:w-6 sm:h-6" />
-                <span className="text-sm font-bold pr-3">Kembali</span>
+              <button onClick={() => setActiveImage(null)} className="absolute -top-12 right-0 sm:-right-4 px-4 py-2 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-all font-bold text-sm tracking-wide backdrop-blur-sm z-50">
+                Kembali
               </button>
-              <img src={activeImage} alt="Preview" className="w-full max-h-[85vh] object-contain rounded-xl shadow-2xl" />
+              <img src={activeImage} alt="Preview" className="w-full max-h-[85vh] object-contain rounded-xl shadow-2xl cursor-pointer" onDoubleClick={() => setActiveImage(null)} />
             </motion.div>
           </div>
         )}
