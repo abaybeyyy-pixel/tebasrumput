@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+const motion = {
+  div: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <div {...props} />,
+  h1: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <h1 {...props} />,
+  p: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <p {...props} />,
+  span: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <span {...props} />,
+};
 import {
   CheckCircle2,
   Users,

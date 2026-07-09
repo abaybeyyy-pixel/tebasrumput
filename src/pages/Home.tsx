@@ -1,5 +1,14 @@
 import { Helmet } from "react-helmet-async";
-import { motion, AnimatePresence } from "motion/react";
+const motion = {
+  div: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <div {...props} />,
+  h1: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <h1 {...props} />,
+  p: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <p {...props} />,
+  span: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <span {...props} />,
+  a: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <a {...props} />,
+  button: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <button {...props} />,
+  section: ({ initial, animate, exit, whileInView, viewport, whileHover, variants, transition, ...props }: any) => <section {...props} />,
+};
+const AnimatePresence = ({ children }: any) => <>{children}</>;
 import {
   CheckCircle2,
   Scissors,
