@@ -434,9 +434,9 @@ export default function Home() {
         <section id="kalkulator" className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
           <div className="max-w-7xl mx-auto w-full px-0 sm:px-6">
             <div className="text-center space-y-3 mb-12 sm:mb-16 px-6">
-              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Estimasi Biaya</h2>
-              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Kalkulator Harga Potong Rumput</h3>
-              <p className="text-slate-500 text-sm max-w-2xl mx-auto">Hitung perkiraan biaya jasa kami dengan mudah berdasarkan luas lahan dan kondisi rumput Anda.</p>
+              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Estimasi Layanan</h2>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Simulasi Konsultasi Layanan</h3>
+              <p className="text-slate-500 text-sm max-w-2xl mx-auto">Tentukan luas lahan dan kondisi rumput Anda untuk mempermudah proses konsultasi dengan tim kami.</p>
             </div>
 
             <div className="bg-white p-6 sm:p-8 md:p-12 rounded-none sm:rounded-[2rem] md:rounded-[2.5rem] shadow-none sm:shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
