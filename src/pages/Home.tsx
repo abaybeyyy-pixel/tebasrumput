@@ -240,6 +240,42 @@ export default function Home() {
             }
           `}
         </script>
+        
+        {/* FAQ Schema for Rich Snippets */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Apakah saya harus menyiapkan alat potong rumput sendiri?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak perlu. Tim tebasrumput.com sudah membawa semua perlengkapan potong rumput profesional termasuk mesin potong rumput, sapu, dan alat pendukung lainnya."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Apakah area yang dipotong akan dibersihkan setelahnya?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ya, harga jasa potong rumput kami sudah termasuk perapihan dan pembersihan area dari sisa-sisa rumput yang dipotong."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Berapa biaya jasa potong rumput di Jakarta?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Biaya jasa kami mulai dari Rp1.000 per meter persegi, tergantung pada tingkat kesulitan dan tinggi rumput (Rumput Sedang, Tinggi, atau Semak Belukar)."
+                  }
+                }
+              ]
+            }
+          `}
+        </script>
       </Helmet>
 
       {/* Navbar */}
