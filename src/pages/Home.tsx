@@ -780,7 +780,7 @@ export default function Home() {
         </section>
 
         {/* Google Reviews Marquee */}
-        <section className="py-12 bg-slate-50 overflow-hidden">
+        <section id="testimoni" className="py-12 bg-slate-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase mb-3">Ulasan Google Maps</h2>
              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Apa Kata Pelanggan Kami?</h3>
