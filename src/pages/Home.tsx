@@ -587,12 +587,14 @@ export default function Home() {
                 </div>
                 
                 <div className="p-6 sm:p-8 flex flex-col flex-1 relative z-10">
-                  <div className="mb-6">
-                    <h4 className="text-white/60 text-[10px] font-black uppercase tracking-widest mb-1">Estimasi Harga</h4>
-                    <div className="text-3xl md:text-4xl font-black text-primary">
-                      Mulai dari Rp1.000/m²
+                  {calcCategory === 'sedang' && (
+                    <div className="mb-6">
+                      <h4 className="text-white/60 text-[10px] font-black uppercase tracking-widest mb-1">Estimasi Harga</h4>
+                      <div className="text-3xl md:text-4xl font-black text-primary">
+                        Mulai dari Rp1.000/m²
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   <div className="space-y-4 pt-6 border-t border-white/10 mb-8">
                     <p className="text-xs text-slate-300 flex items-start gap-3">
