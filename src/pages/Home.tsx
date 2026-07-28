@@ -758,7 +758,7 @@ export default function Home() {
 
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="https://www.google.com/maps/place/JASA+POTONG+RUMPUT%2FPOHON%2FTAMAN+MODERN+wA/@-6.2434075,106.9127555,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698dd8a9fcb301:0xaab8022520355d74!8m2!3d-6.2434075!4d106.9153304!16s%2Fg%2F11kxlx2jyh?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D"
+                    href="https://www.google.com/maps/place/JASA+POTONG+RUMPUT%2FPOHON%2FTAMAN+MODERN+wA/@-6.2434075,106.9153304,17z/data=!4m15!1m8!3m7!1s0x2e698ccda0c2e98d:0x791eed5f17563fbc!2sJl.+Dua+Sembilan+No.12,+RT.7%2FRW.7,+Duren+Sawit,+Kec.+Duren+Sawit,+Kota+Jakarta+Timur,+Daerah+Khusus+Ibukota+Jakarta+13440!3b1!8m2!3d-6.2434075!4d106.9153304!16s%2Fg%2F11cpbnn718!3m5!1s0x2e698dd8a9fcb301:0xaab8022520355d74!8m2!3d-6.2434075!4d106.9153304!16s%2Fg%2F11kxlx2jyh?entry=ttu&g_ep=EgoyMDI2MDcyNi4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary text-xs px-8 py-3.5 inline-flex items-center gap-2 font-bold hover:shadow-md cursor-pointer"
@@ -926,7 +926,7 @@ export default function Home() {
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Seluruh Wilayah DKI Jakarta (HQ: Taman Modern, Kec. Cakung, Kota Jakarta Timur)</span>
+                <span>Seluruh Wilayah DKI Jakarta (HQ: Jl. Dua Sembilan No.12, RT.7/RW.7, Duren Sawit, Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13440)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
