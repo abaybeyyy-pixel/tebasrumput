@@ -38,7 +38,9 @@ import {
   Quote,
   Clock,
   Wallet,
-  Briefcase
+  Briefcase,
+  FileText,
+  Maximize2
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { JAKARTA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
@@ -293,6 +295,7 @@ export default function Home() {
             <a href="#layanan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Layanan</a>
             <a href="#alur" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Alur</a>
             <a href="#keunggulan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Keunggulan</a>
+            <a href="#legalitas" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Legalitas</a>
             <a href="#testimoni" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Testimoni</a>
             <a href="#lokasi" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Lokasi</a>
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">FAQ</a>
@@ -317,6 +320,7 @@ export default function Home() {
             <a href="#layanan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Layanan</a>
             <a href="#alur" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Alur</a>
             <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Keunggulan</a>
+            <a href="#legalitas" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Legalitas</a>
             <a href="#testimoni" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Testimoni</a>
             <a href="#lokasi" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Lokasi</a>
             <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">FAQ</a>
@@ -694,6 +698,115 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Legalitas Section */}
+        <section id="legalitas" className="section-padding bg-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center space-y-3 mb-16">
+              <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Legalitas Resmi</h2>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Kredibilitas & Legalitas Usaha</h3>
+              <p className="text-slate-500 text-sm max-w-2xl mx-auto">
+                PT Tebas Rumput Saputra berkomitmen memberikan layanan yang aman, profesional, dan terpercaya. Usaha kami telah terdaftar secara resmi di instansi pemerintah terkait.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 max-w-5xl mx-auto">
+              {/* Card 1: SK Kemenkumham */}
+              <div className="bg-slate-50 rounded-[2rem] p-5 sm:p-6 md:p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div className="space-y-6">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className="bg-primary/10 p-3.5 rounded-2xl text-primary shrink-0">
+                      <ShieldCheck className="w-6 h-6" />
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-green-100 text-green-700">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      Terverifikasi Kemenkumham
+                    </span>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-black text-slate-950 mb-2">SK Pendirian Badan Hukum</h4>
+                    <p className="text-slate-500 text-xs font-semibold leading-relaxed">
+                      Keputusan Menteri Hukum dan Hak Asasi Manusia Republik Indonesia
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-xl space-y-3 border border-slate-100">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 text-xs">
+                      <span className="text-slate-400 font-medium sm:shrink-0">Nomor SK</span>
+                      <span className="font-bold text-slate-800 text-left sm:text-right break-all">AHU-A109844.AH.01.30.Tahun 2026</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 text-xs border-t border-slate-100 pt-3">
+                      <span className="text-slate-400 font-medium sm:shrink-0">Nama Perseroan</span>
+                      <span className="font-bold text-slate-800 text-left sm:text-right break-all">TEBAS RUMPUT SAPUTRA</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 relative rounded-2xl overflow-hidden aspect-[3/4] cursor-zoom-in" onClick={() => setActiveImage("/images/sk_pendirian.jpg")}>
+                  <img 
+                    src="/images/sk_pendirian.jpg" 
+                    alt="SK Pendirian PT Tebas Rumput Saputra" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-2 font-bold text-sm">
+                    <Maximize2 className="w-5 h-5" />
+                    <span>Perbesar Dokumen</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: SKT DJP */}
+              <div className="bg-slate-50 rounded-[2rem] p-5 sm:p-6 md:p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div className="space-y-6">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className="bg-primary/10 p-3.5 rounded-2xl text-primary shrink-0">
+                      <FileText className="w-6 h-6" />
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-green-100 text-green-700">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      Terdaftar Resmi DJP
+                    </span>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-black text-slate-950 mb-2">Surat Keterangan Terdaftar (SKT)</h4>
+                    <p className="text-slate-500 text-xs font-semibold leading-relaxed">
+                      Direktorat Jenderal Pajak - Kementerian Keuangan RI
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-xl space-y-3 border border-slate-100">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 text-xs">
+                      <span className="text-slate-400 font-medium sm:shrink-0">Nomor Surat</span>
+                      <span className="font-bold text-slate-800 text-left sm:text-right break-all">S-22510/SKT-WP-CT/KPP.2004/2026</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 text-xs border-t border-slate-100 pt-3">
+                      <span className="text-slate-400 font-medium sm:shrink-0">NPWP / NIK</span>
+                      <span className="font-bold text-slate-800 text-left sm:text-right break-all">1000000010637321</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 text-xs border-t border-slate-100 pt-3">
+                      <span className="text-slate-400 font-medium sm:shrink-0">Nama Wajib Pajak</span>
+                      <span className="font-bold text-slate-800 text-left sm:text-right break-all">PT TEBAS RUMPUT SAPUTRA</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 relative rounded-2xl overflow-hidden aspect-[3/4] cursor-zoom-in" onClick={() => setActiveImage("/images/skt.jpg")}>
+                  <img 
+                    src="/images/skt.jpg" 
+                    alt="SKT DJP PT Tebas Rumput Saputra" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-2 font-bold text-sm">
+                    <Maximize2 className="w-5 h-5" />
+                    <span>Perbesar Dokumen</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Lokasi & Jangkauan Section */}
         <section id="lokasi" className="section-padding bg-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto">
@@ -908,6 +1021,8 @@ export default function Home() {
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li><a href="#layanan" className="hover:text-primary transition-colors">Layanan</a></li>
               <li><a href="#alur" className="hover:text-primary transition-colors">Alur</a></li>
+              <li><a href="#keunggulan" className="hover:text-primary transition-colors">Keunggulan</a></li>
+              <li><a href="#legalitas" className="hover:text-primary transition-colors">Legalitas</a></li>
               <li><a href="#lokasi" className="hover:text-primary transition-colors">Lokasi</a></li>
               <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
             </ul>
