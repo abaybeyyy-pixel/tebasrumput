@@ -25,6 +25,7 @@ import {
   AlertCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { INDONESIA_REGIONS, JAKARTA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
 
 const WA_LINK = "https://wa.me/6289502470657";
@@ -82,11 +83,15 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
 
   return (
     <div className="min-h-screen font-sans bg-white selection:bg-primary/20 selection:text-primary">
+      <Helmet>
+        <title>Pendaftaran Mitra Jasa Potong Rumput Jakarta | PT Tebas Rumput Saputra</title>
+        <meta name="description" content="Bergabunglah sebagai mitra penyedia jasa potong rumput profesional PT Tebas Rumput Saputra di Jakarta. Dapatkan order rutin dan bagi hasil yang menguntungkan." />
+        <meta name="keywords" content="mitra potong rumput, lowongan tukang potong rumput, kerja sama potong rumput jakarta, lowongan kerja jakarta, pt tebas rumput saputra" />
+      </Helmet>
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 cursor-pointer group">
-            <Leaf className="w-6 h-6 text-primary group-hover:rotate-12 transition-transform shrink-0" />
+          <Link to="/" className="flex items-center cursor-pointer group">
             <span className="text-xl font-black tracking-tighter text-black">
               tebasrumput.com
             </span>
@@ -488,9 +493,14 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <Leaf className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-black tracking-tighter text-white">
-                tebasrumput.com
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-black tracking-tighter text-white leading-none">
+                  tebasrumput.com
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 tracking-wider uppercase mt-1">
+                  PT TEBAS RUMPUT SAPUTRA
+                </span>
+              </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Membangun jaringan profesional penyedia jasa potong rumput di seluruh wilayah DKI Jakarta. Bergabunglah menjadi mitra kami hari ini.
@@ -531,7 +541,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
         </div>
 
         <div className="max-w-7xl mx-auto pt-10 border-t border-white/5 text-center text-slate-500 text-xs">
-          <p>&copy; 2026 tebasrumput.com Mitra. Seluruh hak cipta dilindungi undang-undang.</p>
+          <p>&copy; 2026 PT TEBAS RUMPUT SAPUTRA (tebasrumput.com). Seluruh hak cipta dilindungi undang-undang.</p>
         </div>
       </footer>
     </div>

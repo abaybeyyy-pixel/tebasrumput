@@ -200,9 +200,9 @@ export default function Home() {
   return (
     <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Helmet>
-        <title>Jasa Potong Rumput Jakarta (Panggilan Terdekat & Murah) | tebasrumput.com</title>
-        <meta name="description" content="Layanan jasa potong rumput panggilan terdekat, profesional, cepat, dan murah untuk wilayah Jakarta Selatan, Jakarta Timur, Jakarta Barat, Jakarta Pusat, dan Jakarta Utara." />
-        <meta name="keywords" content="jasa potong rumput jakarta, potong rumput panggilan, jasa potong rumput terdekat, tukang potong rumput, potong rumput jakarta selatan, potong rumput jakarta timur, potong rumput jakarta barat, potong rumput jakarta utara, potong rumput jakarta pusat, tebasrumput, perawatan taman" />
+        <title>Jasa Potong Rumput Jakarta Terdekat & Murah | PT Tebas Rumput Saputra</title>
+        <meta name="description" content="Layanan jasa potong rumput panggilan terdekat, cepat, murah, dan resmi oleh PT Tebas Rumput Saputra. Melayani wilayah Jakarta Selatan, Timur, Barat, Pusat, dan Utara." />
+        <meta name="keywords" content="jasa potong rumput jakarta, pt tebas rumput saputra, potong rumput panggilan, jasa potong rumput terdekat, tukang potong rumput, potong rumput jakarta resmi, tebasrumput, perawatan taman" />
         
         {/* Schema Markup for Local SEO */}
         <script type="application/ld+json">
@@ -210,9 +210,10 @@ export default function Home() {
             {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Tebasrumput.com",
+              "name": "PT Tebas Rumput Saputra",
+              "alternateName": "Tebasrumput.com",
               "image": "https://tebasrumput.com/images/rumput%20sedang%201.jpg",
-              "description": "Layanan jasa potong rumput panggilan profesional untuk seluruh wilayah DKI Jakarta.",
+              "description": "Layanan jasa potong rumput panggilan resmi dan profesional untuk seluruh wilayah DKI Jakarta oleh PT Tebas Rumput Saputra.",
               "url": "https://tebasrumput.com",
               "telephone": "089502470657",
               "priceRange": "Rp",
@@ -255,7 +256,7 @@ export default function Home() {
                   "name": "Apakah saya harus menyiapkan alat potong rumput sendiri?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Tidak perlu. Tim tebasrumput.com sudah membawa semua perlengkapan potong rumput profesional termasuk mesin potong rumput, sapu, dan alat pendukung lainnya."
+                    "text": "Tidak perlu. Tim PT Tebas Rumput Saputra sudah membawa semua perlengkapan potong rumput profesional termasuk mesin potong rumput, sapu, dan alat pendukung lainnya."
                   }
                 },
                 {
@@ -283,8 +284,7 @@ export default function Home() {
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <Leaf className="w-6 h-6 text-primary group-hover:rotate-12 transition-transform shrink-0" />
+          <div className="flex items-center cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <span className="text-xl font-black tracking-tighter text-black">
               tebasrumput.com
             </span>
@@ -1007,9 +1007,14 @@ export default function Home() {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <Leaf className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-black tracking-tighter text-white">
-                tebasrumput.com
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-black tracking-tighter text-white leading-none">
+                  tebasrumput.com
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 tracking-wider uppercase mt-1">
+                  PT TEBAS RUMPUT SAPUTRA
+                </span>
+              </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed font-medium">
               Partner terpercaya untuk perawatan halaman dan taman Anda. Kami mengutamakan kualitas dan kepuasan pelanggan di seluruh wilayah DKI Jakarta.
@@ -1050,6 +1055,9 @@ export default function Home() {
             </ul>
           </div>
         </div>
+        <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 text-center text-slate-500 text-xs font-medium">
+          <p>© 2026 PT TEBAS RUMPUT SAPUTRA (tebasrumput.com). Seluruh hak cipta dilindungi undang-undang.</p>
+        </div>
       </footer >
 
       {/* Modal Legal (Simplified for Home) */}
@@ -1062,9 +1070,17 @@ export default function Home() {
               <h2 className="text-2xl font-black mb-6 tracking-tight">{activeModal === 'terms' ? 'Terms & Conditions' : 'Privacy Policy'}</h2>
               <div className="text-slate-600 space-y-4 text-sm leading-relaxed font-medium">
                 {activeModal === 'terms' ? (
-                  <p>1. DP 15% (&lt; Rp500.000) atau 30% (&gt; Rp1.000.000) untuk booking jadwal. <br/> 2. Pelunasan setelah pengerjaan selesai. <br/> 3. Dokumentasi hasil akan diberikan.</p>
+                  <>
+                    <p className="font-bold text-slate-800">Syarat & Ketentuan Layanan PT TEBAS RUMPUT SAPUTRA:</p>
+                    <p>1. Pembayaran uang muka (DP) sebesar 15% (untuk total order &lt; Rp500.000) atau 30% (untuk total order &gt; Rp1.000.000) sebagai konfirmasi booking jadwal.</p>
+                    <p>2. Pelunasan pembayaran dilakukan segera setelah seluruh pekerjaan pemotongan rumput/taman selesai dikerjakan.</p>
+                    <p>3. Dokumentasi berupa foto/video hasil pengerjaan sebelum (before) dan sesudah (after) akan diberikan sebagai bukti penyelesaian pekerjaan.</p>
+                  </>
                 ) : (
-                  <p>Kami menjaga privasi data Anda. Informasi hanya digunakan untuk koordinasi layanan potong rumput.</p>
+                  <>
+                    <p className="font-bold text-slate-800">Kebijakan Privasi PT TEBAS RUMPUT SAPUTRA:</p>
+                    <p>Kami sangat menjaga kerahasiaan dan privasi data pelanggan kami. Seluruh informasi data pribadi, alamat lokasi lahan, serta kontak WhatsApp yang Anda berikan hanya akan digunakan secara internal untuk koordinasi operasional tim kami di lapangan dan proses administrasi layanan jasa potong rumput PT TEBAS RUMPUT SAPUTRA.</p>
+                  </>
                 )}
               </div>
             </motion.div>
