@@ -40,7 +40,8 @@ import {
   Wallet,
   Briefcase,
   FileText,
-  Maximize2
+  Maximize2,
+  Truck
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { JAKARTA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
@@ -182,16 +183,16 @@ export default function Home() {
     name: "",
     region: "",
     city: "",
-    service: "Custom / Borongan"
+    service: "Potong Rumput"
   });
 
   const handleBooking = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
 
-    let message = "Halo tebasrumput.com, saya ingin memesan jasa potong rumput.";
+    let message = `Halo tebasrumput.com, saya ingin memesan layanan ${formData.service}.`;
     if (formData.name || formData.region) {
       const location = formData.city ? `${formData.city}, ${formData.region}, DKI Jakarta` : (formData.region ? `${formData.region}, DKI Jakarta` : "DKI Jakarta");
-      message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari ${location} ingin memesan layanan potong rumput.`;
+      message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari ${location} ingin memesan layanan ${formData.service}.`;
     }
 
     window.open(`${WA_LINK}?text=${encodeURIComponent(message)}`, "_blank");
@@ -200,10 +201,17 @@ export default function Home() {
   return (
     <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Helmet>
-        <title>Jasa Potong Rumput Jakarta Terdekat & Murah | PT Tebas Rumput Saputra</title>
-        <meta name="description" content="Layanan jasa potong rumput panggilan terdekat, cepat, murah, dan resmi oleh PT Tebas Rumput Saputra. Melayani wilayah Jakarta Selatan, Timur, Barat, Pusat, dan Utara." />
-        <meta name="keywords" content="jasa potong rumput jakarta, pt tebas rumput saputra, potong rumput panggilan, jasa potong rumput terdekat, tukang potong rumput, potong rumput jakarta resmi, tebasrumput, perawatan taman" />
+        <title>Jasa Potong Rumput, Tebang Pohon & Buang Barang / Puing Jakarta | PT Tebas Rumput Saputra</title>
+        <meta name="description" content="Layanan resmi jasa potong rumput panggilan terdekat, tebang pohon, dan buang barang bekas / puing proyek di Jakarta. Hubungi PT Tebas Rumput Saputra untuk penawaran murah & cepat." />
+        <meta name="keywords" content="jasa potong rumput jakarta, pt tebas rumput saputra, potong rumput panggilan, tebang pohon jakarta, jasa buang barang, buang puing jakarta, jasa potong rumput terdekat, tukang potong rumput, potong rumput jakarta resmi, tebasrumput, tebang pohon panggilan, buang sampah proyek jakarta, jasa pembuangan puing jakarta" />
         
+        {/* Open Graph Tags for Social Media */}
+        <meta property="og:title" content="Jasa Potong Rumput, Tebang Pohon & Buang Barang / Puing Jakarta | PT Tebas Rumput Saputra" />
+        <meta property="og:description" content="Layanan panggilan resmi jasa potong rumput, tebang pohon, dan pembuangan barang bekas / puing di seluruh wilayah Jakarta. Cepat, rapi, dan terpercaya." />
+        <meta property="og:image" content="https://tebasrumput.com/images/rumput%20sedang%201.jpg" />
+        <meta property="og:url" content="https://tebasrumput.com" />
+        <meta property="og:type" content="website" />
+
         {/* Schema Markup for Local SEO */}
         <script type="application/ld+json">
           {`
@@ -213,7 +221,7 @@ export default function Home() {
               "name": "PT Tebas Rumput Saputra",
               "alternateName": "Tebasrumput.com",
               "image": "https://tebasrumput.com/images/rumput%20sedang%201.jpg",
-              "description": "Layanan jasa potong rumput panggilan resmi dan profesional untuk seluruh wilayah DKI Jakarta oleh PT Tebas Rumput Saputra.",
+              "description": "Layanan resmi dan profesional Jasa Potong Rumput, Tebang Pohon, serta Buang Barang & Puing panggilan untuk seluruh wilayah DKI Jakarta oleh PT Tebas Rumput Saputra.",
               "url": "https://tebasrumput.com",
               "telephone": "089502470657",
               "priceRange": "Rp",
@@ -239,6 +247,36 @@ export default function Home() {
                   "longitude": 106.8456
                 },
                 "geoRadius": "40000"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Layanan Utama",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Jasa Potong Rumput",
+                      "description": "Pemotongan rumput taman, halaman rumah, dan lahan kosong secara rapi dan presisi."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Jasa Tebang Pohon",
+                      "description": "Pemotongan dan penebangan pohon berbagai ukuran secara aman, bersih, dan profesional."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Jasa Buang Barang / Puing",
+                      "description": "Layanan pembuangan barang bekas, sampah proyek, dan puing-puing sisa bangunan."
+                    }
+                  }
+                ]
               }
             }
           `}
@@ -253,26 +291,26 @@ export default function Home() {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Apakah saya harus menyiapkan alat potong rumput sendiri?",
+                  "name": "Apakah PT Tebas Rumput Saputra melayani jasa tebang pohon dan buang puing?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Tidak perlu. Tim PT Tebas Rumput Saputra sudah membawa semua perlengkapan potong rumput profesional termasuk mesin potong rumput, sapu, dan alat pendukung lainnya."
+                    "text": "Ya, selain jasa potong rumput, kami juga menyediakan layanan profesional tebang pohon berbagai ukuran serta pembuangan barang bekas, sampah proyek, dan puing sisa bangunan."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Apakah area yang dipotong akan dibersihkan setelahnya?",
+                  "name": "Apakah area pengerjaan akan dibersihkan setelah selesai?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ya, harga jasa potong rumput kami sudah termasuk perapihan dan pembersihan area dari sisa-sisa rumput yang dipotong."
+                    "text": "Ya, seluruh layanan kami (potong rumput, tebang pohon, buang puing) sudah termasuk perapihan dan pembersihan area dari sisa-sisa pekerjaan."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Berapa biaya jasa potong rumput di Jakarta?",
+                  "name": "Berapa biaya tebang pohon dan buang puing di Jakarta?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Biaya jasa kami mulai dari Rp1.000 per meter persegi, tergantung pada tingkat kesulitan dan tinggi rumput (Rumput Sedang, Tinggi, atau Semak Belukar)."
+                    "text": "Biaya jasa tebang pohon dan pembuangan barang/puing ditentukan secara borongan (custom) tergantung tingkat kesulitan, diameter pohon, serta volume/ritase barang yang dibuang."
                   }
                 }
               ]
@@ -348,16 +386,15 @@ export default function Home() {
                 <MapPin className="w-3 h-3" />
                 <span>Panggilan <span className="text-primary">Seluruh DKI Jakarta</span></span>
               </motion.div>
-
               <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-slate-900 tracking-tight">
-                <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Jasa Potong Rumput Panggilan Jakarta</span>
-                <span className="block mb-1">Murah, Cepat</span>
-                <span className="text-primary">& Profesional</span>
+                <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Potong Rumput • Tebang Pohon • Buang Barang & Puing</span>
+                <span className="block mb-1">Solusi Bersih</span>
+                <span className="text-primary">Lahan & Halaman</span>
               </motion.h1>
               
               <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 border-l-2 border-primary/20 pl-6 py-2">
-                Layanan <span className="font-medium text-slate-700 italic">Jasa Potong Rumput</span> praktis untuk halaman rumah, kantor, dan lahan kosong di <span className="font-medium text-slate-700">seluruh wilayah DKI Jakarta</span>. 
-                <span className="block mt-1 font-bold text-slate-800">Rapi, Bersih, dan Terjangkau.</span>
+                Layanan profesional <span className="font-medium text-slate-700">Potong Rumput</span>, <span className="font-medium text-slate-700">Tebang Pohon</span>, serta <span className="font-medium text-slate-700">Buang Barang & Puing</span> panggilan di <span className="font-medium text-slate-700">seluruh wilayah DKI Jakarta</span>. 
+                <span className="block mt-1 font-bold text-slate-800">Cepat, Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
 
               <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 items-center w-full lg:w-auto">
@@ -439,6 +476,23 @@ export default function Home() {
                   </div>
                 </div>
 
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Pilih Layanan / Jasa</label>
+                  <div className="relative">
+                    <select
+                      className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none text-sm font-medium"
+                      value={formData.service}
+                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      required
+                    >
+                      <option value="Potong Rumput">Potong Rumput</option>
+                      <option value="Tebang Pohon">Tebang Pohon</option>
+                      <option value="Buang Barang / Puing">Buang Barang / Puing</option>
+                    </select>
+                    <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                  </div>
+                </div>
+
                 <button
                   type="submit"
                   className="w-full bg-slate-900 text-white py-5 rounded-2xl font-black text-lg shadow-2xl hover:bg-black transition-all active:scale-[0.98] flex items-center justify-center gap-3 mt-4 group"
@@ -457,12 +511,11 @@ export default function Home() {
             <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Solusi Lengkap Untuk Halaman Anda</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: <Scissors />, title: "Potong Rumput", desc: "Pemotongan rumput taman rumah dengan hasil rapi dan presisi." },
-              { icon: <Leaf />, title: "Perawatan Rutin", desc: "Pemeliharaan berkala agar taman tetap sehat dan indah setiap saat." },
-              { icon: <Trash2 />, title: "Pembersihan Halaman", desc: "Pembersihan sisa rumput, daun kering, dan sampah organik lainnya." },
-              { icon: <Trees />, title: "Pangkas Tanaman", desc: "Merapikan tanaman hias dan pohon kecil agar tumbuh teratur." }
+              { icon: <Scissors />, title: "Potong Rumput", desc: "Pemotongan rumput taman, halaman rumah, dan lahan kosong secara rapi dan presisi." },
+              { icon: <Trees />, title: "Tebang Pohon", desc: "Pemotongan dan penebangan pohon berbagai ukuran secara aman, bersih, dan profesional." },
+              { icon: <Truck />, title: "Buang Barang / Puing", desc: "Layanan pembuangan barang bekas, sampah proyek, dan puing-puing sisa bangunan." }
             ].map((item, i) => (
               <motion.div
                 key={i}
