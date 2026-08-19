@@ -385,7 +385,7 @@ export default function Home() {
               </motion.div>
               <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-slate-900 tracking-tight">
                 <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Potong Rumput • Tebang Pohon • Buang Barang & Puing</span>
-                <span className="block mb-1">Lingkungan Lebih Rapi</span>
+                <span className="block mb-1">Lingkungan Rapi</span>
                 <span className="text-primary block">Hunian Lebih Nyaman</span>
               </motion.h1>
               
