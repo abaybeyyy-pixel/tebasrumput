@@ -694,7 +694,7 @@ export default function Home() {
               
               {[
                 { icon: <MessageCircle />, title: "Pilih Layanan & Booking", desc: "Hubungi kami via WhatsApp atau isi form pendaftaran." },
-                { icon: <Wallet />, title: "Konfirmasi & DP", desc: "Tim admin mengonfirmasi jadwal dan pembayaran DP 15% (< Rp500rb) atau 30% (> Rp1Jt)." },
+                { icon: <Wallet />, title: "Konfirmasi & DP", desc: "Tim admin mengonfirmasi jadwal dan pembayaran DP 30% sebagai konfirmasi booking." },
                 { icon: <Briefcase />, title: "Pengerjaan di Lokasi", desc: "Tim profesional datang dan mengerjakan lahan Anda." },
                 { icon: <CheckCircle2 />, title: "Pelunasan & Selesai", desc: "Cek hasil, pelunasan, dan halaman Anda kembali rapi." }
               ].map((step, i) => (
@@ -1125,7 +1125,7 @@ export default function Home() {
                 {activeModal === 'terms' ? (
                   <>
                     <p className="font-bold text-slate-800">Syarat & Ketentuan Layanan PT TEBAS RUMPUT SAPUTRA:</p>
-                    <p>1. Pembayaran uang muka (DP) sebesar 15% (untuk total order &lt; Rp500.000) atau 30% (untuk total order &gt; Rp1.000.000) sebagai konfirmasi booking jadwal.</p>
+                    <p>1. Pembayaran uang muka (DP) sebesar 30% sebagai konfirmasi booking jadwal.</p>
                     <p>2. Pelunasan pembayaran dilakukan segera setelah seluruh pekerjaan pemotongan rumput/taman selesai dikerjakan.</p>
                     <p>3. Dokumentasi berupa foto/video hasil pengerjaan sebelum (before) dan sesudah (after) akan diberikan sebagai bukti penyelesaian pekerjaan.</p>
                   </>
