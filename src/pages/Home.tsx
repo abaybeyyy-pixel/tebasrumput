@@ -418,12 +418,7 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
               variants={staggerContainer}
               className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-8"
             >
-              <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-[0.2em] uppercase">
-                <MapPin className="w-3 h-3" />
-                <span>Panggilan <span className="text-primary">Seluruh DKI Jakarta</span> • <span className="text-slate-800 font-bold">Pengalaman 5+ Tahun</span></span>
-              </motion.div>
               <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-slate-900 tracking-tight">
-                <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Potong Rumput • Tebang Pohon • Buang Barang & Puing</span>
                 <span className="block mb-1">Lingkungan Rapi</span>
                 <span className="text-primary block">Hunian Lebih Nyaman</span>
               </motion.h1>
