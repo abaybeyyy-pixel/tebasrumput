@@ -227,10 +227,16 @@ export default function Home() {
               "priceRange": "Rp",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Grogol Utara, Kec. Kebayoran Lama",
-                "addressLocality": "Jakarta Selatan",
+                "streetAddress": "Jl. Dua Sembilan No.12, RT.7/RW.7, Duren Sawit",
+                "addressLocality": "Jakarta Timur",
                 "addressRegion": "DKI Jakarta",
+                "postalCode": "13440",
                 "addressCountry": "ID"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -6.2434075,
+                "longitude": 106.9153304
               },
               "areaServed": [
                 { "@type": "City", "name": "Jakarta Selatan" },
@@ -239,15 +245,6 @@ export default function Home() {
                 { "@type": "City", "name": "Jakarta Pusat" },
                 { "@type": "City", "name": "Jakarta Utara" }
               ],
-              "serviceArea": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                  "@type": "GeoCoordinates",
-                  "latitude": -6.2088,
-                  "longitude": 106.8456
-                },
-                "geoRadius": "40000"
-              },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Layanan Utama",
@@ -388,8 +385,8 @@ export default function Home() {
               </motion.div>
               <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-slate-900 tracking-tight">
                 <span className="font-bold text-primary text-[10px] md:text-xs block mb-4 uppercase tracking-[0.3em] opacity-80">Potong Rumput • Tebang Pohon • Buang Barang & Puing</span>
-                <span className="block mb-1">Solusi Bersih</span>
-                <span className="text-primary">Lahan & Halaman</span>
+                <span className="block mb-1">Lingkungan Lebih Rapi</span>
+                <span className="text-primary block">Hunian Lebih Nyaman</span>
               </motion.h1>
               
               <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 border-l-2 border-primary/20 pl-6 py-2">
