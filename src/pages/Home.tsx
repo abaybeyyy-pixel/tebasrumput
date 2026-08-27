@@ -134,7 +134,7 @@ const googleReviewsRow1 = [
 const googleReviewsRow2 = [
   { name: "Rian Hidayat", role: "Local Guide • 5 bulan lalu", text: "Sangat puas dengan hasil tebang pohon dan potong rumputnya. Tim datang tepat waktu dan lokasi dibersihkan rapi.", rating: 5 },
   { name: "Siti Rahmawati", role: "8 bulan lalu", text: "Respon admin cepat sekali via WA. Pagi pesan, siang tim sudah datang pengerjaan rapi banget.", rating: 5 },
-  { name: "Budi Santoso", role: "Local Guide • 1 tahun lalu", text: "Jasa pembuangan puing dan barang bekas terbaik di Jakarta. Kerja cepat dan bersih tanpa ada sisa.", rating: 5 },
+  { name: "Budi Santoso", role: "Local Guide • 1 tahun lalu", text: "Jasa potong rumput dan tebang pohon terbaik di Jakarta. Pengerjaan cepat, rapi, dan timnya profesional.", rating: 5 },
   { name: "Fajar Nugraha", role: "3 bulan lalu", text: "Sangat profesional! Rumput gajah mini di halaman rumah saya dipotong rapi persis sesuai keinginan.", rating: 5 },
   { name: "Hendra Wijaya", role: "Local Guide • 6 bulan lalu", text: "Pelayanan sangat baik, harga bersahabat dan pekerjaannya cepat selesainya. Recommended!", rating: 5 },
   { name: "Dewi Lestari", role: "4 bulan lalu", text: "Rapi, bersih, dan sangat komunikatif. Terima kasih PT Tebas Rumput Saputra!", rating: 5 }
@@ -144,8 +144,6 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState<"terms" | "privacy" | "quotation" | null>(null);
   const [activeBlog, setActiveBlog] = useState<any>(null);
-  const [showPaymentNotice, setShowPaymentNotice] = useState(false);
-  const [isCopied, setIsCopied] = useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
   const [quotationData, setQuotationData] = useState({
@@ -197,27 +195,6 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
     return area * categoryDetails[calcCategory].price;
   };
 
-  useEffect(() => {
-    const hasSeenNotice = sessionStorage.getItem("hasSeenPaymentNotice");
-    if (!hasSeenNotice) {
-      const timer = setTimeout(() => {
-        setShowPaymentNotice(true);
-      }, 1500);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
-  const closePaymentNotice = () => {
-    setShowPaymentNotice(false);
-    sessionStorage.setItem("hasSeenPaymentNotice", "true");
-  };
-
-  const copyAccountNumber = () => {
-    navigator.clipboard.writeText("1160478272");
-    setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000);
-  };
-
   const [formData, setFormData] = useState({
     name: "",
     region: "",
@@ -240,27 +217,31 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
   return (
     <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Helmet>
-        <title>Jasa Potong Rumput, Tebang Pohon & Buang Barang / Puing Jakarta | PT Tebas Rumput Saputra</title>
-        <meta name="description" content="Layanan resmi jasa potong rumput panggilan terdekat, tebang pohon, dan buang barang bekas / puing proyek di Jakarta. Hubungi PT Tebas Rumput Saputra untuk penawaran murah & cepat." />
-        <meta name="keywords" content="jasa potong rumput jakarta, pt tebas rumput saputra, potong rumput panggilan, tebang pohon jakarta, jasa buang barang, buang puing jakarta, jasa potong rumput terdekat, tukang potong rumput, potong rumput jakarta resmi, tebasrumput, tebang pohon panggilan, buang sampah proyek jakarta, jasa pembuangan puing jakarta" />
+        <title>Jasa Potong Rumput & Tebang Pohon Jakarta Terdekat | PT Tebas Rumput Saputra</title>
+        <meta name="description" content="Jasa potong rumput panggilan terdekat & tebang pohon profesional di Jakarta (Selatan, Barat, Timur, Pusat, Utara). Garansi rapi, cepat & berizin resmi PT TEBAS RUMPUT SAPUTRA." />
+        <meta name="keywords" content="jasa potong rumput jakarta, tebang pohon jakarta, tukang potong rumput terdekat, potong rumput panggilan jakarta, jasa tebang pohon jakarta, potong rumput jakarta selatan, potong rumput jakarta barat, potong rumput jakarta timur, potong rumput jakarta pusat, potong rumput jakarta utara, tebas rumput saputra" />
         
         {/* Open Graph Tags for Social Media */}
-        <meta property="og:title" content="Jasa Potong Rumput, Tebang Pohon & Buang Barang / Puing Jakarta | PT Tebas Rumput Saputra" />
-        <meta property="og:description" content="Layanan panggilan resmi jasa potong rumput, tebang pohon, dan pembuangan barang bekas / puing di seluruh wilayah Jakarta. Cepat, rapi, dan terpercaya." />
+        <meta property="og:title" content="Jasa Potong Rumput & Tebang Pohon Jakarta Terdekat | PT Tebas Rumput Saputra" />
+        <meta property="og:description" content="Layanan panggilan resmi jasa potong rumput dan tebang pohon di seluruh wilayah Jakarta. Cepat, rapi, bersih, dan terpercaya." />
         <meta property="og:image" content="https://tebasrumput.com/images/rumput%20sedang%201.jpg" />
         <meta property="og:url" content="https://tebasrumput.com" />
         <meta property="og:type" content="website" />
+
+        {/* Geographic & Local Target Meta */}
+        <meta name="geo.region" content="ID-JK" />
+        <meta name="geo.placename" content="Jakarta" />
 
         {/* Schema Markup for Local SEO */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "HomeAndConstructionBusiness",
               "name": "PT Tebas Rumput Saputra",
-              "alternateName": "Tebasrumput.com",
+              "alternateName": ["Tebasrumput.com", "Jasa Potong Rumput Jakarta", "Jasa Tebang Pohon Jakarta"],
               "image": "https://tebasrumput.com/images/rumput%20sedang%201.jpg",
-              "description": "Layanan resmi dan profesional Jasa Potong Rumput, Tebang Pohon, serta Buang Barang & Puing panggilan untuk seluruh wilayah DKI Jakarta oleh PT Tebas Rumput Saputra.",
+              "description": "Layanan resmi dan profesional Jasa Potong Rumput serta Tebang Pohon panggilan untuk seluruh wilayah DKI Jakarta oleh PT Tebas Rumput Saputra.",
               "url": "https://tebasrumput.com",
               "telephone": "089502470657",
               "priceRange": "Rp",
@@ -276,6 +257,17 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                 "@type": "GeoCoordinates",
                 "latitude": -6.2434075,
                 "longitude": 106.9153304
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "06:00",
+                "closes": "21:00"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "60"
               },
               "areaServed": [
                 { "@type": "City", "name": "Jakarta Selatan" },
@@ -303,14 +295,6 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                       "name": "Jasa Tebang Pohon",
                       "description": "Pemotongan dan penebangan pohon berbagai ukuran secara aman, bersih, dan profesional."
                     }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Jasa Buang Barang / Puing",
-                      "description": "Layanan pembuangan barang bekas, sampah proyek, dan puing-puing sisa bangunan."
-                    }
                   }
                 ]
               }
@@ -327,10 +311,10 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Apakah PT Tebas Rumput Saputra melayani jasa tebang pohon dan buang puing?",
+                  "name": "Apakah PT Tebas Rumput Saputra melayani jasa tebang pohon?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ya, selain jasa potong rumput, kami juga menyediakan layanan profesional tebang pohon berbagai ukuran serta pembuangan barang bekas, sampah proyek, dan puing sisa bangunan."
+                    "text": "Ya, selain jasa potong rumput, kami juga menyediakan layanan profesional tebang pohon berbagai ukuran secara aman, rapi, dan bersih."
                   }
                 },
                 {
@@ -338,15 +322,15 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                   "name": "Apakah area pengerjaan akan dibersihkan setelah selesai?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ya, seluruh layanan kami (potong rumput, tebang pohon, buang puing) sudah termasuk perapihan dan pembersihan area dari sisa-sisa pekerjaan."
+                    "text": "Ya, seluruh layanan kami (potong rumput dan tebang pohon) sudah termasuk perapihan dan pembersihan area dari sisa-sisa pekerjaan."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Berapa biaya tebang pohon dan buang puing di Jakarta?",
+                  "name": "Berapa biaya tebang pohon di Jakarta?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Biaya jasa tebang pohon dan pembuangan barang/puing ditentukan secara borongan (custom) tergantung tingkat kesulitan, diameter pohon, serta volume/ritase barang yang dibuang."
+                    "text": "Biaya jasa tebang pohon ditentukan secara borongan (custom) tergantung tingkat kesulitan, lokasi, dan diameter pohon."
                   }
                 }
               ]
@@ -424,7 +408,7 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
               </motion.h1>
               
               <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 border-l-2 border-primary/20 pl-6 py-2">
-                Layanan profesional <span className="font-medium text-slate-700">Potong Rumput</span>, <span className="font-medium text-slate-700">Tebang Pohon</span>, serta <span className="font-medium text-slate-700">Buang Barang & Puing</span> panggilan di <span className="font-medium text-slate-700">seluruh wilayah DKI Jakarta</span>. 
+                Layanan profesional <span className="font-medium text-slate-700">Potong Rumput</span> dan <span className="font-medium text-slate-700">Tebang Pohon</span> panggilan di <span className="font-medium text-slate-700">seluruh wilayah DKI Jakarta</span>. 
                 <span className="block mt-1 font-bold text-slate-800">Cepat, Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
 
@@ -565,7 +549,6 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                     >
                       <option value="Potong Rumput">Potong Rumput</option>
                       <option value="Tebang Pohon">Tebang Pohon</option>
-                      <option value="Buang Barang / Puing">Buang Barang / Puing</option>
                     </select>
                     <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                   </div>
@@ -586,25 +569,24 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
         < section id="layanan" className="section-padding max-w-7xl mx-auto" >
           <div className="text-center space-y-3 mb-16">
             <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Layanan Kami</h2>
-            <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Solusi Lengkap Untuk Halaman Anda</h3>
+            <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Solusi Perawatan Halaman & Pohon Anda</h3>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
-              { icon: <Scissors />, title: "Potong Rumput", desc: "Pemotongan rumput taman, halaman rumah, dan lahan kosong secara rapi dan presisi." },
-              { icon: <Trees />, title: "Tebang Pohon", desc: "Pemotongan dan penebangan pohon berbagai ukuran secara aman, bersih, dan profesional." },
-              { icon: <Truck />, title: "Buang Barang / Puing", desc: "Layanan pembuangan barang bekas, sampah proyek, dan puing-puing sisa bangunan." }
+              { icon: <Scissors />, title: "Potong Rumput", desc: "Pemotongan rumput taman, halaman rumah, dan pembersihan lahan kosong secara rapi, bersih, dan presisi." },
+              { icon: <Trees />, title: "Tebang Pohon", desc: "Pemotongan, pemangkasan dahan, dan penebangan pohon berbagai ukuran secara aman, bersih, dan profesional." }
             ].map((item, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -3 }}
                 className="card p-8 group border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] bg-slate-50/50"
               >
-                <div className="bg-white w-10 h-10 rounded-xl flex items-center justify-center text-primary mb-6 shadow-sm transition-colors group-hover:bg-primary group-hover:text-white">
-                  {React.cloneElement(item.icon as React.ReactElement, { className: "w-5 h-5" })}
+                <div className="bg-white w-12 h-12 rounded-xl flex items-center justify-center text-primary mb-6 shadow-sm transition-colors group-hover:bg-primary group-hover:text-white">
+                  {React.cloneElement(item.icon as React.ReactElement, { className: "w-6 h-6" })}
                 </div>
-                <h4 className="text-lg font-black mb-3 text-slate-900 leading-tight">{item.title}</h4>
-                <p className="text-slate-500 text-xs leading-relaxed font-medium">{item.desc}</p>
+                <h4 className="text-xl font-black mb-3 text-slate-900 leading-tight">{item.title}</h4>
+                <p className="text-slate-500 text-sm leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -1312,17 +1294,16 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                       >
                         <option value="Potong Rumput">Potong Rumput</option>
                         <option value="Tebang Pohon">Tebang Pohon</option>
-                        <option value="Buang Barang / Puing">Buang Barang / Puing</option>
-                        <option value="Paket Pembersihan Lahan Lengkap">Paket Pembersihan Lahan Lengkap</option>
+                        <option value="Paket Perapihan Lahan Lengkap">Paket Perapihan Lahan Lengkap</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Estimasi Luas Lahan / Jumlah Pohon / Volume Puing</label>
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Estimasi Luas Lahan / Jumlah Pohon</label>
                     <input
                       type="text"
-                      placeholder="Contoh: 200m² / 2 Pohon Tinggi / 2 Rit Truck"
+                      placeholder="Contoh: 200m² / 2 Pohon Tinggi"
                       className="w-full px-4 py-3 rounded-xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary outline-none transition-all text-xs font-medium"
                       value={quotationData.areaSize}
                       onChange={(e) => setQuotationData({ ...quotationData, areaSize: e.target.value })}
@@ -1408,32 +1389,6 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
         </div>
       </div>
 
-      {/* Modal Payment Notice */}
-      <AnimatePresence>
-        {showPaymentNotice && (
-          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={closePaymentNotice} className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" />
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative bg-white w-full max-w-sm rounded-[2.5rem] p-8 shadow-2xl">
-              <div className="flex items-center gap-3 mb-6">
-                <AlertTriangle className="text-amber-500 w-6 h-6" />
-                <h2 className="text-xl font-black tracking-tight">Notifikasi Penting</h2>
-              </div>
-              <p className="text-sm text-slate-500 mb-6 font-medium leading-relaxed">Pembayaran resmi hanya dilakukan ke rekening berikut:</p>
-              <div className="bg-slate-50 p-6 rounded-2xl mb-8 border border-slate-100">
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">BCA Account</p>
-                <p className="text-lg font-black text-slate-900 mb-1">1160478272</p>
-                <div className="flex justify-between items-center">
-                  <p className="font-bold text-sm text-slate-600">Muhamad Ridwan Saputra</p>
-                  <button onClick={copyAccountNumber} className="p-2 hover:bg-white rounded-lg transition-colors">
-                    {isCopied ? <Check className="text-green-500 w-4 h-4"/> : <Copy className="text-slate-400 w-4 h-4"/>}
-                  </button>
-                </div>
-              </div>
-              <button onClick={closePaymentNotice} className="w-full bg-slate-900 text-white py-4 rounded-2xl font-black shadow-xl hover:bg-black transition-all">Saya Mengerti</button>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
       {/* Lightbox Image */}
       <AnimatePresence>
         {activeImage && (
