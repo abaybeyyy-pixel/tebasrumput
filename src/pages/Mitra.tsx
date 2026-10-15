@@ -87,6 +87,11 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
         <title>Pendaftaran Mitra Jasa Potong Rumput Jakarta & Palembang | PT Tebas Rumput Saputra</title>
         <meta name="description" content="Bergabunglah sebagai mitra penyedia jasa potong rumput profesional PT Tebas Rumput Saputra di Jakarta & Palembang. Dapatkan order rutin dan bagi hasil yang menguntungkan." />
         <meta name="keywords" content="mitra potong rumput, lowongan tukang potong rumput, kerja sama potong rumput jakarta, kerja sama potong rumput palembang, lowongan kerja jakarta, pt tebas rumput saputra" />
+        <link rel="canonical" href="https://tebasrumput.com/mitra" />
+        <meta property="og:title" content="Pendaftaran Mitra Jasa Potong Rumput Jakarta & Palembang | PT Tebas Rumput Saputra" />
+        <meta property="og:description" content="Bergabunglah sebagai mitra resmi PT Tebas Rumput Saputra di wilayah DKI Jakarta & Kota Palembang. Dapatkan order harian dan komisi terjamin." />
+        <meta property="og:url" content="https://tebasrumput.com/mitra" />
+        <meta property="og:type" content="website" />
       </Helmet>
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
