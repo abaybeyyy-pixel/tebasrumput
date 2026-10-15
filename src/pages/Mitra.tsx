@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { INDONESIA_REGIONS, JAKARTA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
+import { INDONESIA_REGIONS, INDONESIA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
 
 const WA_LINK = "https://wa.me/6289502470657";
 
@@ -84,9 +84,9 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
   return (
     <div className="min-h-screen font-sans bg-white selection:bg-primary/20 selection:text-primary">
       <Helmet>
-        <title>Pendaftaran Mitra Jasa Potong Rumput Jakarta | PT Tebas Rumput Saputra</title>
-        <meta name="description" content="Bergabunglah sebagai mitra penyedia jasa potong rumput profesional PT Tebas Rumput Saputra di Jakarta. Dapatkan order rutin dan bagi hasil yang menguntungkan." />
-        <meta name="keywords" content="mitra potong rumput, lowongan tukang potong rumput, kerja sama potong rumput jakarta, lowongan kerja jakarta, pt tebas rumput saputra" />
+        <title>Pendaftaran Mitra Jasa Potong Rumput Jakarta & Palembang | PT Tebas Rumput Saputra</title>
+        <meta name="description" content="Bergabunglah sebagai mitra penyedia jasa potong rumput profesional PT Tebas Rumput Saputra di Jakarta & Palembang. Dapatkan order rutin dan bagi hasil yang menguntungkan." />
+        <meta name="keywords" content="mitra potong rumput, lowongan tukang potong rumput, kerja sama potong rumput jakarta, kerja sama potong rumput palembang, lowongan kerja jakarta, pt tebas rumput saputra" />
       </Helmet>
       {/* Navbar */}
       <nav aria-label="Menu Utama" className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
@@ -143,7 +143,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase"
             >
               <Users className="w-4 h-4" />
-              <span>Program Kemitraan Wilayah Jakarta</span>
+              <span>Program Kemitraan Jakarta & Palembang</span>
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -159,7 +159,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               transition={{ delay: 0.1 }}
               className="text-lg text-slate-600 max-w-2xl mx-auto"
             >
-              Bergabunglah dengan jaringan penyedia jasa potong rumput profesional di DKI Jakarta. Dapatkan order rutin tanpa pusing mencari customer.
+              Bergabunglah dengan jaringan penyedia jasa potong rumput profesional di DKI Jakarta & Palembang. Dapatkan order rutin tanpa pusing mencari customer.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -402,7 +402,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
                           onChange={(e) => setFormData({ ...formData, kota: e.target.value, kecamatan: "" })}
                         >
                           <option value="">{formData.provinsi ? "Pilih Kota Administrasi" : "Pilih Provinsi Dahulu"}</option>
-                          {formData.provinsi && JAKARTA_CITIES.map(city => <option key={city} value={city}>{city}</option>)}
+                          {formData.provinsi && (INDONESIA_CITIES[formData.provinsi] || []).map(city => <option key={city} value={city}>{city}</option>)}
                         </select>
                         <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                       </div>
@@ -503,7 +503,7 @@ Saya bersedia mengikuti sistem kerja sama dan potongan biaya layanan 10% dari Te
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Membangun jaringan profesional penyedia jasa potong rumput di seluruh wilayah DKI Jakarta. Bergabunglah menjadi mitra kami hari ini.
+              Membangun jaringan profesional penyedia jasa potong rumput di seluruh wilayah DKI Jakarta dan Kota Palembang. Bergabunglah menjadi mitra kami hari ini.
             </p>
           </div>
 

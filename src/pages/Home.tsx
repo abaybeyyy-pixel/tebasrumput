@@ -48,7 +48,7 @@ import {
   PhoneCall
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import { JAKARTA_CITIES, INDONESIA_DISTRICTS } from "../data/regions";
+import { JAKARTA_CITIES, PALEMBANG_CITIES, INDONESIA_DISTRICTS, INDONESIA_REGIONS, INDONESIA_CITIES } from "../data/regions";
 import { Link } from "react-router-dom";
 
 const fadeIn = {
@@ -118,6 +118,27 @@ const blogs = [
       <p>Memotong rumput secara rutin merangsang pertumbuhan tunas baru yang lebih hijau dan lembut. Selain itu, sinar matahari akan lebih mudah masuk ke sela-sela batang rumput, mencegah pertumbuhan lumut dan jamur yang merusak visual taman Anda.</p>
 
       <p>Tebasrumput.com menyediakan layanan langganan bulanan di seluruh kecamatan se-DKI Jakarta. Hubungi kami untuk info lebih lanjut!</p>
+    `
+  },
+  {
+    title: "Tips Perawatan Lahan & Halaman di Wilayah Palembang dan Sekitarnya",
+    tags: ["Edukasi", "Palembang", "Sumatera Selatan", "Pembersihan Lahan"],
+    date: "14 Apr 2026",
+    desc: "Kondisi tanah dan iklim di Palembang memerlukan penanganan khusus untuk semak liar dan pohon rindang. Simak panduan praktis dari tim Tebasrumput.com.",
+    source: "https://tebasrumput.com/artikel/perawatan-lahan-palembang",
+    content: `
+      <h2>Karakteristik Lahan dan Pertumbuhan Rumput di Palembang</h2>
+      <p>Kota Palembang dan wilayah Sumatera Selatan memiliki kelembapan tinggi dengan curah hujan tropis yang menyuburkan pertumbuhan berbagai jenis ilalang dan gulma tebal. Jika dibiarkan lebih dari 1 bulan, lahan kosong atau halaman rumah dapat dengan cepat dipenuhi semak belukar.</p>
+      
+      <h3>1. Pemangkasan Rutin Mencegah Sarang Hama</h3>
+      <p>Rumput liar yang lebat dan lembap seringkali menjadi sarang nyamuk, tikus, atau bahkan ular. Rutin memangkas rumput setiap 2–3 minggu sekali memastikan area hunian tetap aman dan higienis bagi keluarga.</p>
+      
+      <h3>2. Perapihan Dahan dan Tebang Pohon Rindang</h3>
+      <p>Saat musim angin kencang atau hujan deras di Palembang, dahan pohon tua yang rapuh berisiko tumbang menimpa atap atau kabel listrik. Pemangkasan dahan secara berkala adalah langkah preventif terbaik.</p>
+      
+      <blockquote>
+        <p><strong>Layanan Tebasrumput.com Hadir di Palembang!</strong> Kami siap melayani panggilan jasa potong rumput dan tebang pohon untuk seluruh 18 kecamatan di Kota Palembang. Hubungi kami untuk survei dan konsultasi cepat.</p>
+      </blockquote>
     `
   }
 ];
@@ -197,17 +218,26 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
 
   const [formData, setFormData] = useState({
     name: "",
+    province: "DKI Jakarta",
     region: "",
     city: "",
     service: "Potong Rumput"
   });
+
+  const [activeRegionTab, setActiveRegionTab] = useState<"jakarta" | "palembang">("jakarta");
+  const [selectedMapCity, setSelectedMapCity] = useState<"jakarta" | "palembang">("jakarta");
+
+  const getCitiesForProvince = (province: string) => {
+    return INDONESIA_CITIES[province] || [];
+  };
 
   const handleBooking = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
 
     let message = `Halo tebasrumput.com, saya ingin memesan layanan ${formData.service}.`;
     if (formData.name || formData.region) {
-      const location = formData.city ? `${formData.city}, ${formData.region}, DKI Jakarta` : (formData.region ? `${formData.region}, DKI Jakarta` : "DKI Jakarta");
+      const provinceName = formData.province || "";
+      const location = formData.city ? `${formData.city}, ${formData.region}, ${provinceName}` : (formData.region ? `${formData.region}, ${provinceName}` : provinceName);
       message = `Halo tebasrumput.com, saya ${formData.name || "Pelanggan"} dari ${location} ingin memesan layanan ${formData.service}.`;
     }
 
@@ -217,13 +247,13 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
   return (
     <div className="min-h-screen font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden">
       <Helmet>
-        <title>Jasa Potong Rumput & Tebang Pohon Jakarta Terdekat | PT Tebas Rumput Saputra</title>
-        <meta name="description" content="Jasa potong rumput panggilan terdekat & tebang pohon profesional di Jakarta (Selatan, Barat, Timur, Pusat, Utara). Garansi rapi, cepat & berizin resmi PT TEBAS RUMPUT SAPUTRA." />
-        <meta name="keywords" content="jasa potong rumput jakarta, tebang pohon jakarta, tukang potong rumput terdekat, potong rumput panggilan jakarta, jasa tebang pohon jakarta, potong rumput jakarta selatan, potong rumput jakarta barat, potong rumput jakarta timur, potong rumput jakarta pusat, potong rumput jakarta utara, tebas rumput saputra" />
+        <title>Jasa Potong Rumput & Tebang Pohon Jakarta & Palembang Terdekat | PT Tebas Rumput Saputra</title>
+        <meta name="description" content="Jasa potong rumput panggilan terdekat & tebang pohon profesional di Jakarta & Palembang. Garansi rapi, cepat & berizin resmi PT TEBAS RUMPUT SAPUTRA." />
+        <meta name="keywords" content="jasa potong rumput jakarta, tebang pohon jakarta, tukang potong rumput terdekat, potong rumput panggilan jakarta, jasa tebang pohon jakarta, potong rumput jakarta selatan, potong rumput jakarta barat, potong rumput jakarta timur, potong rumput jakarta pusat, potong rumput jakarta utara, jasa potong rumput palembang, tebang pohon palembang, potong rumput panggilan palembang, tebas rumput saputra" />
         
         {/* Open Graph Tags for Social Media */}
-        <meta property="og:title" content="Jasa Potong Rumput & Tebang Pohon Jakarta Terdekat | PT Tebas Rumput Saputra" />
-        <meta property="og:description" content="Layanan panggilan resmi jasa potong rumput dan tebang pohon di seluruh wilayah Jakarta. Cepat, rapi, bersih, dan terpercaya." />
+        <meta property="og:title" content="Jasa Potong Rumput & Tebang Pohon Jakarta & Palembang Terdekat | PT Tebas Rumput Saputra" />
+        <meta property="og:description" content="Layanan panggilan resmi jasa potong rumput dan tebang pohon di Jakarta & Palembang. Cepat, rapi, bersih, dan terpercaya." />
         <meta property="og:image" content="https://tebasrumput.com/images/rumput%20sedang%201.jpg" />
         <meta property="og:url" content="https://tebasrumput.com" />
         <meta property="og:type" content="website" />
@@ -239,9 +269,9 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
               "name": "PT Tebas Rumput Saputra",
-              "alternateName": ["Tebasrumput.com", "Jasa Potong Rumput Jakarta", "Jasa Tebang Pohon Jakarta"],
+              "alternateName": ["Tebasrumput.com", "Jasa Potong Rumput Jakarta", "Jasa Tebang Pohon Jakarta", "Jasa Potong Rumput Palembang", "Jasa Tebang Pohon Palembang"],
               "image": "https://tebasrumput.com/images/rumput%20sedang%201.jpg",
-              "description": "Layanan resmi dan profesional Jasa Potong Rumput serta Tebang Pohon panggilan untuk seluruh wilayah DKI Jakarta oleh PT Tebas Rumput Saputra.",
+              "description": "Layanan resmi dan profesional Jasa Potong Rumput serta Tebang Pohon panggilan untuk wilayah DKI Jakarta dan Palembang oleh PT Tebas Rumput Saputra.",
               "url": "https://tebasrumput.com",
               "telephone": "089502470657",
               "priceRange": "Rp",
@@ -274,7 +304,9 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                 { "@type": "City", "name": "Jakarta Barat" },
                 { "@type": "City", "name": "Jakarta Timur" },
                 { "@type": "City", "name": "Jakarta Pusat" },
-                { "@type": "City", "name": "Jakarta Utara" }
+                { "@type": "City", "name": "Jakarta Utara" },
+                { "@type": "City", "name": "Palembang" },
+                { "@type": "AdministrativeArea", "name": "Sumatera Selatan" }
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
@@ -351,11 +383,13 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#layanan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Layanan</a>
+            <a href="#kalkulator" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Kalkulator</a>
             <a href="#alur" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Alur</a>
             <a href="#keunggulan" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Keunggulan</a>
             <a href="#legalitas" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Legalitas</a>
             <a href="#testimoni" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Testimoni</a>
             <a href="#lokasi" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Lokasi</a>
+            <a href="#artikel" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Artikel</a>
             <a href="#faq" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">FAQ</a>
             <button onClick={handleBooking} className="btn-primary text-sm py-2.5 px-6 flex items-center gap-2 font-bold">
               <MessageCircle className="w-4 h-4" /> Booking Sekarang
@@ -376,11 +410,13 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
             className="md:hidden bg-white border-b border-slate-100 px-6 py-8 flex flex-col gap-4"
           >
             <a href="#layanan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Layanan</a>
+            <a href="#kalkulator" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Kalkulator</a>
             <a href="#alur" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Alur</a>
             <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Keunggulan</a>
             <a href="#legalitas" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Legalitas</a>
             <a href="#testimoni" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Testimoni</a>
             <a href="#lokasi" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Lokasi</a>
+            <a href="#artikel" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">Artikel</a>
             <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">FAQ</a>
             <button onClick={handleBooking} className="btn-primary w-full mt-4 flex items-center justify-center gap-2">
               <MessageCircle className="w-5 h-5" /> Booking Sekarang
@@ -391,9 +427,11 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
 
       <main>
         {/* Hero Section */}
-        <section className="pt-32 md:pt-48 pb-20 md:pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative">
-          {/* Abstract Background Element */}
+        <section className="pt-32 md:pt-48 pb-20 md:pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto relative hero-gradient">
+          {/* Abstract Background Elements */}
           <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
+          <div className="absolute top-20 right-10 w-[300px] h-[300px] bg-emerald-glow/5 rounded-full blur-[100px] -z-10 animate-float"></div>
+          <div className="absolute bottom-10 left-1/3 w-[200px] h-[200px] bg-primary/3 rounded-full blur-[80px] -z-10 animate-float-delay"></div>
           
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center relative z-10">
             <motion.div
@@ -404,11 +442,11 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
             >
               <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-slate-900 tracking-tight">
                 <span className="block mb-1">Lingkungan Rapi</span>
-                <span className="text-primary block">Hunian Lebih Nyaman</span>
+                <span className="text-gradient block">Hunian Lebih Nyaman</span>
               </motion.h1>
               
               <motion.p variants={fadeIn} className="text-base md:text-lg text-slate-500 leading-relaxed font-light max-w-xl mx-auto lg:mx-0 border-l-2 border-primary/20 pl-6 py-2">
-                Layanan profesional <span className="font-medium text-slate-700">Potong Rumput</span> dan <span className="font-medium text-slate-700">Tebang Pohon</span> panggilan di <span className="font-medium text-slate-700">seluruh wilayah DKI Jakarta</span>. 
+                Layanan profesional <span className="font-medium text-slate-700">Potong Rumput</span> dan <span className="font-medium text-slate-700">Tebang Pohon</span> panggilan di <span className="font-medium text-slate-700">Jakarta</span> & <span className="font-medium text-slate-700">Palembang</span>. 
                 <span className="block mt-1 font-bold text-slate-800">Cepat, Rapi, Bersih, dan Terjangkau.</span>
               </motion.p>
 
@@ -499,6 +537,24 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                   />
                 </div>
 
+                {/* Province Selector */}
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Wilayah / Provinsi</label>
+                  <div className="relative">
+                    <select
+                      className="w-full px-5 py-4 rounded-2xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none text-sm font-medium"
+                      value={formData.province}
+                      onChange={(e) => setFormData({ ...formData, province: e.target.value, region: "", city: "" })}
+                      required
+                    >
+                      {INDONESIA_REGIONS.map(reg => (
+                        <option key={reg} value={reg}>{reg}</option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 gap-4">
                   <div className="space-y-2">
                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Kota Administrasi</label>
@@ -510,7 +566,7 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                         required
                       >
                         <option value="" disabled>Pilih Kota Administrasi</option>
-                        {JAKARTA_CITIES.map(region => (
+                        {getCitiesForProvince(formData.province).map(region => (
                           <option key={region} value={region}>{region}</option>
                         ))}
                       </select>
@@ -945,25 +1001,83 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
         <section id="lokasi" className="section-padding bg-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Map Column */}
+              {/* Map Column with City Selector */}
               <motion.div 
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="w-full h-[400px] md:h-[500px] bg-white p-4 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] border border-slate-100 overflow-hidden relative group"
+                className="w-full bg-white p-4 md:p-5 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] border border-slate-100 overflow-hidden relative flex flex-col gap-3"
               >
-                <iframe
-                  src="https://maps.google.com/maps?q=-6.2434075,106.9153304&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Lokasi Tebasrumput Jakarta"
-                  className="w-full h-full rounded-[1.8rem] grayscale-[10%] contrast-[110%] group-hover:grayscale-0 transition-all duration-500"
-                ></iframe>
+                {/* Switcher Buttons */}
+                <div className="flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl w-full">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedMapCity("jakarta")}
+                    className={`flex-1 py-2.5 px-4 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                      selectedMapCity === "jakarta"
+                        ? "bg-white text-slate-900 shadow-sm"
+                        : "text-slate-500 hover:text-slate-900"
+                    }`}
+                  >
+                    <span className="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+                    <span>DKI Jakarta (HQ)</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedMapCity("palembang")}
+                    className={`flex-1 py-2.5 px-4 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                      selectedMapCity === "palembang"
+                        ? "bg-white text-slate-900 shadow-sm"
+                        : "text-slate-500 hover:text-slate-900"
+                    }`}
+                  >
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+                    <span>Kota Palembang</span>
+                  </button>
+                </div>
+
+                <div className="w-full h-[360px] md:h-[420px] rounded-[1.8rem] overflow-hidden relative group">
+                  <iframe
+                    key={selectedMapCity}
+                    src={
+                      selectedMapCity === "jakarta"
+                        ? "https://maps.google.com/maps?q=-6.2434075,106.9153304&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        : "https://maps.google.com/maps?q=-2.9760735,104.7754307&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                    }
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={selectedMapCity === "jakarta" ? "Lokasi Tebasrumput Jakarta" : "Lokasi Layanan Palembang"}
+                    className="w-full h-full grayscale-[10%] contrast-[110%] group-hover:grayscale-0 transition-all duration-500"
+                  ></iframe>
+
+                  <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md text-white p-3.5 rounded-2xl border border-slate-700/60 shadow-lg flex items-center justify-between text-xs font-medium">
+                    <div className="flex items-center gap-2 truncate">
+                      <MapPin className="w-4 h-4 text-primary shrink-0" />
+                      <span className="truncate">
+                        {selectedMapCity === "jakarta"
+                          ? "Jl. Dua Sembilan No.12, Duren Sawit, Jakarta Timur"
+                          : "Melayani 18 Kecamatan Kota Palembang & Sekitarnya"}
+                      </span>
+                    </div>
+                    <a
+                      href={
+                        selectedMapCity === "jakarta"
+                          ? "https://maps.google.com/maps?q=-6.2434075,106.9153304"
+                          : "https://maps.google.com/maps?q=Palembang"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline font-bold shrink-0 text-[11px] ml-2"
+                    >
+                      Buka Maps
+                    </a>
+                  </div>
+                </div>
               </motion.div>
 
               {/* Stats & Details Column */}
@@ -980,19 +1094,19 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                     <span>Area Layanan & HQ</span>
                   </div>
                   <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight tracking-tight">
-                    Hadir Lebih Dekat Melayani Seluruh <span className="text-primary">DKI Jakarta</span>
+                    Hadir Melayani <span className="text-gradient">Jakarta</span> & <span className="text-gradient">Palembang</span>
                   </h3>
                   <p className="text-slate-500 leading-relaxed text-sm font-light">
-                    Sebagai penyedia <strong>jasa potong rumput Jakarta</strong> terdekat dan andalan, kami siap memberikan layanan panggilan ke seluruh wilayah tanpa terkecuali. Cakupan layanan kami meliputi <strong>Jakarta Selatan</strong> (Kebayoran, Kemang, Tebet, Cilandak), <strong>Jakarta Barat</strong> (Puri Kembangan, Kebon Jeruk, Grogol), <strong>Jakarta Timur</strong> (Cibubur, Duren Sawit, Pulogadung), <strong>Jakarta Pusat</strong> (Menteng, Cempaka Putih), hingga <strong>Jakarta Utara</strong> (Kelapa Gading, PIK, Pluit). Apapun kondisi lahan Anda, tim kami siap membersihkannya dengan cepat, rapi, dan profesional.
+                    Sebagai penyedia <strong>jasa potong rumput</strong> terdekat dan andalan, kami siap memberikan layanan panggilan ke seluruh wilayah. Di <strong>Jakarta</strong>: Jakarta Selatan (Kebayoran, Kemang, Tebet, Cilandak), Jakarta Barat (Puri Kembangan, Kebon Jeruk, Grogol), Jakarta Timur (Cibubur, Duren Sawit, Pulogadung), Jakarta Pusat (Menteng, Cempaka Putih), hingga Jakarta Utara (Kelapa Gading, PIK, Pluit). Di <strong>Palembang</strong>: Ilir Barat, Ilir Timur, Sukarami, Sako, Jakabaring, dan seluruh kecamatan lainnya.
                   </p>
                 </div>
 
                 {/* Statistics Grid */}
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { number: "5+ Tahun", label: "Pengalaman Layanan", desc: "Tenaga profesional berpengalaman luas di Jakarta" },
+                    { number: "5+ Tahun", label: "Pengalaman Layanan", desc: "Tenaga profesional berpengalaman di Jakarta & Palembang" },
                     { number: "350+", label: "Halaman Dirapikan", desc: "Ratusan proyek selesai dengan rapi & bersih" },
-                    { number: "60+", label: "Ulasan Google", desc: "Ulasan positif dari warga Jakarta di Google Maps" },
+                    { number: "60+", label: "Ulasan Google", desc: "Ulasan positif pelanggan puas di Google Maps" },
                     { number: "4.9/5", label: "Rating Layanan", desc: "Hasil terpercaya dan memuaskan" }
                   ].map((stat, idx) => (
                     <div key={idx} className="p-5 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm group hover:border-primary/20 transition-all hover:bg-white hover:shadow-md">
@@ -1087,26 +1201,62 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
         {/* SEO Regions Section */}
         <section className="py-16 md:py-24 bg-white border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center space-y-3 mb-12">
+            <div className="text-center space-y-3 mb-8">
               <h2 className="text-xs font-bold text-primary tracking-[0.2em] uppercase">Cakupan Wilayah</h2>
-              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Melayani Seluruh Kecamatan di DKI Jakarta</h3>
-              <p className="text-slate-500 text-sm max-w-2xl mx-auto">Kami menjangkau setiap sudut ibu kota. Di mana pun lokasi Anda, tim kami siap datang memberikan layanan potong rumput terbaik.</p>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Melayani Jakarta & Palembang</h3>
+              <p className="text-slate-500 text-sm max-w-2xl mx-auto">Di mana pun lokasi Anda di Jakarta atau Palembang, tim kami siap datang memberikan layanan potong rumput & tebang pohon terbaik.</p>
+            </div>
+
+            {/* Region Tabs */}
+            <div className="flex items-center justify-center gap-3 mb-12">
+              <button 
+                onClick={() => setActiveRegionTab("jakarta")} 
+                className={`region-tab ${activeRegionTab === "jakarta" ? "active" : ""}`}
+              >
+                <span className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  DKI Jakarta
+                </span>
+              </button>
+              <button 
+                onClick={() => setActiveRegionTab("palembang")} 
+                className={`region-tab ${activeRegionTab === "palembang" ? "active" : ""}`}
+              >
+                <span className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  Palembang
+                </span>
+              </button>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
-              {JAKARTA_CITIES.map((city) => (
-                <div key={city} className="space-y-4">
-                  <h4 className="font-bold text-slate-900 border-b border-primary/20 pb-2 text-sm">{city}</h4>
-                  <ul className="space-y-2">
-                    {INDONESIA_DISTRICTS[city]?.map((district: string) => (
-                      <li key={district} className="text-xs text-slate-500 hover:text-primary transition-colors cursor-default">
-                        Potong Rumput {district}
-                      </li>
-                    ))}
-                  </ul>
+            {activeRegionTab === "jakarta" ? (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+                {JAKARTA_CITIES.map((city) => (
+                  <div key={city} className="space-y-4">
+                    <h4 className="font-bold text-slate-900 border-b border-primary/20 pb-2 text-sm">{city}</h4>
+                    <ul className="space-y-2">
+                      {INDONESIA_DISTRICTS[city]?.map((district: string) => (
+                        <li key={district} className="text-xs text-slate-500 hover:text-primary transition-colors cursor-default">
+                          Potong Rumput {district}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+                <div className="space-y-4 col-span-full">
+                  <h4 className="font-bold text-slate-900 border-b border-primary/20 pb-2 text-sm">Kota Palembang — Sumatera Selatan</h4>
                 </div>
-              ))}
-            </div>
+                {INDONESIA_DISTRICTS["Palembang"]?.map((district: string) => (
+                  <div key={district} className="flex items-center gap-2 text-xs text-slate-500 hover:text-primary transition-colors cursor-default p-3 bg-slate-50 rounded-xl border border-slate-100">
+                    <MapPin className="w-3 h-3 text-primary shrink-0" />
+                    Potong Rumput {district}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 
@@ -1120,8 +1270,9 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
 
             <div className="space-y-4">
               {[
-                { q: "Apakah bisa panggilan mendadak?", a: "Tentu! Kami menyediakan slot untuk pengerjaan di hari yang sama jika jadwal masih tersedia. Sebaiknya hubungi kami di pagi hari." },
-                { q: "Area layanan di mana saja?", a: "Kami melayani seluruh wilayah di DKI Jakarta, mencakup Jakarta Selatan, Jakarta Pusat, Jakarta Barat, Jakarta Timur, Jakarta Utara, dan Kepulauan Seribu hingga ke seluruh kecamatan." },
+                { q: "Apakah bisa panggilan mendadak?", a: "Tentu! Kami menyediakan slot untuk pengerjaan di hari yang sama (same-day service) jika jadwal masih tersedia, baik di Jakarta maupun Palembang. Sebaiknya hubungi kami di pagi hari." },
+                { q: "Area layanan di mana saja?", a: "Kami melayani seluruh wilayah di DKI Jakarta (Jakarta Selatan, Pusat, Barat, Timur, Utara, Kepulauan Seribu) dan Kota Palembang (Ilir Barat, Ilir Timur, Sukarami, Sako, Jakabaring, dan seluruh kecamatan lainnya)." },
+                { q: "Apakah layanan tersedia di Palembang?", a: "Ya! Mulai 2026, PT Tebas Rumput Saputra telah memperluas cakupan layanan ke Kota Palembang, Sumatera Selatan. Kami melayani seluruh 18 kecamatan di Palembang dengan standar kualitas yang sama seperti di Jakarta." },
                 { q: "Apakah alat disediakan?", a: "Ya, tim kami membawa seluruh peralatan lengkap mulai dari mesin potong, gunting tanaman, hingga alat pembersih." },
                 { q: "Berapa lama pengerjaan?", a: "Tergantung luas area. Untuk halaman rumah standar (50m²), biasanya memakan waktu 1-2 jam." }
               ].map((faq, i) => (
@@ -1145,6 +1296,55 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
             </div>
           </div>
         </section >
+
+        {/* Blog & Edukasi Section */}
+        <section id="artikel" className="py-16 md:py-24 bg-white border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center space-y-3 mb-14">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-[0.2em] uppercase">
+                <Leaf className="w-3.5 h-3.5" />
+                <span>Edukasi & Panduan</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">Tips Perawatan Halaman Jakarta & Palembang</h3>
+              <p className="text-slate-500 text-sm max-w-2xl mx-auto font-light">Pelajari tips merawat rumput taman, penanganan gulma liar, dan perapihan pohon di lingkungan perkotaan tropis.</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {blogs.map((blog, idx) => (
+                <article
+                  key={idx}
+                  onClick={() => setActiveBlog(blog)}
+                  className="bg-slate-50/70 hover:bg-white rounded-[2rem] p-6 sm:p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
+                >
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {blog.tags.map((tag, tIdx) => (
+                        <span key={tIdx} className="text-[10px] font-black px-2.5 py-1 rounded-full bg-primary/10 text-primary uppercase tracking-wider">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h4 className="text-lg font-black text-slate-900 group-hover:text-primary transition-colors line-clamp-2 leading-snug">
+                      {blog.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed font-medium">
+                      {blog.desc}
+                    </p>
+                  </div>
+                  <div className="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-400">
+                    <span className="flex items-center gap-1.5 text-[11px]">
+                      <Clock className="w-3.5 h-3.5 text-primary" />
+                      {blog.date}
+                    </span>
+                    <span className="text-primary font-black group-hover:translate-x-1 transition-transform flex items-center gap-1 text-xs">
+                      Baca Panduan <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Banner */}
         < section className="px-5 md:px-12 lg:px-24 py-12" >
@@ -1178,7 +1378,7 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed font-medium">
-              Partner terpercaya untuk perawatan halaman dan taman Anda. Kami mengutamakan kualitas dan kepuasan pelanggan di seluruh wilayah DKI Jakarta.
+              Partner terpercaya untuk perawatan halaman dan taman Anda. Kami mengutamakan kualitas dan kepuasan pelanggan di seluruh wilayah DKI Jakarta dan Kota Palembang.
             </p>
           </div>
 
@@ -1186,10 +1386,11 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
             <h5 className="font-black text-lg">Tautan Cepat</h5>
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li><a href="#layanan" className="hover:text-primary transition-colors">Layanan</a></li>
+              <li><a href="#kalkulator" className="hover:text-primary transition-colors">Kalkulator</a></li>
               <li><a href="#alur" className="hover:text-primary transition-colors">Alur</a></li>
               <li><a href="#keunggulan" className="hover:text-primary transition-colors">Keunggulan</a></li>
               <li><a href="#legalitas" className="hover:text-primary transition-colors">Legalitas</a></li>
-              <li><a href="#lokasi" className="hover:text-primary transition-colors">Lokasi</a></li>
+              <li><a href="#lokasi" className="hover:text-primary transition-colors">Lokasi Jakarta & Palembang</a></li>
               <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
@@ -1203,11 +1404,15 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
           </div>
 
           <div className="space-y-6">
-            <h5 className="font-black text-lg">Kontak</h5>
+            <h5 className="font-black text-lg">Kontak & Operasional</h5>
             <ul className="space-y-4 text-slate-400 text-sm font-medium">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Seluruh Wilayah DKI Jakarta (HQ: Jl. Dua Sembilan No.12, RT.7/RW.7, Duren Sawit, Kec. Duren Sawit, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13440)</span>
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span><strong className="text-white">DKI Jakarta (HQ):</strong> Jl. Dua Sembilan No.12, Duren Sawit, Jakarta Timur 13440</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <span><strong className="text-white">Kota Palembang:</strong> Melayani seluruh 18 Kecamatan Kota Palembang & Sekitarnya</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
@@ -1314,7 +1519,7 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Alamat Lokasi Pekerjaan *</label>
                     <textarea
                       rows={2}
-                      placeholder="Contoh: Jl. Sudirman No.45, Kebayoran Baru, Jakarta Selatan"
+                      placeholder="Contoh: Jl. Sudirman No.45, Jakarta Selatan / Jl. R. Soekamto, Ilir Timur, Palembang"
                       className="w-full px-4 py-3 rounded-xl border border-slate-100 bg-slate-50 focus:bg-white focus:border-primary outline-none transition-all text-xs font-medium"
                       value={quotationData.address}
                       onChange={(e) => setQuotationData({ ...quotationData, address: e.target.value })}
@@ -1351,6 +1556,50 @@ Mohon untuk dapat diterbitkan Surat Penawaran Resmi dari PT TEBAS RUMPUT SAPUTRA
                 </div>
               </motion.div>
             )}
+          </div>
+        )}
+
+        {/* Blog Article Modal */}
+        {activeBlog && (
+          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-6">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setActiveBlog(null)} className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" />
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="relative bg-white w-full max-w-2xl p-6 sm:p-10 rounded-[2.5rem] overflow-y-auto max-h-[85vh] shadow-2xl">
+              <button onClick={() => setActiveBlog(null)} className="absolute top-6 right-6 p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer">
+                <X className="w-5 h-5 text-slate-600" />
+              </button>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {activeBlog.tags?.map((t: string, i: number) => (
+                  <span key={i} className="text-[10px] font-black px-2.5 py-1 rounded-full bg-primary/10 text-primary uppercase tracking-wider">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 mb-2 tracking-tight leading-tight">{activeBlog.title}</h2>
+              <p className="text-xs text-slate-400 font-medium mb-6 flex items-center gap-2">
+                <Clock className="w-3.5 h-3.5 text-primary" /> Dipublikasikan {activeBlog.date} • PT Tebas Rumput Saputra
+              </p>
+              <div 
+                className="prose prose-slate prose-sm text-slate-600 leading-relaxed font-medium space-y-4"
+                dangerouslySetInnerHTML={{ __html: activeBlog.content }}
+              />
+              <div className="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                <button
+                  onClick={() => {
+                    setActiveBlog(null);
+                    handleBooking();
+                  }}
+                  className="btn-primary text-xs px-6 py-3 font-bold flex items-center gap-2 cursor-pointer"
+                >
+                  <MessageCircle className="w-4 h-4" /> Konsultasi Layanan via WhatsApp
+                </button>
+                <button
+                  onClick={() => setActiveBlog(null)}
+                  className="text-xs font-bold text-slate-400 hover:text-slate-600 cursor-pointer"
+                >
+                  Tutup
+                </button>
+              </div>
+            </motion.div>
           </div>
         )}
       </AnimatePresence>

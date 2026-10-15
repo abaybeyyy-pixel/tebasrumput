@@ -1,4 +1,4 @@
-export const INDONESIA_REGIONS = ["DKI Jakarta"];
+export const INDONESIA_REGIONS = ["DKI Jakarta", "Sumatera Selatan"];
 
 export const JAKARTA_CITIES = [
   "Jakarta Selatan",
@@ -9,8 +9,13 @@ export const JAKARTA_CITIES = [
   "Kepulauan Seribu"
 ];
 
+export const PALEMBANG_CITIES = [
+  "Palembang"
+];
+
 export const INDONESIA_CITIES: Record<string, string[]> = {
-  "DKI Jakarta": JAKARTA_CITIES
+  "DKI Jakarta": JAKARTA_CITIES,
+  "Sumatera Selatan": PALEMBANG_CITIES
 };
 
 export const INDONESIA_DISTRICTS: Record<string, string[]> = {
@@ -69,5 +74,25 @@ export const INDONESIA_DISTRICTS: Record<string, string[]> = {
   "Kepulauan Seribu": [
     "Kepulauan Seribu Selatan",
     "Kepulauan Seribu Utara"
+  ],
+  "Palembang": [
+    "Ilir Barat I",
+    "Ilir Barat II",
+    "Ilir Timur I",
+    "Ilir Timur II",
+    "Ilir Timur III",
+    "Seberang Ulu I",
+    "Seberang Ulu II",
+    "Sukarami",
+    "Sako",
+    "Kemuning",
+    "Kalidoni",
+    "Bukit Kecil",
+    "Gandus",
+    "Kertapati",
+    "Plaju",
+    "Alang-Alang Lebar",
+    "Sematang Borang",
+    "Jakabaring"
   ]
 };
